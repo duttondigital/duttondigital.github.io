@@ -304,7 +304,26 @@
     }
 
 
-    /* APPROACH */
+    /* ABOUT */
+    .about-intro {
+      display: flex;
+      gap: 2.5rem;
+      align-items: flex-start;
+    }
+
+    .about-photo {
+      width: 180px;
+      height: 180px;
+      border-radius: 10px;
+      object-fit: cover;
+      flex-shrink: 0;
+      background: var(--border);
+    }
+
+    .about-text {
+      flex: 1;
+    }
+
     .approach {
       margin-top: 1rem;
       font-size: 1rem;
@@ -316,6 +335,17 @@
     .approach strong {
       color: var(--fg);
       font-weight: 600;
+    }
+
+    @media (max-width: 600px) {
+      .about-intro {
+        flex-direction: column;
+        gap: 1.5rem;
+      }
+      .about-photo {
+        width: 100%;
+        height: 200px;
+      }
     }
 
     /* PRINCIPLES */
@@ -426,7 +456,7 @@
     </div>
     <div>
       <a href="#packages">Packages</a>
-      <a href="#approach">Approach</a>
+      <a href="#approach">About</a>
       <a href="#contact">Contact</a>
     </div>
   </nav>
@@ -528,7 +558,7 @@
           <li>Product listings &amp; pricing</li>
           <li>Inventory management</li>
           <li>Online orders &amp; payments</li>
-          <li>One source of truth across all channels</li>
+          <li>Sell anywhere, manage in one place</li>
         </ul>
         <a href="#contact" class="pkg-cta">Get started</a>
       </div>
@@ -544,7 +574,7 @@
         </div>
         <p class="desc">Pick exactly the modules you need &mdash; nothing you don't.</p>
         <ul>
-          <li>Choose from any module</li>
+          <li>Choose exactly what you need</li>
           <li>Bookings, menus, galleries &mdash; whatever fits</li>
           <li>Add or remove as your business changes</li>
           <li>No bundles, no extras, just what you use</li>
@@ -557,22 +587,30 @@
   <hr class="divider">
 
   <section id="approach">
-    <h2>Approach</h2>
-    <p class="approach">
-      I build <strong>composable, modular systems</strong> &mdash; small pieces that work independently and connect cleanly. No monoliths, no vendor lock-in, no unnecessary complexity. Every component earns its place.
-    </p>
+    <h2>About</h2>
+    <div class="about-intro">
+      <img class="about-photo" src="https://placehold.co/360x360/1e1e1e/777?text=Photo" alt="The Dutton family">
+      <div class="about-text">
+        <p class="approach" style="margin-top: 0;">
+          We're a <strong>family-run business</strong> based in Cornwall, built around one idea: getting local businesses online shouldn't be complicated or expensive. Too many companies overcomplicate it &mdash; we don't.
+        </p>
+        <p class="approach" style="margin-top: 1rem;">
+          Our technology is <strong>purpose-built for local businesses</strong>. No bloated platforms, no features you'll never use. Just robust, reliable tools that do exactly what you need &mdash; and nothing more.
+        </p>
+      </div>
+    </div>
     <div class="principles">
       <div class="principle">
-        <h3>One moving part at a time</h3>
-        <p>Each piece does one job well. Easier to understand, test, and replace.</p>
+        <h3>Built for businesses like yours</h3>
+        <p>Everything we make is designed specifically for local businesses. Not startups, not enterprises &mdash; you.</p>
       </div>
       <div class="principle">
-        <h3>You talk to the builder</h3>
-        <p>Sole trader. No account managers or hand-offs. Direct, senior-level work from start to finish.</p>
+        <h3>Real people, not a helpdesk</h3>
+        <p>Family business means you always talk to someone who knows your setup and actually cares.</p>
       </div>
       <div class="principle">
-        <h3>Simple by default</h3>
-        <p>Complexity is added only when the problem demands it &mdash; never preemptively.</p>
+        <h3>Simple by design</h3>
+        <p>Less clutter, fewer headaches, lower costs. You get exactly what you need and nothing you don't.</p>
       </div>
     </div>
   </section>
@@ -625,7 +663,7 @@
         </g>
       </svg>
       <h3>Ready to get started?</h3>
-      <p>Drop us a line and we'll get back to you within 24 hours.</p>
+      <p>Drop us a line and let's have a chat about what you need.</p>
       <a href="mailto:contact@dutton.digital" class="cta">Get in touch</a>
     </div>
   </section>
