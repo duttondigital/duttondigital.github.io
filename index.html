@@ -103,11 +103,6 @@
       line-height: 1.15;
     }
 
-    .hero h1 em {
-      font-style: italic;
-      font-weight: 300;
-      padding-left: 0.15em;
-    }
 
     .hero p {
       margin-top: 1.25rem;
@@ -131,6 +126,25 @@
     }
 
     .hero .cta:hover { opacity: 0.85; }
+
+    .hero .cta-secondary {
+      display: inline-block;
+      margin-top: 2rem;
+      margin-left: 0.75rem;
+      padding: 0.65rem 1.5rem;
+      border: 1px solid var(--border);
+      color: var(--fg);
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: 500;
+      font-size: 0.85rem;
+      transition: background 0.2s, border-color 0.2s;
+    }
+
+    .hero .cta-secondary:hover {
+      background: var(--accent-dim);
+      border-color: #333;
+    }
 
     /* CLIENTS */
     .clients {
@@ -387,9 +401,10 @@
   </nav>
 
   <div class="hero">
-    <h1>Software, <em>simplified</em></h1>
-    <p>Modular solutions for your needs. Nothing more, nothing less.</p>
-    <a href="#contact" class="cta">Get in touch</a>
+    <h1>We handle the tech.<br>You handle the customers.</h1>
+    <p>Your website, your listings, your business info &mdash; managed in one place, always up to date.</p>
+    <a href="#contact" class="cta">Get started</a>
+    <a href="#packages" class="cta-secondary">Learn more</a>
 
     <svg class="hero-graphic" viewBox="0 0 360 360" fill="none" aria-hidden="true">
       <defs>
@@ -435,17 +450,6 @@
         <line x1="232" y1="26" x2="304" y2="26" stroke="white" stroke-width="1" stroke-dasharray="4 3" opacity="0.10"/>
       </g>
     </svg>
-  </div>
-
-  <hr class="divider">
-
-  <div class="clients">
-    <div class="clients-label">Working with</div>
-    <div class="clients-list">
-      <img src="assets/clients/duchy-opera.svg" alt="Duchy Opera">
-      <img src="assets/clients/xgx.svg" alt="XGX.AI">
-      <img src="assets/clients/modular-mapper.svg" alt="Modular Mapper">
-    </div>
   </div>
 
   <hr class="divider">
