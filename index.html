@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dutton Digital — Software, Simplified</title>
   <meta name="description" content="Dutton Digital is a software consultancy that builds modular, composable solutions. Simple technology that works.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pathway+Extreme:wght@300;400;500&display=swap" rel="stylesheet">
   <style>
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -48,17 +51,25 @@
     }
 
     .logo-icon svg {
-      height: 1.3em;
+      height: 2em;
       width: auto;
       display: block;
     }
 
     .logo-text {
-      letter-spacing: 0.05em;
+      letter-spacing: 0.08em;
       font-size: 1rem;
       font-weight: 300;
-      /* font-family: monospace; */
-      /* text-transform: uppercase; */
+      font-family: 'Pathway Extreme', sans-serif;
+      text-transform: uppercase;
+      line-height: 1.1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .logo-stretch {
+      display: block;
+      letter-spacing: 0.12em;
     }
 
     .logo-bold { font-weight: 800; }
@@ -441,7 +452,7 @@
 </head>
 <body>
 
-  <div class="container">
+<div class="container">
   <nav>
     <div class="logo">
       <div class="logo-icon">
@@ -452,7 +463,7 @@
           <path d="M 7,7 L 14,7 C 21,7 21,21 14,21 L 7,21 A 1,1 0 0,1 6,20 L 6,8 A 1,1 0 0,1 7,7 Z" stroke="white" stroke-width="1.2" fill="none"/>
         </svg>
       </div>
-      <div class="logo-text">Dutton Digital</div>
+      <div class="logo-text"><span>Dutton</span><span class="logo-stretch">Digital</span></div>
     </div>
     <div>
       <a href="#packages">Packages</a>
