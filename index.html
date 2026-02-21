@@ -105,7 +105,8 @@
 
     .hero h1 em {
       font-style: italic;
-      font-weight: 400;
+      font-weight: 300;
+      padding-left: 0.15em;
     }
 
     .hero p {
@@ -130,6 +131,40 @@
     }
 
     .hero .cta:hover { opacity: 0.85; }
+
+    /* CLIENTS */
+    .clients {
+      padding: 2.5rem 0;
+      text-align: center;
+    }
+
+    .clients-label {
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 1.25rem;
+    }
+
+    .clients-list {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 3rem;
+      flex-wrap: wrap;
+    }
+
+    .clients-list img {
+      height: 20px;
+      width: auto;
+      opacity: 0.3;
+      transition: opacity 0.2s;
+    }
+
+    .clients-list img:hover {
+      opacity: 0.5;
+    }
 
     /* SECTIONS */
     section {
@@ -168,10 +203,22 @@
       flex-direction: column;
     }
 
+    .package .pkg-header {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .package .pkg-header svg {
+      width: 18px;
+      height: 18px;
+      flex-shrink: 0;
+    }
+
     .package h3 {
       font-size: 0.95rem;
       font-weight: 600;
-      margin-bottom: 0.25rem;
     }
 
     .package .price {
@@ -392,11 +439,29 @@
 
   <hr class="divider">
 
+  <div class="clients">
+    <div class="clients-label">Working with</div>
+    <div class="clients-list">
+      <img src="assets/clients/duchy-opera.svg" alt="Duchy Opera">
+      <img src="assets/clients/xgx.svg" alt="XGX.AI">
+      <img src="assets/clients/modular-mapper.svg" alt="Modular Mapper">
+    </div>
+  </div>
+
+  <hr class="divider">
+
   <section id="packages">
     <h2>Packages</h2>
     <div class="packages-grid">
       <div class="package">
-        <h3>Essentials</h3>
+        <div class="pkg-header">
+          <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 21h18"/>
+            <path d="M5 21V7l7-4 7 4v14"/>
+            <path d="M9 21v-6h6v6"/>
+          </svg>
+          <h3>Essentials</h3>
+        </div>
         <div class="price">
           <span class="amount">£10</span><span class="period">/mo</span>
         </div>
@@ -411,7 +476,14 @@
         <a href="#contact" class="pkg-cta">Get started</a>
       </div>
       <div class="package">
-        <h3>Commerce</h3>
+        <div class="pkg-header">
+          <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <path d="M16 10a4 4 0 01-8 0"/>
+          </svg>
+          <h3>Commerce</h3>
+        </div>
         <div class="price">
           <span class="amount">£50</span><span class="period">/mo</span>
         </div>
@@ -426,17 +498,21 @@
         <a href="#contact" class="pkg-cta">Get started</a>
       </div>
       <div class="package">
-        <h3>Custom</h3>
+        <div class="pkg-header">
+          <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2l-2 7H3l5.5 4.5L6 21l6-4.5L18 21l-2.5-7.5L21 9h-7z"/>
+          </svg>
+          <h3>Custom</h3>
+        </div>
         <div class="price">
           <span class="note">Let's talk</span>
         </div>
-        <p class="desc">Something specific to how your business works.</p>
+        <p class="desc">Pick exactly the modules you need &mdash; nothing you don't.</p>
         <ul>
-          <li>Everything in Commerce</li>
-          <li>Booking &amp; appointment systems</li>
-          <li>Client portals &amp; dashboards</li>
-          <li>Custom integrations</li>
-          <li>Built around your workflow</li>
+          <li>Choose from any module</li>
+          <li>Bookings, menus, galleries &mdash; whatever fits</li>
+          <li>Add or remove as your business changes</li>
+          <li>No bundles, no extras, just what you use</li>
         </ul>
         <a href="#contact" class="pkg-cta">Get in touch</a>
       </div>

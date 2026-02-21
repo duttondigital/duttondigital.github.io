@@ -1,0 +1,13 @@
+<svg viewBox="0 0 320 50" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <mask id="note-cutout">
+      <rect width="320" height="50" fill="black"/>
+      <circle cx="160" cy="25" r="23" fill="white"/>
+      <ellipse cx="153" cy="32" rx="9" ry="7.5" fill="black" transform="rotate(-20 153 32)"/>
+      <rect x="160" y="8" width="3.5" height="26" fill="black" rx="1.75"/>
+    </mask>
+  </defs>
+  <circle cx="160" cy="25" r="23" fill="white" mask="url(#note-cutout)"/>
+  <text x="125" y="33" fill="white" font-family="system-ui, -apple-system, sans-serif" font-size="22" font-weight="800" text-anchor="end" letter-spacing="0.06em">DUCHY</text>
+  <text x="195" y="33" fill="white" font-family="system-ui, -apple-system, sans-serif" font-size="22" font-weight="800" letter-spacing="0.06em">OPERA</text>
+</svg>
