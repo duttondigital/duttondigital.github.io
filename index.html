@@ -41,10 +41,25 @@
     }
 
     .logo {
-      font-size: 0.85rem;
-      letter-spacing: 0.06em;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
       color: #fff;
       text-transform: uppercase;
+    }
+
+    .logo-icon svg {
+      width: 28px;
+      height: auto;
+      display: block;
+    }
+
+    .logo-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.15;
+      letter-spacing: 0.06em;
+      font-size: 0.7rem;
     }
 
     .logo-bold { font-weight: 800; }
@@ -240,9 +255,112 @@
 </head>
 <body>
 
+  <!-- LOGO PREVIEWS — temporary -->
+  <div style="padding: 3rem 2rem; display: flex; flex-wrap: wrap; gap: 3rem; border-bottom: 1px solid #1e1e1e;">
+
+    <!-- 1. Stacked Blocks -->
+    <div style="display: flex; align-items: center; gap: 0.6rem;">
+      <svg width="28" viewBox="0 0 24 24" fill="none">
+        <rect x="0" y="10" width="10" height="10" rx="2" fill="white"/>
+        <rect x="7" y="3" width="10" height="10" rx="2" fill="white" opacity="0.45"/>
+        <rect x="14" y="-4" width="10" height="10" rx="2" fill="white" opacity="0.2"/>
+      </svg>
+      <div style="color: white; text-transform: uppercase; font-size: 0.65rem; letter-spacing: 0.06em; line-height: 1.15;">
+        <div style="font-weight: 800;">Dutton</div>
+        <div style="font-weight: 300;">Digital</div>
+      </div>
+      <span style="color: #555; font-size: 0.6rem; margin-left: 0.5rem;">1. Stacked Blocks</span>
+    </div>
+
+    <!-- 2. DD Monogram -->
+    <div style="display: flex; align-items: center; gap: 0.6rem;">
+      <svg width="28" viewBox="0 0 28 24" fill="none">
+        <path d="M 0,0 L 8,0 C 16,0 16,11 8,11 L 0,11 Z" stroke="white" stroke-width="1.8" fill="none"/>
+        <path d="M 10,13 L 18,13 C 26,13 26,24 18,24 L 10,24 Z" fill="white"/>
+      </svg>
+      <div style="color: white; text-transform: uppercase; font-size: 0.65rem; letter-spacing: 0.06em; line-height: 1.15;">
+        <div style="font-weight: 800;">Dutton</div>
+        <div style="font-weight: 300;">Digital</div>
+      </div>
+      <span style="color: #555; font-size: 0.6rem; margin-left: 0.5rem;">2. DD Monogram</span>
+    </div>
+
+    <!-- 3. Slash Mark -->
+    <div style="display: flex; align-items: center; gap: 0.5rem;">
+      <svg width="16" viewBox="0 0 14 24" fill="none">
+        <line x1="12" y1="0" x2="2" y2="24" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+      </svg>
+      <div style="color: white; text-transform: uppercase; font-size: 0.65rem; letter-spacing: 0.06em; line-height: 1.15;">
+        <div style="font-weight: 800;">Dutton</div>
+        <div style="font-weight: 300;">Digital</div>
+      </div>
+      <span style="color: #555; font-size: 0.6rem; margin-left: 0.5rem;">3. Slash</span>
+    </div>
+
+    <!-- 4. Bracket Pair -->
+    <div style="display: flex; align-items: center; gap: 0.5rem;">
+      <svg width="24" viewBox="0 0 24 24" fill="none">
+        <path d="M 8,1 C 2,1 2,12 8,12" stroke="white" stroke-width="2" stroke-linecap="round" fill="none"/>
+        <path d="M 16,12 C 22,12 22,23 16,23" stroke="white" stroke-width="2" stroke-linecap="round" fill="none"/>
+      </svg>
+      <div style="color: white; text-transform: uppercase; font-size: 0.65rem; letter-spacing: 0.06em; line-height: 1.15;">
+        <div style="font-weight: 800;">Dutton</div>
+        <div style="font-weight: 300;">Digital</div>
+      </div>
+      <span style="color: #555; font-size: 0.6rem; margin-left: 0.5rem;">4. Brackets</span>
+    </div>
+
+    <!-- 5. Dot Grid -->
+    <div style="display: flex; align-items: center; gap: 0.6rem;">
+      <svg width="22" viewBox="0 0 20 20" fill="none">
+        <circle cx="5" cy="5" r="3.5" fill="white"/>
+        <circle cx="15" cy="5" r="3.5" stroke="white" stroke-width="1.5"/>
+        <circle cx="5" cy="15" r="3.5" stroke="white" stroke-width="1.5"/>
+        <circle cx="15" cy="15" r="3.5" fill="white"/>
+      </svg>
+      <div style="color: white; text-transform: uppercase; font-size: 0.65rem; letter-spacing: 0.06em; line-height: 1.15;">
+        <div style="font-weight: 800;">Dutton</div>
+        <div style="font-weight: 300;">Digital</div>
+      </div>
+      <span style="color: #555; font-size: 0.6rem; margin-left: 0.5rem;">5. Dot Grid</span>
+    </div>
+
+    <!-- 6. Single Module -->
+    <div style="display: flex; align-items: center; gap: 0.6rem;">
+      <svg width="24" viewBox="0 0 24 24" fill="none">
+        <rect x="1" y="1" width="22" height="22" rx="4" fill="white"/>
+        <rect x="18" y="8" width="6" height="8" rx="2" fill="#0b0b0b" stroke="white" stroke-width="1.5"/>
+      </svg>
+      <div style="color: white; text-transform: uppercase; font-size: 0.65rem; letter-spacing: 0.06em; line-height: 1.15;">
+        <div style="font-weight: 800;">Dutton</div>
+        <div style="font-weight: 300;">Digital</div>
+      </div>
+      <span style="color: #555; font-size: 0.6rem; margin-left: 0.5rem;">6. Module</span>
+    </div>
+
+  </div>
+  <!-- END LOGO PREVIEWS -->
+
   <div class="container">
   <nav>
-    <div class="logo"><span class="logo-bold">Dutton</span> <span class="logo-thin">Digital</span></div>
+    <div class="logo">
+      <div class="logo-icon">
+        <svg viewBox="0 0 38 32" fill="none" aria-hidden="true">
+          <!-- Top-left: filled -->
+          <rect x="0" y="0" width="14.5" height="14.5" rx="3" fill="white"/>
+          <!-- Bottom-left: outline -->
+          <rect x="0" y="17.5" width="14.5" height="14.5" rx="3" stroke="white" stroke-width="1.5"/>
+          <!-- Top-right: outline, D curve -->
+          <path d="M 17.5,3 A 3,3 0 0,1 20.5,0 L 26,0 C 28,0 38,8 38,14.5 L 20.5,14.5 A 3,3 0 0,1 17.5,11.5 Z" stroke="white" stroke-width="1.5"/>
+          <!-- Bottom-right: filled, D curve -->
+          <path d="M 17.5,20.5 A 3,3 0 0,1 20.5,17.5 L 38,17.5 C 38,24 28,32 26,32 L 20.5,32 A 3,3 0 0,1 17.5,29 Z" fill="white"/>
+        </svg>
+      </div>
+      <div class="logo-text">
+        <span class="logo-bold">Dutton</span>
+        <span class="logo-thin">Digital</span>
+      </div>
+    </div>
     <div>
       <a href="#services">Services</a>
       <a href="#approach">Approach</a>
