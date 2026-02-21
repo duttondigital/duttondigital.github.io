@@ -343,21 +343,52 @@
       line-height: 1.65;
     }
 
-    /* CONTACT */
-    .contact-body {
-      margin-top: 0.5rem;
+    /* CONTACT CTA */
+    .contact-card {
+      background: #0e0e0e;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 3rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .contact-card > * {
+      position: relative;
+    }
+
+    .contact-graphic {
+      position: absolute;
+      pointer-events: none;
+    }
+
+    .contact-card h3 {
+      font-size: 1.4rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.5rem;
+    }
+
+    .contact-card p {
       color: var(--muted);
-      font-size: 1rem;
-      line-height: 1.7;
+      font-size: 0.95rem;
+      margin-bottom: 1.5rem;
     }
 
-    .contact-body a {
-      color: var(--fg);
+    .contact-card .cta {
+      display: inline-block;
+      padding: 0.65rem 1.5rem;
+      background: var(--fg);
+      color: var(--bg);
       text-decoration: none;
-      font-weight: 500;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 0.85rem;
+      transition: opacity 0.2s;
     }
 
-    .contact-body a:hover { text-decoration: underline; }
+    .contact-card .cta:hover { opacity: 0.85; }
 
     /* FOOTER */
     footer {
@@ -403,7 +434,7 @@
   <div class="hero">
     <h1>We handle the tech.<br>You handle the customers.</h1>
     <p>Your website, your listings, your business info &mdash; managed in one place, always up to date.</p>
-    <a href="#contact" class="cta">Get started</a>
+    <a href="#contact" class="cta">Get in touch</a>
     <a href="#packages" class="cta-secondary">Learn more</a>
 
     <svg class="hero-graphic" viewBox="0 0 360 360" fill="none" aria-hidden="true">
@@ -549,14 +580,55 @@
   <hr class="divider">
 
   <section id="contact">
-    <h2>Contact</h2>
-    <div class="contact-body">
-      <p>Got something to build, fix, or figure out?</p>
-      <p style="margin-top: 0.75rem;"><a href="mailto:contact@dutton.digital">contact@dutton.digital</a></p>
+    <div class="contact-card">
+      <svg class="contact-graphic" style="left:-40px;top:-40px;width:280px;height:280px;" viewBox="0 0 300 300" fill="none" aria-hidden="true">
+        <defs>
+          <radialGradient id="glow2" cx="80%" cy="80%" r="70%">
+            <stop offset="0%" stop-color="white"/>
+            <stop offset="100%" stop-color="white" stop-opacity="0"/>
+          </radialGradient>
+          <mask id="fade2">
+            <rect width="300" height="300" fill="url(#glow2)"/>
+          </mask>
+        </defs>
+        <g mask="url(#fade2)">
+          <rect x="60" y="60" width="44" height="44" rx="7" fill="white" opacity="0.08"/>
+          <rect x="112" y="60" width="44" height="44" rx="7" fill="white" opacity="0.18"/>
+          <rect x="60" y="112" width="44" height="44" rx="7" fill="white" opacity="0.12"/>
+          <rect x="112" y="112" width="44" height="44" rx="7" fill="white" opacity="0.25"/>
+          <rect x="164" y="112" width="44" height="44" rx="7" fill="white" opacity="0.10"/>
+          <rect x="112" y="164" width="44" height="44" rx="7" fill="white" opacity="0.08"/>
+          <rect x="164" y="164" width="44" height="44" rx="7" fill="white" opacity="0.15"/>
+          <rect x="216" y="164" width="44" height="44" rx="7" fill="white" opacity="0.06"/>
+          <rect x="164" y="216" width="44" height="44" rx="7" fill="white" opacity="0.08"/>
+        </g>
+      </svg>
+      <svg class="contact-graphic" style="right:-40px;bottom:-40px;width:280px;height:280px;" viewBox="0 0 300 300" fill="none" aria-hidden="true">
+        <defs>
+          <radialGradient id="glow3" cx="20%" cy="20%" r="70%">
+            <stop offset="0%" stop-color="white"/>
+            <stop offset="100%" stop-color="white" stop-opacity="0"/>
+          </radialGradient>
+          <mask id="fade3">
+            <rect width="300" height="300" fill="url(#glow3)"/>
+          </mask>
+        </defs>
+        <g mask="url(#fade3)">
+          <rect x="40" y="40" width="44" height="44" rx="7" fill="white" opacity="0.08"/>
+          <rect x="92" y="40" width="44" height="44" rx="7" fill="white" opacity="0.18"/>
+          <rect x="40" y="92" width="44" height="44" rx="7" fill="white" opacity="0.15"/>
+          <rect x="92" y="92" width="44" height="44" rx="7" fill="white" opacity="0.25"/>
+          <rect x="144" y="92" width="44" height="44" rx="7" fill="white" opacity="0.12"/>
+          <rect x="92" y="144" width="44" height="44" rx="7" fill="white" opacity="0.10"/>
+          <rect x="144" y="144" width="44" height="44" rx="7" fill="white" opacity="0.18"/>
+          <rect x="196" y="144" width="44" height="44" rx="7" fill="white" opacity="0.08"/>
+        </g>
+      </svg>
+      <h3>Ready to get started?</h3>
+      <p>Drop us a line and we'll get back to you within 24 hours.</p>
+      <a href="mailto:contact@dutton.digital" class="cta">Get in touch</a>
     </div>
   </section>
-
-  <hr class="divider">
 
   <footer>
     <span>&copy; 2025 Dutton Digital</span>
