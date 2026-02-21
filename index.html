@@ -150,10 +150,10 @@
       margin-bottom: 2rem;
     }
 
-    /* BLOCKS — modular visual */
-    .blocks {
+    /* PACKAGES */
+    .packages-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 1px;
       background: var(--border);
       border: 1px solid var(--border);
@@ -161,22 +161,87 @@
       overflow: hidden;
     }
 
-    .block {
+    .package {
       background: var(--bg);
-      padding: 1.75rem;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
     }
 
-    .block h3 {
+    .package h3 {
       font-size: 0.95rem;
       font-weight: 600;
-      margin-bottom: 0.4rem;
+      margin-bottom: 0.25rem;
     }
 
-    .block p {
+    .package .price {
+      margin-bottom: 1.25rem;
+    }
+
+    .package .price .amount {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--fg);
+      letter-spacing: -0.03em;
+    }
+
+    .package .price .period {
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    .package .price .note {
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    .package .desc {
       color: var(--muted);
       font-size: 0.85rem;
       line-height: 1.65;
+      margin-bottom: 1.25rem;
     }
+
+    .package ul {
+      list-style: none;
+      margin-bottom: 1.5rem;
+      flex: 1;
+    }
+
+    .package ul li {
+      font-size: 0.82rem;
+      color: var(--muted);
+      padding: 0.3rem 0;
+      padding-left: 1.2rem;
+      position: relative;
+    }
+
+    .package ul li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: var(--fg);
+      font-size: 0.75rem;
+    }
+
+    .package .pkg-cta {
+      display: block;
+      text-align: center;
+      padding: 0.6rem 1rem;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      color: var(--fg);
+      text-decoration: none;
+      font-size: 0.82rem;
+      font-weight: 500;
+      transition: background 0.2s, border-color 0.2s;
+    }
+
+    .package .pkg-cta:hover {
+      background: var(--accent-dim);
+      border-color: #333;
+    }
+
 
     /* APPROACH */
     .approach {
@@ -268,7 +333,7 @@
       <div class="logo-text">Dutton Digital</div>
     </div>
     <div>
-      <a href="#services">Services</a>
+      <a href="#packages">Packages</a>
       <a href="#approach">Approach</a>
       <a href="#contact">Contact</a>
     </div>
@@ -327,20 +392,53 @@
 
   <hr class="divider">
 
-  <section id="services">
-    <h2>Services</h2>
-    <div class="blocks">
-      <div class="block">
-        <h3>Build</h3>
-        <p>Web apps, APIs, and tools &mdash; scoped tightly, built to last.</p>
+  <section id="packages">
+    <h2>Packages</h2>
+    <div class="packages-grid">
+      <div class="package">
+        <h3>Essentials</h3>
+        <div class="price">
+          <span class="amount">£10</span><span class="period">/mo</span>
+        </div>
+        <p class="desc">Your business online &mdash; managed in one place, available everywhere.</p>
+        <ul>
+          <li>Business profile &amp; contact info</li>
+          <li>Opening hours &amp; location</li>
+          <li>Your own website</li>
+          <li>Works with Google, social &amp; AI</li>
+          <li>Update once, live everywhere</li>
+        </ul>
+        <a href="#contact" class="pkg-cta">Get started</a>
       </div>
-      <div class="block">
-        <h3>Advise</h3>
-        <p>Architecture reviews, tech selection, and second opinions on your existing stack.</p>
+      <div class="package">
+        <h3>Commerce</h3>
+        <div class="price">
+          <span class="amount">£50</span><span class="period">/mo</span>
+        </div>
+        <p class="desc">Everything in Essentials, plus sell your products online.</p>
+        <ul>
+          <li>Everything in Essentials</li>
+          <li>Product listings &amp; pricing</li>
+          <li>Inventory management</li>
+          <li>Online orders &amp; payments</li>
+          <li>One source of truth across all channels</li>
+        </ul>
+        <a href="#contact" class="pkg-cta">Get started</a>
       </div>
-      <div class="block">
-        <h3>Replace</h3>
-        <p>Swap out clunky legacy systems with clean, modern alternatives that actually fit.</p>
+      <div class="package">
+        <h3>Custom</h3>
+        <div class="price">
+          <span class="note">Let's talk</span>
+        </div>
+        <p class="desc">Something specific to how your business works.</p>
+        <ul>
+          <li>Everything in Commerce</li>
+          <li>Booking &amp; appointment systems</li>
+          <li>Client portals &amp; dashboards</li>
+          <li>Custom integrations</li>
+          <li>Built around your workflow</li>
+        </ul>
+        <a href="#contact" class="pkg-cta">Get in touch</a>
       </div>
     </div>
   </section>
