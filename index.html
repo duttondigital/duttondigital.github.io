@@ -223,11 +223,11 @@
     .packages-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 1px;
-      background: var(--border);
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      overflow: hidden;
+      gap: 1.25rem;
+      background: none;
+      border: none;
+      border-radius: 0;
+      overflow: visible;
     }
 
     .package {
@@ -235,6 +235,8 @@
       padding: 2rem;
       display: flex;
       flex-direction: column;
+      border: 1px solid var(--border);
+      border-radius: 10px;
     }
 
     .package .pkg-header {
@@ -323,6 +325,20 @@
       border-color: #333;
     }
 
+    .package.primary {
+      border-color: rgba(255, 255, 255, 0.25);
+    }
+
+    .package.primary .pkg-cta {
+      background: var(--fg);
+      color: var(--bg);
+      border-color: var(--fg);
+    }
+
+    .package.primary .pkg-cta:hover {
+      opacity: 0.85;
+      background: var(--fg);
+    }
 
     /* ABOUT */
     .about-intro {
@@ -537,6 +553,52 @@
 
   <section id="packages">
     <div class="packages-grid">
+      <div class="package primary">
+        <div class="pkg-header">
+          <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M19 4H5a2 2 0 00-2 2v2a2 2 0 002 2h14a2 2 0 002-2V6a2 2 0 00-2-2z"/>
+            <path d="M3 10v8a2 2 0 002 2h14a2 2 0 002-2v-8"/>
+            <line x1="12" y1="14" x2="12" y2="14.01"/>
+          </svg>
+          <h3>Ticketed Events</h3>
+        </div>
+        <div class="price">
+          <span class="note">Pilot programme</span>
+        </div>
+        <p class="desc">We're looking for companies that sell ticketed events to join our pilot. Get set up early and help shape the product.</p>
+        <ul>
+          <li>Event listings &amp; scheduling</li>
+          <li>Online ticket sales &amp; payments</li>
+          <li>Your own event website</li>
+          <li>Hands-on support from our team</li>
+          <li>Pilot pricing &mdash; locked in when we launch</li>
+        </ul>
+        <a href="#contact" class="pkg-cta">Join the pilot</a>
+      </div>
+      <div class="package">
+        <div class="pkg-header">
+          <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/>
+            <path d="M12 6v6l4 2"/>
+          </svg>
+          <h3>More coming soon</h3>
+        </div>
+        <div class="price">
+          <span class="note">Stay tuned</span>
+        </div>
+        <p class="desc">We're building more packages for local businesses &mdash; commerce, bookings, websites &amp; beyond. Get in touch to be the first to know.</p>
+        <ul>
+          <li>Business essentials &amp; websites</li>
+          <li>Online commerce &amp; payments</li>
+          <li>Bookings, menus &amp; more</li>
+          <li>Custom modules &mdash; pick what you need</li>
+        </ul>
+        <a href="#contact" class="pkg-cta">Register interest</a>
+      </div>
+    </div>
+
+    <!-- ORIGINAL PACKAGES — uncomment when ready to launch full offerings
+    <div class="packages-grid">
       <div class="package">
         <div class="pkg-header">
           <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
@@ -601,6 +663,7 @@
         <a href="#contact" class="pkg-cta">Get in touch</a>
       </div>
     </div>
+    END ORIGINAL PACKAGES -->
   </section>
 
   <div class="divider"><span>About</span></div>
