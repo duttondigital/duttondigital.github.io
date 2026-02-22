@@ -355,6 +355,23 @@
       object-fit: cover;
       flex-shrink: 0;
       background: var(--border);
+      position: relative;
+    }
+
+    .about-photo-wrap {
+      position: relative;
+      width: 180px;
+      height: 180px;
+      flex-shrink: 0;
+    }
+
+    .about-photo-wrap::before {
+      content: "";
+      position: absolute;
+      inset: 14px -14px -14px 14px;
+      border: 1px solid #fff;
+      border-radius: 10px;
+      pointer-events: none;
     }
 
     .about-text {
@@ -378,6 +395,10 @@
       .about-intro {
         flex-direction: column;
         gap: 1.5rem;
+      }
+      .about-photo-wrap {
+        width: calc(100% - 14px);
+        height: 200px;
       }
       .about-photo {
         width: 100%;
@@ -671,7 +692,9 @@
 
   <section id="approach">
     <div class="about-intro">
-      <img class="about-photo" src="family.webp" alt="The Dutton family">
+      <div class="about-photo-wrap">
+        <img class="about-photo" src="family.webp" alt="The Dutton family">
+      </div>
       <div class="about-text">
         <p class="approach" style="margin-top: 0;">
           We're a <strong>family-run business</strong> based in Cornwall, built around one idea: getting local businesses online shouldn't be complicated or expensive. Too many companies overcomplicate it &mdash; we don't.
