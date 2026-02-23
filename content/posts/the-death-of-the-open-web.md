@@ -29,11 +29,11 @@ On platforms, you're subject to algorithms you can't influence. One policy chang
 
 Businesses that built their customer acquisition on Instagram have woken up to find their reach decimated because Meta prioritised different content. They had no recourse. They didn't own the relationship.
 
-## The homogenisation of everything
+## The lock-in problem
 
-Platforms flatten everything into the same format. Every business gets the same profile template. Same review system. Same limited ways to present themselves.
+The real issue isn't standardisation — it's control. Platforms don't just host your information; they own it. Your content, your customer relationships, your reviews all live inside their walls.
 
-A quirky independent shop looks basically the same as a chain store. Distinctiveness gets compressed into platform-approved boxes.
+You can't take your Instagram followers with you. You can't export your Google reviews. Your presence exists only as long as the platform allows it.
 
 ## Is there a way back?
 
