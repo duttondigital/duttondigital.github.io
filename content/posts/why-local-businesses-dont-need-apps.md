@@ -1,6 +1,12 @@
 +++
 title = "Why local businesses don't need apps"
 date = 2026-02-21
+
+[extra]
+author = "Louis Dutton"
+
+[taxonomies]
+tags = ["ai-assisted"]
 +++
 
 "You should build an app." It's advice that gets thrown around constantly. And for most local businesses, it's terrible advice.

@@ -24,6 +24,21 @@ article .meta {
   font-size: 0.85rem;
 }
 
+article .tag {
+  display: inline-block;
+  padding: 0.2rem 0.5rem;
+  background: var(--accent-dim);
+  border-radius: 4px;
+  font-size: 0.75rem;
+  color: var(--muted);
+  text-decoration: none;
+  margin-left: 0.5rem;
+}
+
+article .tag:hover {
+  color: var(--fg);
+}
+
 article h2 {
   font-size: 1.3rem;
   font-weight: 600;
@@ -114,7 +129,9 @@ article hr {
 <article>
   <header>
     <h1>{{ page.title }}</h1>
-    <p class="meta">{{ page.date | date(format="%d %B %Y") }}</p>
+    <p class="meta">
+      {% if page.extra.author %}{{ page.extra.author }} · {% endif %}{{ page.date | date(format="%d %B %Y") }}{% if page.taxonomies.tags %}{% for tag in page.taxonomies.tags %}<a href="/tags/{{ tag | slugify }}/" class="tag">{{ tag }}</a>{% endfor %}{% endif %}
+    </p>
   </header>
   {{ page.content | safe }}
 </article>

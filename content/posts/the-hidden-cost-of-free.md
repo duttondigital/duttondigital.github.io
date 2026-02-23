@@ -1,6 +1,12 @@
 +++
 title = "The hidden cost of free platforms"
 date = 2026-02-22
+
+[extra]
+author = "Louis Dutton"
+
+[taxonomies]
+tags = ["ai-assisted"]
 +++
 
 Google Forms is free. Facebook Pages are free. Instagram business accounts are free. But nothing is truly free.

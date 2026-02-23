@@ -1,6 +1,12 @@
 +++
 title = "The accessibility problem no one's talking about"
 date = 2026-02-23
+
+[extra]
+author = "Louis Dutton"
+
+[taxonomies]
+tags = ["ai-assisted"]
 +++
 
 Every company builds their own website. Every company implements their own version of accessibility. And every user is forced to adapt to whatever each company decided was "good enough."

@@ -1,6 +1,12 @@
 +++
 title = "AI search and what it means for small businesses"
 date = 2026-02-18
+
+[extra]
+author = "Louis Dutton"
+
+[taxonomies]
+tags = ["ai-assisted"]
 +++
 
 "Find me a good electrician nearby."

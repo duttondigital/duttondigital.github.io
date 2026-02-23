@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{% block title %}Posts | {{ config.title }}{% endblock %}
+{% block title %}{{ term.name }} | {{ config.title }}{% endblock %}
 
 {% block extra_css %}
 .page-header {
@@ -44,26 +44,17 @@
   font-size: 0.8rem;
   color: var(--muted);
 }
-
-.post-item .tag {
-  display: inline-block;
-  padding: 0.15rem 0.4rem;
-  background: var(--accent-dim);
-  border-radius: 3px;
-  font-size: 0.7rem;
-  margin-left: 0.4rem;
-}
 {% endblock %}
 
 {% block content %}
 <div class="page-header">
-  <h1>Posts</h1>
+  <h1>Tagged: {{ term.name }}</h1>
 </div>
 <div class="posts">
-  {% for page in section.pages %}
+  {% for page in term.pages %}
   <a href="{{ page.permalink }}" class="post-item">
     <h2>{{ page.title }}</h2>
-    <span class="meta">{% if page.extra.author %}{{ page.extra.author }} · {% endif %}{{ page.date | date(format="%d %B %Y") }}{% if page.taxonomies.tags %}{% for tag in page.taxonomies.tags %}<span class="tag">{{ tag }}</span>{% endfor %}{% endif %}</span>
+    <span class="meta">{% if page.extra.author %}{{ page.extra.author }} · {% endif %}{{ page.date | date(format="%d %B %Y") }}</span>
   </a>
   {% endfor %}
 </div>

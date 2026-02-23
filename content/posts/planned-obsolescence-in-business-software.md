@@ -1,6 +1,12 @@
 +++
 title = "Planned obsolescence in business software"
 date = 2026-02-19
+
+[extra]
+author = "Louis Dutton"
+
+[taxonomies]
+tags = ["ai-assisted"]
 +++
 
 Your accounting software worked fine yesterday. Today there's an update. Now it needs a subscription. And half the features you relied on are "premium."

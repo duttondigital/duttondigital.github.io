@@ -1,6 +1,12 @@
 +++
 title = "The death of the open web"
 date = 2026-02-20
+
+[extra]
+author = "Louis Dutton"
+
+[taxonomies]
+tags = ["ai-assisted"]
 +++
 
 Twenty years ago, if you wanted to find a local business, you'd search the web. You'd find their website. You'd get their information directly from them.
