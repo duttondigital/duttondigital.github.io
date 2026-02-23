@@ -1,5 +1,5 @@
 +++
-title = "The accessibility problem no one's talking about"
+title = "Why web accessibility is still a mess"
 date = 2026-02-23
 
 [extra]
