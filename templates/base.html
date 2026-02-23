@@ -40,6 +40,12 @@
       padding-top: 2rem;
     }
 
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 0;
+    }
+
     .logo {
       display: flex;
       align-items: center;
@@ -80,6 +86,24 @@
 
     nav a:hover { color: var(--fg); }
 
+    .nav-cta {
+      display: inline-block;
+      margin-left: 1.5rem;
+      padding: 0.5rem 1rem;
+      background: var(--fg);
+      color: var(--bg);
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 0.8rem;
+      transition: opacity 0.2s;
+    }
+
+    .nav-cta:hover {
+      opacity: 0.85;
+      color: var(--bg);
+    }
+
     footer {
       padding: 3rem 0;
       display: flex;
@@ -111,10 +135,10 @@
       </div>
       <div class="logo-text"><span>Dutton</span><span class="logo-stretch">Digital</span></div>
     </a>
-    <div>
+    <div class="nav-links">
+      <a href="/">Home</a>
       <a href="/blog/">Blog</a>
-      <a href="/#packages">Packages</a>
-      <a href="/#approach">About</a>
+      <a href="mailto:contact@dutton.digital" class="nav-cta">Contact</a>
     </div>
   </nav>
 

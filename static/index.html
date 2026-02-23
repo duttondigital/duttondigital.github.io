@@ -75,6 +75,12 @@
     .logo-bold { font-weight: 800; }
     .logo-thin { font-weight: 300; }
 
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 0;
+    }
+
     nav a {
       color: var(--muted);
       text-decoration: none;
@@ -84,6 +90,24 @@
     }
 
     nav a:hover { color: var(--fg); }
+
+    .nav-cta {
+      display: inline-block;
+      margin-left: 1.5rem;
+      padding: 0.5rem 1rem;
+      background: var(--fg);
+      color: var(--bg);
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 0.8rem;
+      transition: opacity 0.2s;
+    }
+
+    .nav-cta:hover {
+      opacity: 0.85;
+      color: var(--bg);
+    }
 
     /* HERO */
     .hero {
@@ -502,21 +526,19 @@
 
 <div class="container">
   <nav>
-    <div class="logo">
+    <a href="/" class="logo">
       <div class="logo-icon">
         <svg viewBox="-1 -1 23 23" fill="none" aria-hidden="true">
-          <!-- Back D: thin outline -->
           <path d="M 1,0 L 8,0 C 15,0 15,14 8,14 L 1,14 A 1,1 0 0,1 0,13 L 0,1 A 1,1 0 0,1 1,0 Z" stroke="white" stroke-width="1.2" fill="none"/>
-          <!-- Front D -->
           <path d="M 7,7 L 14,7 C 21,7 21,21 14,21 L 7,21 A 1,1 0 0,1 6,20 L 6,8 A 1,1 0 0,1 7,7 Z" stroke="white" stroke-width="1.2" fill="none"/>
         </svg>
       </div>
       <div class="logo-text"><span>Dutton</span><span class="logo-stretch">Digital</span></div>
-    </div>
-    <div>
-      <a href="#packages">Packages</a>
-      <a href="#approach">About</a>
-      <a href="#contact">Contact</a>
+    </a>
+    <div class="nav-links">
+      <a href="/">Home</a>
+      <a href="/blog/">Blog</a>
+      <a href="mailto:contact@dutton.digital" class="nav-cta">Contact</a>
     </div>
   </nav>
 
