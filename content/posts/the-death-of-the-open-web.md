@@ -1,5 +1,5 @@
 +++
-title = "The death of the open web"
+title = "The shift from open web to platforms"
 date = 2026-02-20
 
 [extra]
@@ -9,42 +9,28 @@ author = "Louis Dutton"
 tags = ["ai-assisted"]
 +++
 
-Twenty years ago, if you wanted to find a local business, you'd search the web. You'd find their website. You'd get their information directly from them.
+Twenty years ago, finding a local business meant searching the web and landing on their website. Today, discovery often happens through Instagram, Google Maps, or TikTok.
 
-Today, you scroll Instagram.
+## How discovery changed
 
-## Walled gardens everywhere
+Platforms solved real problems. They made it easier for customers to find businesses and for businesses to reach customers. The trade-off is that visibility now depends on algorithms and policies you don't control.
 
-The open web — where anyone could publish anything and anyone could find it — is dying. In its place: platforms.
+Businesses that built their customer base on Instagram have seen their reach change overnight when the platform prioritised different content. There's no appeal process.
 
-Facebook. Instagram. TikTok. Google Maps. Each one a walled garden where businesses play by someone else's rules to be visible at all.
+## The data ownership question
 
-Your own website? Increasingly irrelevant.
+When your presence lives on a platform, so does your data. You can't export your Instagram followers. You can't take your Google reviews elsewhere. If you leave — or get removed — you start from scratch.
 
-## The discovery problem
+This isn't necessarily wrong. Platforms provide value. But it's worth understanding what you're trading.
 
-On the open web, you controlled your presence. You could optimise your site, build links, create content — and people would find you.
+## Reducing dependence
 
-On platforms, you're subject to algorithms you can't influence. One policy change, one algorithm update, and your visibility evaporates overnight.
+Complete independence from platforms isn't realistic for most businesses. But reducing dependence is:
 
-Businesses that built their customer acquisition on Instagram have woken up to find their reach decimated because Meta prioritised different content. They had no recourse. They didn't own the relationship.
+- **Own customer relationships** — Email lists and direct contact information stay with you regardless of platform changes.
+- **Publish in open formats** — Structured data and RSS feeds can be read by any tool, not just one platform. When the next platform emerges, your information is ready.
 
-## The lock-in problem
-
-The real issue isn't standardisation — it's control. Platforms don't just host your information; they own it. Your content, your customer relationships, your reviews all live inside their walls.
-
-You can't take your Instagram followers with you. You can't export your Google reviews. Your presence exists only as long as the platform allows it.
-
-## Is there a way back?
-
-Probably not to how things were. Platforms won because they solved real problems — discovery, trust, convenience.
-
-But we can push back against complete dependence:
-
-- **Own customer relationships** — Email lists, direct contact information. Things that don't disappear when a platform changes its rules.
-- **Publish in open formats** — Structured data, RSS feeds. Information that any tool can read, not just one platform. This is how you stay visible regardless of which platform dominates next.
-
-None of this will bring back 2005. But it might prevent a future where a few platforms control all commercial visibility online.
+This approach doesn't mean abandoning platforms. It means not being entirely dependent on them.
 
 ---
 

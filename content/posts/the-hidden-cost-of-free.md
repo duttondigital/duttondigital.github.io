@@ -9,45 +9,33 @@ author = "Louis Dutton"
 tags = ["ai-assisted"]
 +++
 
-Google Forms is free. Facebook Pages are free. Instagram business accounts are free. But nothing is truly free.
+Google Forms, Facebook Pages, Instagram business accounts — all free to use. These tools work well and cost nothing upfront. But there's a trade-off worth understanding.
 
-When a product costs nothing, you're not the customer. Your data is.
+## How free platforms make money
 
-## The trade you didn't agree to
+Every customer interaction on these platforms generates data. Google learns from your form submissions. Meta tracks engagement on your page. This information helps them sell targeted advertising.
 
-Every time a customer fills out your Google Form, Google learns something. Every interaction on your Facebook Page feeds Meta's advertising machine.
+On Facebook and Instagram, your customers might see ads from competitors based on their interaction with your page. That's part of how the model works.
 
-You're not just using a free tool. You're handing over your customer relationships to a company whose entire business model is selling attention and information.
+## The switching cost
 
-## What they're actually getting
+Free platforms become harder to leave over time. Your customer list, reviews, and content all live in their system. Moving means rebuilding from scratch, which is why most businesses don't.
 
-It's not just names and emails. It's patterns. When do your customers book? What do they buy together? What makes them come back?
+## Paid alternatives
 
-This data is extraordinarily valuable — valuable enough that companies give you sophisticated software for free just to collect it.
+When you pay for software, the business model is simpler: they make money by being useful to you. There's no advertising layer, no data extraction.
 
-On platforms like Facebook and Instagram, your customers might see ads from your competitors based on their interaction with your page. You have no control over this.
+This doesn't mean free tools are always wrong. For many businesses, the trade-off is worthwhile. But it helps to understand what you're trading.
 
-## The dependency trap
+## Questions to consider
 
-Free platforms are sticky by design. Your customer list lives in their system. Your reviews are on their platform. Moving away means starting from scratch.
-
-This isn't accidental. It's the business model.
-
-## What's the alternative?
-
-Pay for things.
-
-When you pay for software, the incentives align. The company makes money by serving you well, not by extracting value from your customers.
-
-## Questions worth asking
-
-Before you sign up for that free tool:
+Before signing up for a free tool:
 
 - How does this company make money?
 - What data are they collecting?
-- What happens to my data if I leave?
+- Can you export your data if you leave?
 
-If you can't answer these questions, you're not making an informed choice. You're just hoping for the best.
+Knowing the answers helps you make an informed choice rather than discovering the costs later.
 
 ---
 

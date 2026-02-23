@@ -9,43 +9,33 @@ author = "Louis Dutton"
 tags = ["ai-assisted"]
 +++
 
-"You should build an app." It's advice that gets thrown around constantly. And for most local businesses, it's terrible advice.
+Building a custom app sounds appealing — customers could book appointments, browse menus, get updates. But for most local businesses, the maths doesn't work out.
 
-## The app fantasy
+## Usage patterns
 
-The pitch is seductive. Your own app! Customers can book appointments, browse your menu, get notifications. It'll be right there on their home screen.
+The average person uses about 10 apps per day, and those slots are dominated by messaging, social media, and utilities. A local business app typically gets downloaded once, used a few times, then forgotten.
 
-Here's the reality: nobody wants another app.
+## Cost considerations
 
-The average person uses about 10 apps per day. They're not looking to add your coffee shop to the rotation. They'll download it once, maybe use it twice, then forget it exists.
+A custom app costs tens of thousands of pounds to build. iOS and Android update constantly, so there's ongoing maintenance. Even template-based app builders mean monthly fees for something that may rarely get used.
 
-## What apps actually cost
+## What customers actually need
 
-A decent custom app costs tens of thousands of pounds. Then there's maintenance — iOS and Android update constantly. Budget for ongoing developer costs indefinitely.
+When someone looks up a local business, they want basic information: hours, location, what you offer, how to contact you. A fast website provides all of this without requiring a download.
 
-Even "cheap" app builders lock you into monthly fees for something generic. For what? An app that sits unused on a handful of phones?
+## About notifications
 
-## What customers actually want
+Push notifications can feel like a feature worth having, but most users disable them or ignore them. Overuse damages your relationship with customers rather than strengthening it.
 
-When someone looks up your business, they want basic information quickly: Are you open? Where are you? What do you offer? How do I contact you?
+## A simpler approach
 
-They don't want to download an app to find this out. A simple, fast website does this perfectly.
+Instead of an app:
 
-## The notification trap
+1. **Keep information accurate** — Hours, location, contact details consistent everywhere.
+2. **Make your site fast** — Works instantly on any device.
+3. **Make contact easy** — Phone, email, directions clearly visible.
 
-"But push notifications!" You know what that's called? Spam.
-
-People are drowning in notifications. Adding to the noise doesn't build loyalty — it builds resentment.
-
-## The simpler path
-
-Instead of building an app nobody asked for, focus on:
-
-1. **Accurate information** — Hours, location, contact details correct everywhere.
-2. **Fast load times** — Your website should work instantly on any device.
-3. **Easy contact** — Phone, email, directions. Don't make people hunt.
-
-This isn't exciting. It's not cutting-edge. It just works.
+Most customers don't need an app to interact with a local business. They need reliable information that's easy to find.
 
 ---
 

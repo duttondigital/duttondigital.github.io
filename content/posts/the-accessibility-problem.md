@@ -9,41 +9,31 @@ author = "Louis Dutton"
 tags = ["ai-assisted"]
 +++
 
-Every company builds their own website. Every company implements their own version of accessibility. And every user is forced to adapt to whatever each company decided was "good enough."
+Every company builds their own website and implements their own version of accessibility. Users have to adapt to whatever each company decided was good enough.
 
-This is broken.
+## How it works today
 
-## The current model
+Accessibility is handled individually by each business. A restaurant builds a website. A shop builds a website. Each makes their own choices about fonts, colours, contrast, and screen reader support.
 
-Accessibility is something each business handles individually. A restaurant builds a website. A shop builds a website. Each makes their own choices about fonts, colours, contrast, screen reader support.
+Some do it well. Most don't. Proper accessibility requires expertise and ongoing maintenance that most businesses can't afford. The result is a web that's inconsistent and often unusable for people who rely on accessibility features.
 
-Some do it well. Most don't. Implementing proper accessibility is genuinely difficult — it requires expertise and ongoing maintenance that most businesses can't afford.
+## The same applies to user experience generally
 
-The result? A web that's inconsistent and frequently unusable for people who need accessibility features most.
+When you visit a website, you're operating within parameters set by that company. You accept their cookies or you don't use the site. You navigate their way. Users have limited control over their own experience.
 
-## It's not just accessibility
+## A different approach
 
-The same problem applies to tracking and user experience generally. When you visit a website, you're operating entirely within parameters set by that company. You accept their cookies or you don't use the site. You navigate their way.
+What if information was separate from how it's displayed?
 
-Users have almost no control over their own experience.
+Google already does this with business hours in search results. The information appears formatted consistently, readable by screen readers, scalable to any text size — because the data is structured in a standard way.
 
-## A better approach
+The same idea can extend further. Instead of every business building their own website, businesses publish their information in a standard format — hours, menus, events, products — and users choose how to view it. Your device, your preferences, your accessibility settings, applied to every business.
 
-What if the information was separate from how it's displayed?
+## Why this matters
 
-Think about how Google shows business hours directly in search results. The information appears formatted consistently, readable by screen readers, scalable to any text size — because the data is structured in a standard way.
+When accessibility is implemented once at the platform level, it can be done properly — tested thoroughly, maintained consistently. The standard becomes high rather than a patchwork of varying quality.
 
-Extend that idea. Instead of every business building their own website, businesses publish their information in a standard format — hours, menus, events, products — and users choose how to view it.
-
-Your phone. Your preferences. Your accessibility settings. Applied universally, to every business, every time.
-
-## The real benefit
-
-When accessibility is implemented once, at the platform level, it can be done properly. Tested thoroughly. Maintained consistently. The standard becomes genuinely high, not a patchwork of half-measures.
-
-And businesses benefit too. They don't need to become accessibility experts — they just keep their information accurate.
-
-Simple technology that works. For everyone.
+Businesses benefit too. They don't need to become accessibility experts. They just keep their information accurate.
 
 ---
 
