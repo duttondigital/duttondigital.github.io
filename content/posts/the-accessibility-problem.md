@@ -1,5 +1,5 @@
 +++
-title = "The Accessibility Problem No One's Talking About"
+title = "The accessibility problem no one's talking about"
 date = 2026-02-23
 +++
 
