@@ -56,4 +56,4 @@ Worth thinking about.
 
 ---
 
-*The best defence against platform dependence is a presence you control. That's what we help local businesses build. [Get in touch](mailto:contact@dutton.digital) if you'd like to talk about it.*
+*Have questions? [contact@dutton.digital](mailto:contact@dutton.digital)*

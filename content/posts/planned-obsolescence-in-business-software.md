@@ -69,4 +69,4 @@ The goal is software that serves you, not software that extracts maximum revenue
 
 ---
 
-*At Dutton Digital, we build tools that do one thing well. No feature bloat, no surprise pricing changes. [Learn more](/).*
+*We build simple tools for local businesses. [See what we offer](/).*
