@@ -86,7 +86,7 @@
 
     .nav-links a:hover { color: var(--fg); }
 
-    .nav-cta {
+    .nav-links .nav-cta {
       display: inline-block;
       margin-left: 1.5rem;
       padding: 0.5rem 1rem;
@@ -99,9 +99,11 @@
       transition: opacity 0.2s;
     }
 
-    .nav-cta:hover {
+    .nav-links .nav-cta:hover,
+    .nav-links .nav-cta:active {
       opacity: 0.85;
       color: var(--bg);
+      background: var(--fg);
     }
 
     footer {
