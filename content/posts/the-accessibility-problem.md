@@ -41,4 +41,4 @@ Simple technology that works. For everyone.
 
 ---
 
-*We'd love to hear your thoughts: contact@dutton.digital*
+*Have thoughts? [contact@dutton.digital](mailto:contact@dutton.digital)*

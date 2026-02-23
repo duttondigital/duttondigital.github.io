@@ -5,7 +5,7 @@ date = 2026-02-18
 
 "Find me a good electrician nearby."
 
-Ten years ago, that meant typing into Google and browsing results. Increasingly, people are asking AI assistants. As that shift accelerates, it will change how businesses get discovered.
+Ten years ago, that meant typing into Google and browsing results. Increasingly, people are asking AI assistants for recommendations. As that shift accelerates, it will change how businesses get discovered.
 
 ## The shift from links to answers
 

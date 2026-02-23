@@ -3,7 +3,7 @@ title = "The hidden cost of free platforms"
 date = 2026-02-22
 +++
 
-Google Forms is free. Facebook Pages are free. Instagram business accounts are free. There's no such thing as free.
+Google Forms is free. Facebook Pages are free. Instagram business accounts are free. But nothing is truly free.
 
 When a product costs nothing, you're not the customer. Your data is.
 

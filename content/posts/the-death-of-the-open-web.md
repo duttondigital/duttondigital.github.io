@@ -35,11 +35,11 @@ Probably not to how things were. Platforms won because they solved real problems
 
 But we can push back against complete dependence:
 
-- **Maintain your own web presence** — Even if most traffic comes from platforms, your own site means you always have somewhere to point people.
 - **Own customer relationships** — Email lists, direct contact information. Things that don't disappear when a platform changes its rules.
+- **Publish in open formats** — Structured data, RSS feeds. Information that any tool can read, not just one platform. This is how you stay visible regardless of which platform dominates next.
 
 None of this will bring back 2005. But it might prevent a future where a few platforms control all commercial visibility online.
 
 ---
 
-*Have thoughts on this? contact@dutton.digital*
+*Have thoughts? [contact@dutton.digital](mailto:contact@dutton.digital)*
