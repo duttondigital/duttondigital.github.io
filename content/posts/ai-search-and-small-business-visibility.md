@@ -9,26 +9,26 @@ author = "Louis Dutton"
 tags = ["ai-assisted"]
 +++
 
-Traditional search gives you a list of results to browse. AI search increasingly gives you an answer — one recommendation, or a short list the AI has already filtered for you.
+Traditional search gives you a list of results to browse. AI search increasingly just gives you an answer — one recommendation, or a short list the AI has already filtered.
 
-This changes how businesses get discovered.
+That changes how businesses get discovered.
 
-## Less transparency
+## Harder to understand
 
-Search engines were never fully transparent, but there were patterns you could learn. Keywords and links mattered. You could optimise.
+Search engines were never fully transparent, but there were patterns you could learn. Keywords mattered, links mattered, and you could optimise for them.
 
-AI systems work differently. They're trained on datasets with biases that aren't well documented. They sometimes state things confidently that aren't accurate. A business might be overlooked, recommended incorrectly, or described inaccurately — and there's limited recourse.
+AI systems are murkier. They're trained on datasets with biases nobody fully understands. They sometimes state things confidently that aren't true. Your business might get overlooked, recommended for the wrong reasons, or described inaccurately — and there's not much you can do about it.
 
-## Practical steps
+## What you can do
 
-The landscape is still evolving, but some approaches make sense:
+The landscape is shifting, but a few things still make sense:
 
-- **Keep information consistent** — Name, address, hours, services should match across Google, Facebook, your website. Inconsistencies create problems for any system trying to surface accurate information.
-- **Claim your Google Business Profile** — Remains the primary source of local business information for most AI systems.
-- **Build direct relationships** — Customers who know you don't need AI to find you. Email lists and repeat business matter.
-- **Be specific** — "Family-run electrician serving Truro since 1985" gives AI systems more to work with than "electrical services."
+- **Keep your information consistent** — Name, address, hours, services should match everywhere: Google, Facebook, your website. Inconsistencies confuse any system trying to find accurate information.
+- **Claim your Google Business Profile** — Still the main source of local business data for most AI systems.
+- **Build direct relationships** — Customers who already know you don't need AI to find you. Email lists and repeat visits matter more than ever.
+- **Be specific** — "Family-run electrician serving Truro since 1985" gives AI more to work with than just "electrical services."
 
-None of this guarantees visibility. But maintaining accurate, consistent information across platforms positions you well regardless of how search continues to evolve.
+None of this guarantees you'll show up. But it's the best way to position yourself for whatever comes next.
 
 ---
 

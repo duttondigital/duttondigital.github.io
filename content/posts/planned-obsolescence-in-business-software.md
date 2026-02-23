@@ -9,30 +9,32 @@ author = "Louis Dutton"
 tags = ["ai-assisted"]
 +++
 
-Your accounting software worked fine yesterday. Today there's an update, it requires a subscription, and half the features you relied on are now premium add-ons.
+Your accounting software worked fine yesterday. Today there's an update, it wants a subscription, and half the features you relied on are now premium add-ons. Sound familiar?
 
-## Subscription pricing
+## The subscription shift
 
-Software used to be something you bought once and owned. Now most business software is subscription-based. Prices increase over time, features get moved behind higher tiers, and what was included becomes an add-on. The product you signed up for gradually becomes more expensive and less useful.
+Software used to be something you bought and owned. Now most business software is subscription-based, and the terms tend to creep: prices go up, features move to higher tiers, things that were included become extras. The product you signed up for slowly becomes something else.
 
-## Forced upgrades
+## Upgrades you didn't ask for
 
-Software companies routinely end support for older versions, sometimes shutting them down entirely. Your workflow, your data, your familiarity with the interface — none of it matters. You upgrade or lose access.
+Software companies regularly end support for older versions — sometimes shutting them down entirely. Your workflow, your data, your muscle memory with the interface — none of that factors in. Upgrade or lose access.
 
-## Unnecessary complexity
+## Complexity for its own sake
 
-Simple tools don't justify high prices, so tools get complicated. Features get added whether anyone asked for them or not. Interfaces get redesigned. The software becomes bloated and harder to use, even though you just wanted to send invoices.
+Simple tools don't justify high prices, so tools get complicated. Features pile up whether anyone asked for them or not. Interfaces get redesigned. You just wanted to send invoices, now you're navigating a dashboard with AI insights.
 
-## What businesses actually need
+## What most businesses actually need
 
-Most businesses need simple things done reliably: track money, keep customer information organised, manage appointments, communicate clearly. They don't need AI features or a dozen integrations. They need tools that work, stay stable, and don't hold their data hostage.
+Track money. Keep customer info organised. Manage appointments. Communicate clearly. That's the core of it. Not AI features, not a dozen integrations — just tools that work, stay stable, and let you take your data with you.
 
-## What to look for
+## Finding better options
 
-- **Small vendors** — Companies not chasing aggressive growth tend to offer more stable products.
-- **Simplicity** — A tool that does less but does it reliably is better than one that does everything poorly.
-- **Transparent pricing** — If the price is clear and stays clear, that's a good sign.
-- **Easy data export** — If you can take your data with you, you're not locked in.
+A few things worth looking for:
+
+- **Smaller vendors** tend to be more stable — they're not chasing growth at all costs.
+- **Simple beats sophisticated** if the simple tool actually does what you need.
+- **Clear pricing** that doesn't change every year is a good sign.
+- **Easy data export** means you're not trapped if things change.
 
 ---
 

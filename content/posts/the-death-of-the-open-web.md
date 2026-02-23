@@ -9,28 +9,28 @@ author = "Louis Dutton"
 tags = ["ai-assisted"]
 +++
 
-Twenty years ago, finding a local business meant searching the web and landing on their website. Today, discovery often happens through Instagram, Google Maps, or TikTok.
+Twenty years ago, finding a local business meant searching the web and landing on their website. Today, you're more likely to find them on Instagram, Google Maps, or TikTok.
 
-## How discovery changed
+## Why platforms won
 
-Platforms solved real problems. They made it easier for customers to find businesses and for businesses to reach customers. The trade-off is that visibility now depends on algorithms and policies you don't control.
+Platforms made discovery easier — for customers and businesses alike. That's genuinely useful. The catch is that your visibility now depends on algorithms and policies you don't control.
 
-Businesses that built their customer base on Instagram have seen their reach change overnight when the platform prioritised different content. There's no appeal process.
+Businesses that built their customer base on Instagram have seen their reach drop overnight when the platform changed what it prioritises. There's no one to call about it.
 
-## The data ownership question
+## Your data lives there too
 
-When your presence lives on a platform, so does your data. You can't export your Instagram followers. You can't take your Google reviews elsewhere. If you leave — or get removed — you start from scratch.
+When your presence is on a platform, so is your data. You can't export your Instagram followers. Your Google reviews stay on Google. If you leave — or get removed — you're starting over.
 
-This isn't necessarily wrong. Platforms provide value. But it's worth understanding what you're trading.
+That's not necessarily unfair. Platforms provide real value. But it helps to know what you're trading.
 
-## Reducing dependence
+## Hedging your bets
 
-Complete independence from platforms isn't realistic for most businesses. But reducing dependence is:
+Going fully independent isn't realistic for most businesses. But you can reduce the risk:
 
-- **Own customer relationships** — Email lists and direct contact information stay with you regardless of platform changes.
-- **Publish in open formats** — Structured data and RSS feeds can be read by any tool, not just one platform. When the next platform emerges, your information is ready.
+- **Own customer relationships** — An email list stays with you no matter what Instagram does next.
+- **Publish in open formats** — Structured data and RSS feeds work everywhere. When the next platform comes along, your information is ready for it.
 
-This approach doesn't mean abandoning platforms. It means not being entirely dependent on them.
+You don't have to quit platforms. Just don't bet everything on them.
 
 ---
 

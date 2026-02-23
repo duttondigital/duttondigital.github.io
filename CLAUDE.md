@@ -11,7 +11,9 @@
 - Down to earth and conversational, not corporate
 - Informative without being preachy
 - Acknowledge trade-offs rather than presenting one-sided arguments
-- Avoid sensationalism
+- Avoid sensationalism, but also avoid being too dry or clinical
+- Keep it readable and personable — not a white paper
+- British English, no Americanisms (colour not color, organisation not organization)
 
 ## What to avoid
 
