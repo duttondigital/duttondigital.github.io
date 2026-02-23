@@ -23,13 +23,15 @@ Users have almost no control over their own experience.
 
 ## A better approach
 
-What if we decoupled the data from the presentation?
+What if the information was separate from how it's displayed?
 
-Instead of every business building their own website with their own accessibility implementation, imagine a world where businesses publish structured data — their opening hours, their menu, their events, their products — and users choose how to view it.
+Think about how Google already shows business hours directly in search results. You don't need to visit a website — the information just appears, formatted consistently, readable by screen readers, scalable to any text size. That's because the data is structured in a standard way that any tool can read.
 
-Your device. Your preferences. Your accessibility settings. Applied universally, to every business, every time.
+Now extend that idea. Instead of every business building their own website with their own accessibility implementation, businesses publish their information in a standard format — opening hours, menus, events, products — and users choose how to view it.
 
-A visually impaired user wouldn't need to hope that each individual restaurant implemented proper screen reader support. Their preferred reader would just work, because it's reading standardised data, not navigating a bespoke website.
+Your phone. Your preferences. Your accessibility settings. Applied universally, to every business, every time.
+
+A visually impaired user wouldn't need to hope that each individual restaurant implemented proper screen reader support. Their preferred app would just work, because it's reading standardised information, not navigating a bespoke website.
 
 Someone who needs high contrast wouldn't be stuck with whatever colour scheme a designer picked. They'd see everything in their chosen format.
 
@@ -39,7 +41,7 @@ This isn't just about making things easier for users with disabilities — thoug
 
 When accessibility is implemented once, at the platform level, it can be done properly. It can be tested thoroughly. It can be maintained consistently. The standard becomes genuinely high, not a patchwork of half-measures.
 
-And businesses benefit too. They don't need to become accessibility experts. They just need to publish accurate data.
+And businesses benefit too. They don't need to become accessibility experts. They just need to keep their information accurate — we handle the rest.
 
 ## Where we're headed
 

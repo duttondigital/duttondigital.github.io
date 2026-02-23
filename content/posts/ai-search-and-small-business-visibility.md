@@ -5,7 +5,7 @@ date = 2026-02-18
 
 "Find me a good electrician nearby."
 
-Ten years ago, that meant typing into Google and browsing results. Five years ago, maybe asking Siri. Today, people are asking ChatGPT. And that changes everything about how businesses get discovered.
+Ten years ago, that meant typing into Google and browsing results. Five years ago, maybe asking Siri. Increasingly, people are asking AI assistants like ChatGPT. And as that shift accelerates, it will change everything about how businesses get discovered.
 
 ## The shift from links to answers
 
@@ -29,22 +29,20 @@ Your business might be invisible to AI search because of factors completely outs
 
 With traditional search, power was distributed (imperfectly) across many players. Your website mattered. Review platforms mattered. Local directories mattered. Google dominated, but wasn't the only path to discovery.
 
-AI search concentrates power further. A handful of companies — OpenAI, Google, Anthropic, maybe a few others — will determine which businesses get recommended for which queries. Their training choices, their alignment decisions, their business partnerships will shape commercial visibility for millions of businesses.
+AI search concentrates power further. A handful of tech companies will determine which businesses get recommended for which queries. Their training choices, their design decisions, their business partnerships will shape commercial visibility for millions of businesses.
 
 That's an extraordinary amount of power with very little accountability.
 
 ## What can small businesses do?
 
-Honestly? It's not clear yet. This is new territory.
+This is new territory, but there are practical steps you can take now:
 
-Some things that probably help:
+- **Keep your information accurate everywhere** — Your name, address, hours, and services should be identical across Google, Facebook, your website, and anywhere else you appear. Inconsistencies confuse AI systems and increase the chance of wrong or outdated information being served.
+- **Claim and update your Google Business Profile** — This is still the single most important source of local business information for most AI systems.
+- **Build direct relationships** — Customers who know you don't need AI to find you. Collect email addresses (with permission). Encourage repeat visits. Word of mouth matters more than ever.
+- **Be specific about what you do** — Generic descriptions blur together. "Family-run electrician serving Truro since 1985" is more memorable than "electrical services."
 
-- **Structured data** — Machine-readable information about your business makes it easier for AI systems to understand and accurately represent you.
-- **Accuracy everywhere** — Consistent, correct information across all platforms reduces the chance of AI confusion or hallucination about your business.
-- **Direct relationships** — Customers who know you don't need AI to find you. Email lists, repeat business, word of mouth — these matter more than ever.
-- **Distinctiveness** — Generic businesses blur together. Clear identity makes you memorable to humans and potentially more distinguishable to AI.
-
-But fundamentally, small businesses are about to become dependent on AI systems they don't understand and can't influence. That's concerning.
+None of this guarantees visibility in AI search. But it gives you the best chance — and builds resilience for whatever comes next.
 
 ## The bigger picture
 
@@ -58,4 +56,4 @@ Worth thinking about.
 
 ---
 
-We help local businesses maintain their own presence and direct customer relationships. Because depending entirely on platforms you don't control isn't a strategy. Reach us at contact@dutton.digital.
+*The best defence against platform dependence is a presence you control. That's what we help local businesses build. [Get in touch](mailto:contact@dutton.digital) if you'd like to talk about it.*

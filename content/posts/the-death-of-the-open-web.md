@@ -53,4 +53,4 @@ None of this will bring back 2005. But it might prevent a future where a few pla
 
 ---
 
-We build simple web presences for local businesses. No platform dependence — just your information, under your control. Reach us at contact@dutton.digital.
+*Have thoughts on this? We'd like to hear them: contact@dutton.digital*

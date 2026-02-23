@@ -60,13 +60,13 @@ You need tools that work, stay stable, and don't hold your data hostage.
 
 They exist. Look for:
 
-- **One-time purchase software** — Increasingly rare, but still available for many common tasks.
-- **Open source options** — Free, community-maintained, and you can often host it yourself.
 - **Small vendors** — Companies that aren't chasing growth at all costs tend to offer more stable, focused products.
 - **Simple over sophisticated** — The tool that does less but does it reliably beats the tool that does everything poorly.
+- **Transparent pricing** — If the price is clear and stays clear, that's a good sign.
+- **Easy data export** — If you can take your data with you, you're not trapped.
 
 The goal is software that serves you, not software that extracts maximum revenue from you.
 
 ---
 
-We build straightforward tools for local businesses. No feature bloat, no subscription games — just software that does what you need. Contact us at contact@dutton.digital.
+*At Dutton Digital, we build tools that do one thing well. No feature bloat, no surprise pricing changes. [Learn more](/).*

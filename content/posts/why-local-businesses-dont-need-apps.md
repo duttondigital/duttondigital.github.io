@@ -11,7 +11,7 @@ The pitch is seductive. Your own app! Customers can book appointments, browse yo
 
 Here's the reality: nobody wants another app.
 
-The average person uses about nine apps daily. They're not looking to add your coffee shop to the rotation. They'll download it once, maybe use it twice, then forget it exists until they need to clear storage space.
+Most people use fewer than ten apps regularly. They're not looking to add your coffee shop to the rotation. They'll download it once, maybe use it twice, then forget it exists until they need to clear storage space.
 
 ## What apps actually cost
 
@@ -62,4 +62,4 @@ This isn't exciting. It's not cutting-edge. It just works.
 
 ---
 
-We help local businesses get online without the complexity. No apps, no bloat — just the essentials. Contact us at contact@dutton.digital.
+*Running a local business and wondering what you actually need to get online? [Drop us a line](mailto:contact@dutton.digital) — we're happy to chat, no sales pitch required.*

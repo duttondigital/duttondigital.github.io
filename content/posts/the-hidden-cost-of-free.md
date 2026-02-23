@@ -19,7 +19,7 @@ It's not just the obvious stuff — names, emails, phone numbers. It's patterns.
 
 This data is extraordinarily valuable. Valuable enough that companies will give you sophisticated software for free just to collect it.
 
-And once they have it, you have no control over how it's used. Your customers might see ads from your competitors. Their information might be combined with data from dozens of other sources to build profiles they never consented to.
+And once they have it, you have no control over how it's used. On ad-supported platforms like Facebook and Instagram, your customers might see ads from your competitors based on their interaction with your page. Their information gets combined with data from dozens of other sources to build profiles they never consented to.
 
 ## The dependency trap
 
@@ -51,4 +51,4 @@ If you can't answer these questions, you're not making an informed choice. You'r
 
 ---
 
-We build tools for local businesses that don't rely on harvesting customer data. If that matters to you, get in touch at contact@dutton.digital.
+*This is part of a series on technology choices for local businesses. Read more at [dutton.digital/posts](/posts/).*
