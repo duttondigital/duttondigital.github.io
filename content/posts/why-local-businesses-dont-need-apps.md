@@ -13,7 +13,7 @@ Building a custom app sounds appealing — customers could book appointments, br
 
 ## People don't want more apps
 
-The average person uses about 10 apps per day, and those slots are taken by messaging, social media, and utilities. A local business app typically gets downloaded once, opened a couple of times, then forgotten.
+The average person uses about [10 apps per day][1], and those slots are taken by messaging, social media, and utilities. A local business app typically gets downloaded once, opened a couple of times, then forgotten.
 
 ## The cost adds up
 
@@ -36,6 +36,14 @@ Instead of an app:
 3. **Make contact obvious** — Phone, email, directions, right there.
 
 Most customers don't need an app to find a local business. They need the basics, and they need them quickly.
+
+---
+
+**References**
+
+1. [Mobile App Download Statistics & Usage Statistics (2026) — Buildfire](https://buildfire.com/app-statistics/)
+
+[1]: https://buildfire.com/app-statistics/
 
 ---
 

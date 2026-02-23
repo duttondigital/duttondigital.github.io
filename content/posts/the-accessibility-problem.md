@@ -15,7 +15,7 @@ Every company builds their own website and implements their own version of acces
 
 A restaurant builds a website. A shop builds a website. Each makes their own choices about fonts, colours, contrast, and screen reader support.
 
-Some do it well. Most don't, and it's hard to blame them — proper accessibility takes expertise and ongoing work that most small businesses can't afford. The result is a web that's frustratingly inconsistent for anyone who relies on accessibility features.
+Some do it well. [Most don't][1], and it's hard to blame them — proper accessibility takes expertise and ongoing work that most small businesses can't afford. The result is a web that's frustratingly inconsistent for anyone who relies on accessibility features.
 
 ## It's not just accessibility
 
@@ -32,6 +32,14 @@ That idea could go further. Instead of every business building their own site, t
 When accessibility is done once, at the platform level, it can be done properly. Tested thoroughly, maintained consistently. Everyone gets the same high standard instead of a patchwork.
 
 Businesses win too — they don't need to become accessibility experts. They just keep their information accurate.
+
+---
+
+**References**
+
+1. [The WebAIM Million — 2025 report on the accessibility of the top 1,000,000 home pages](https://webaim.org/projects/million/)
+
+[1]: https://webaim.org/projects/million/
 
 ---
 

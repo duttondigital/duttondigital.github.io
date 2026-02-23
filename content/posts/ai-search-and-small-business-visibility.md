@@ -17,7 +17,7 @@ That changes how businesses get discovered.
 
 Search engines were never fully transparent, but there were patterns you could learn. Keywords mattered, links mattered, and you could optimise for them.
 
-AI systems are murkier. They're trained on datasets with biases nobody fully understands. They sometimes state things confidently that aren't true. Your business might get overlooked, recommended for the wrong reasons, or described inaccurately — and there's not much you can do about it.
+AI systems are murkier. They're trained on datasets with biases nobody fully understands. They sometimes [state things confidently that aren't true][1]. Your business might get overlooked, recommended for the wrong reasons, or described inaccurately — and there's not much you can do about it.
 
 ## What you can do
 
@@ -29,6 +29,14 @@ The landscape is shifting, but a few things still make sense:
 - **Be specific** — "Family-run electrician serving Truro since 1985" gives AI more to work with than just "electrical services."
 
 None of this guarantees you'll show up. But it's the best way to position yourself for whatever comes next.
+
+---
+
+**References**
+
+1. [AI Hallucination Report 2026 — All About AI](https://www.allaboutai.com/resources/ai-statistics/ai-hallucinations/)
+
+[1]: https://www.allaboutai.com/resources/ai-statistics/ai-hallucinations/
 
 ---
 

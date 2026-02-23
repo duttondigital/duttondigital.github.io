@@ -33,6 +33,13 @@
 - End with practical advice or questions to consider
 - CTA varies: link to posts, email contact, or link to services
 
+## Citations
+
+- Specific factual claims must be backed by reliable sources
+- Add a **References** section at the end of the post with numbered links
+- Use markdown reference-style links for inline citations (e.g. `[claim][1]`)
+- General observations and industry patterns don't require citations
+
 ## Content alignment
 
 Our approach favours standardised, structured data that users control. When discussing platforms or data portability:
