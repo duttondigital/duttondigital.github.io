@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a1a"/>
+      <stop offset="100%" style="stop-color:#0d0d0d"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="softGlow">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="400" height="400" fill="url(#bgGrad)"/>
+
+  <!-- Central node - your business -->
+  <g filter="url(#glow)">
+    <circle cx="200" cy="200" r="30" stroke="#ffffff" stroke-width="2.5" fill="none"/>
+    <circle cx="200" cy="200" r="8" fill="#ffffff"/>
+  </g>
+
+  <!-- Platform nodes surrounding -->
+  <g filter="url(#glow)" stroke="#ffffff" stroke-width="2" fill="none">
+    <!-- Top platform -->
+    <rect x="175" y="70" width="50" height="35" rx="6"/>
+
+    <!-- Right platform -->
+    <rect x="295" y="182" width="50" height="35" rx="6"/>
+
+    <!-- Bottom platform -->
+    <rect x="175" y="295" width="50" height="35" rx="6"/>
+
+    <!-- Left platform -->
+    <rect x="55" y="182" width="50" height="35" rx="6"/>
+  </g>
+
+  <!-- Connection lines - showing dependency -->
+  <g filter="url(#softGlow)" stroke="#ffffff" stroke-width="1.5" fill="none" opacity="0.5">
+    <line x1="200" y1="170" x2="200" y2="105"/>
+    <line x1="230" y1="200" x2="295" y2="200"/>
+    <line x1="200" y1="230" x2="200" y2="295"/>
+    <line x1="170" y1="200" x2="105" y2="200"/>
+  </g>
+
+  <!-- Arrows pointing inward - showing platform pull -->
+  <g filter="url(#glow)" stroke="#ffffff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <polyline points="190,140 200,125 210,140"/>
+    <polyline points="260,190 275,200 260,210"/>
+    <polyline points="210,260 200,275 190,260"/>
+    <polyline points="140,210 125,200 140,190"/>
+  </g>
+
+  <!-- Subtle grid pattern -->
+  <g stroke="#ffffff" stroke-width="0.5" opacity="0.1">
+    <line x1="100" y1="0" x2="100" y2="400"/>
+    <line x1="200" y1="0" x2="200" y2="400"/>
+    <line x1="300" y1="0" x2="300" y2="400"/>
+    <line x1="0" y1="100" x2="400" y2="100"/>
+    <line x1="0" y1="200" x2="400" y2="200"/>
+    <line x1="0" y1="300" x2="400" y2="300"/>
+  </g>
+</svg>

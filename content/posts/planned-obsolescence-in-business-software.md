@@ -4,6 +4,8 @@ date = 2026-02-19
 
 [extra]
 author = "Louis Dutton"
+image = "/images/posts/obsolescence.svg"
+image_alt = "Software window with update arrows and price symbol"
 
 [taxonomies]
 tags = ["ai-assisted"]

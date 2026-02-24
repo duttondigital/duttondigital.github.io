@@ -4,6 +4,8 @@ date = 2026-02-18
 
 [extra]
 author = "Louis Dutton"
+image = "/images/posts/ai-search.svg"
+image_alt = "Magnifying glass with neural network pattern and filtered search results"
 
 [taxonomies]
 tags = ["ai-assisted"]

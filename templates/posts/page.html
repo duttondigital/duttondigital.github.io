@@ -118,6 +118,21 @@ article img {
   margin: 1.5rem 0;
 }
 
+article .hero-image {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto 2.5rem;
+  display: block;
+  border-radius: 16px;
+}
+
+article .hero-image img {
+  width: 100%;
+  height: auto;
+  margin: 0;
+  border-radius: 16px;
+}
+
 article hr {
   border: none;
   border-top: 1px solid var(--border);
@@ -133,6 +148,11 @@ article hr {
       {% if page.extra.author %}{{ page.extra.author }} · {% endif %}{{ page.date | date(format="%d %B %Y") }}{% if page.taxonomies.tags %}{% for tag in page.taxonomies.tags %}<a href="/tags/{{ tag | slugify }}/" class="tag">{{ tag }}</a>{% endfor %}{% endif %}
     </p>
   </header>
+  {% if page.extra.image %}
+  <div class="hero-image">
+    <img src="{{ page.extra.image }}" alt="{{ page.extra.image_alt | default(value='') }}">
+  </div>
+  {% endif %}
   {{ page.content | safe }}
 </article>
 {% endblock %}

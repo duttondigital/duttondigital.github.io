@@ -4,6 +4,8 @@ date = 2026-02-20
 
 [extra]
 author = "Louis Dutton"
+image = "/images/posts/open-web.svg"
+image_alt = "Central node surrounded by platform boxes with connecting lines"
 
 [taxonomies]
 tags = ["ai-assisted"]

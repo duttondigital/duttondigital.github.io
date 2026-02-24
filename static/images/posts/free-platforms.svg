@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a1a"/>
+      <stop offset="100%" style="stop-color:#0d0d0d"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="softGlow">
+      <feGaussianBlur stdDeviation="5" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="400" height="400" fill="url(#bgGrad)"/>
+
+  <!-- Gift box / "free" offering -->
+  <g filter="url(#glow)" stroke="#ffffff" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Box body -->
+    <rect x="120" y="180" width="160" height="120" rx="4"/>
+
+    <!-- Box lid -->
+    <rect x="110" y="155" width="180" height="30" rx="4"/>
+
+    <!-- Ribbon vertical -->
+    <line x1="200" y1="155" x2="200" y2="300"/>
+
+    <!-- Ribbon horizontal -->
+    <line x1="120" y1="240" x2="280" y2="240"/>
+
+    <!-- Bow -->
+    <ellipse cx="175" cy="140" rx="20" ry="15"/>
+    <ellipse cx="225" cy="140" rx="20" ry="15"/>
+  </g>
+
+  <!-- Data flowing out - representing hidden cost -->
+  <g filter="url(#softGlow)" stroke="#ffffff" stroke-width="1.5" fill="none" opacity="0.5">
+    <!-- Data streams rising from box -->
+    <path d="M160 155 Q160 100 130 70" stroke-dasharray="4 4"/>
+    <path d="M200 155 Q200 90 200 55" stroke-dasharray="4 4"/>
+    <path d="M240 155 Q240 100 270 70" stroke-dasharray="4 4"/>
+
+    <!-- Small circles representing data points -->
+    <circle cx="130" cy="65" r="6"/>
+    <circle cx="200" cy="50" r="6"/>
+    <circle cx="270" cy="65" r="6"/>
+  </g>
+
+  <!-- Corner accents -->
+  <g fill="#ffffff" opacity="0.25">
+    <rect x="60" y="60" width="20" height="2"/>
+    <rect x="60" y="60" width="2" height="20"/>
+    <rect x="320" y="60" width="20" height="2"/>
+    <rect x="338" y="60" width="2" height="20"/>
+    <rect x="60" y="338" width="20" height="2"/>
+    <rect x="60" y="320" width="2" height="20"/>
+    <rect x="320" y="338" width="20" height="2"/>
+    <rect x="338" y="320" width="2" height="20"/>
+  </g>
+</svg>
