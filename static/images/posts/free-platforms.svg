@@ -1,11 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
   <defs>
     <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" style="stop-color:#1a1a1a"/>
       <stop offset="100%" style="stop-color:#0d0d0d"/>
     </linearGradient>
     <filter id="glow">
-      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feGaussianBlur stdDeviation="2.5" result="coloredBlur"/>
       <feMerge>
         <feMergeNode in="coloredBlur"/>
         <feMergeNode in="SourceGraphic"/>
@@ -13,23 +13,33 @@
     </filter>
   </defs>
 
-  <rect width="400" height="400" fill="url(#bgGrad)"/>
+  <rect width="800" height="400" fill="url(#bgGrad)"/>
 
-  <!-- Price tag outline -->
-  <g filter="url(#glow)" stroke="#ffffff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M200 100 L280 100 L280 220 L200 280 L120 220 L120 100 Z"/>
-    <circle cx="200" cy="140" r="20"/>
+  <!-- Central: Open lock with data flowing out -->
+  <g filter="url(#glow)" stroke="#ffffff" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round" transform="translate(400, 200)">
+    <!-- Padlock body -->
+    <rect x="-40" y="-10" width="80" height="70" rx="8"/>
+
+    <!-- Open shackle -->
+    <path d="M-25 -10 L-25 -40 Q-25 -65 0 -65 Q25 -65 25 -40 L25 -25"/>
+
+    <!-- Keyhole -->
+    <circle cx="0" cy="25" r="12"/>
+    <line x1="0" y1="32" x2="0" y2="48"/>
   </g>
 
-  <!-- £0 in the tag -->
-  <g filter="url(#glow)" fill="#ffffff" opacity="0.9">
-    <text x="200" y="148" font-family="system-ui, sans-serif" font-size="20" font-weight="500" text-anchor="middle">£0</text>
+  <!-- Data particles drifting upward from the lock -->
+  <g fill="#ffffff" opacity="0.4">
+    <circle cx="370" cy="100" r="3"/>
+    <circle cx="400" cy="80" r="4"/>
+    <circle cx="430" cy="95" r="3"/>
+    <circle cx="385" cy="115" r="2"/>
+    <circle cx="415" cy="110" r="2"/>
   </g>
 
-  <!-- Fine print lines below -->
-  <g stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" opacity="0.35">
-    <line x1="150" y1="310" x2="250" y2="310"/>
-    <line x1="160" y1="325" x2="240" y2="325"/>
-    <line x1="170" y1="340" x2="230" y2="340"/>
+  <!-- Subtle horizontal lines -->
+  <g stroke="#ffffff" stroke-width="1" opacity="0.1">
+    <line x1="100" y1="200" x2="280" y2="200"/>
+    <line x1="520" y1="200" x2="700" y2="200"/>
   </g>
 </svg>
