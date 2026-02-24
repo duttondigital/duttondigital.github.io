@@ -1,0 +1,14 @@
+<!-- Circular refresh arrows -->
+<g filter="url(#glow)" stroke="#ffffff" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round" transform="translate(392, 172)">
+  <path d="M0 -60 A60 60 0 1 1 -52 30"/>
+  <path d="M0 60 A60 60 0 1 1 52 -30"/>
+  <polyline points="-60,-12 -52,30 -10,22"/>
+  <polyline points="60,12 52,-30 10,-22"/>
+</g>
+
+<!-- Clock in centre -->
+<g filter="url(#glow)" stroke="#ffffff" stroke-width="2" fill="none" stroke-linecap="round" transform="translate(392, 172)">
+  <circle cx="0" cy="0" r="22"/>
+  <line x1="0" y1="0" x2="0" y2="-12"/>
+  <line x1="0" y1="0" x2="8" y2="6"/>
+</g>

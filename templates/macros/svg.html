@@ -1,10 +1,14 @@
+{% macro hero(icon, id="") %}
+{% set icon_path = "static/images/icons/" ~ icon ~ ".svg" %}
+{% set icon_content = load_data(path=icon_path) %}
+{% set suffix = id %}
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 784 344">
   <defs>
-    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="bgGrad{{ suffix }}" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" style="stop-color:#141414"/>
       <stop offset="100%" style="stop-color:#0a0a0a"/>
     </linearGradient>
-    <filter id="glow">
+    <filter id="glow{{ suffix }}">
       <feGaussianBlur stdDeviation="2.5" result="coloredBlur"/>
       <feMerge>
         <feMergeNode in="coloredBlur"/>
@@ -12,12 +16,8 @@
       </feMerge>
     </filter>
   </defs>
-
-  <rect width="784" height="344" fill="url(#bgGrad)"/>
-
-  <!-- Modular background grid: 14 columns x 6 rows, 48px squares, 8px gap, 8px padding -->
+  <rect width="784" height="344" fill="url(#bgGrad{{ suffix }})"/>
   <g>
-    <!-- Row 1 -->
     <rect x="8" y="8" width="48" height="48" rx="8" fill="white" opacity="0.04"/>
     <rect x="64" y="8" width="48" height="48" rx="8" fill="white" opacity="0.06"/>
     <rect x="120" y="8" width="48" height="48" rx="8" fill="white" opacity="0.03"/>
@@ -32,8 +32,6 @@
     <rect x="624" y="8" width="48" height="48" rx="8" fill="white" opacity="0.06"/>
     <rect x="680" y="8" width="48" height="48" rx="8" fill="white" opacity="0.05"/>
     <rect x="736" y="8" width="48" height="48" rx="8" fill="white" opacity="0.03"/>
-
-    <!-- Row 2 -->
     <rect x="8" y="64" width="48" height="48" rx="8" fill="white" opacity="0.05"/>
     <rect x="64" y="64" width="48" height="48" rx="8" fill="white" opacity="0.03"/>
     <rect x="120" y="64" width="48" height="48" rx="8" fill="white" opacity="0.07"/>
@@ -48,8 +46,6 @@
     <rect x="624" y="64" width="48" height="48" rx="8" fill="white" opacity="0.03"/>
     <rect x="680" y="64" width="48" height="48" rx="8" fill="white" opacity="0.06"/>
     <rect x="736" y="64" width="48" height="48" rx="8" fill="white" opacity="0.04"/>
-
-    <!-- Row 3 -->
     <rect x="8" y="120" width="48" height="48" rx="8" fill="white" opacity="0.06"/>
     <rect x="64" y="120" width="48" height="48" rx="8" fill="white" opacity="0.04"/>
     <rect x="120" y="120" width="48" height="48" rx="8" fill="white" opacity="0.05"/>
@@ -64,8 +60,6 @@
     <rect x="624" y="120" width="48" height="48" rx="8" fill="white" opacity="0.05"/>
     <rect x="680" y="120" width="48" height="48" rx="8" fill="white" opacity="0.04"/>
     <rect x="736" y="120" width="48" height="48" rx="8" fill="white" opacity="0.06"/>
-
-    <!-- Row 4 -->
     <rect x="8" y="176" width="48" height="48" rx="8" fill="white" opacity="0.03"/>
     <rect x="64" y="176" width="48" height="48" rx="8" fill="white" opacity="0.05"/>
     <rect x="120" y="176" width="48" height="48" rx="8" fill="white" opacity="0.06"/>
@@ -80,8 +74,6 @@
     <rect x="624" y="176" width="48" height="48" rx="8" fill="white" opacity="0.06"/>
     <rect x="680" y="176" width="48" height="48" rx="8" fill="white" opacity="0.05"/>
     <rect x="736" y="176" width="48" height="48" rx="8" fill="white" opacity="0.03"/>
-
-    <!-- Row 5 -->
     <rect x="8" y="232" width="48" height="48" rx="8" fill="white" opacity="0.07"/>
     <rect x="64" y="232" width="48" height="48" rx="8" fill="white" opacity="0.04"/>
     <rect x="120" y="232" width="48" height="48" rx="8" fill="white" opacity="0.03"/>
@@ -96,8 +88,6 @@
     <rect x="624" y="232" width="48" height="48" rx="8" fill="white" opacity="0.03"/>
     <rect x="680" y="232" width="48" height="48" rx="8" fill="white" opacity="0.04"/>
     <rect x="736" y="232" width="48" height="48" rx="8" fill="white" opacity="0.07"/>
-
-    <!-- Row 6 -->
     <rect x="8" y="288" width="48" height="48" rx="8" fill="white" opacity="0.04"/>
     <rect x="64" y="288" width="48" height="48" rx="8" fill="white" opacity="0.06"/>
     <rect x="120" y="288" width="48" height="48" rx="8" fill="white" opacity="0.05"/>
@@ -113,21 +103,6 @@
     <rect x="680" y="288" width="48" height="48" rx="8" fill="white" opacity="0.03"/>
     <rect x="736" y="288" width="48" height="48" rx="8" fill="white" opacity="0.04"/>
   </g>
-
-  <!-- Network nodes -->
-  <g filter="url(#glow)" stroke="#ffffff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" transform="translate(392, 172)">
-    <circle cx="0" cy="0" r="18"/>
-    <circle cx="-70" cy="-45" r="10"/>
-    <circle cx="70" cy="-45" r="10"/>
-    <circle cx="-70" cy="45" r="10"/>
-    <circle cx="70" cy="45" r="10"/>
-    <circle cx="0" cy="-80" r="10"/>
-    <circle cx="0" cy="80" r="10"/>
-    <line x1="-14" y1="-10" x2="-60" y2="-38"/>
-    <line x1="14" y1="-10" x2="60" y2="-38"/>
-    <line x1="-14" y1="10" x2="-60" y2="38"/>
-    <line x1="14" y1="10" x2="60" y2="38"/>
-    <line x1="0" y1="-18" x2="0" y2="-70"/>
-    <line x1="0" y1="18" x2="0" y2="70"/>
-  </g>
+  {{ icon_content | replace(from="url(#glow)", to="url(#glow" ~ suffix ~ ")") | safe }}
 </svg>
+{% endmacro hero %}

@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% import "macros/svg.html" as svg %}
 
 {% block title %}Posts | {{ config.title }}{% endblock %}
 
@@ -43,7 +44,8 @@
   overflow: hidden;
 }
 
-.post-item .thumb img {
+.post-item .thumb img,
+.post-item .thumb svg {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -83,7 +85,11 @@
 <div class="posts">
   {% for page in section.pages %}
   <a href="{{ page.permalink }}" class="post-item">
-    {% if page.extra.image %}
+    {% if page.extra.icon %}
+    <div class="thumb">
+      {{ svg::hero(icon=page.extra.icon, id="-" ~ loop.index) }}
+    </div>
+    {% elif page.extra.image %}
     <div class="thumb">
       <img src="{{ page.extra.image }}" alt="">
     </div>

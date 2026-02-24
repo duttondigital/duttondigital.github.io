@@ -4,7 +4,7 @@ date = 2026-02-22
 
 [extra]
 author = "Louis Dutton"
-image = "/images/posts/free-platforms.svg"
+icon = "free-platforms"
 image_alt = "Gift box with data streams rising from it"
 
 [taxonomies]

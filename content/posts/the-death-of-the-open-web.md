@@ -4,7 +4,7 @@ date = 2026-02-20
 
 [extra]
 author = "Louis Dutton"
-image = "/images/posts/open-web.svg"
+icon = "open-web"
 image_alt = "Central node surrounded by platform boxes with connecting lines"
 
 [taxonomies]

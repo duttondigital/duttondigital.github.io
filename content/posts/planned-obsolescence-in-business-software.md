@@ -4,7 +4,7 @@ date = 2026-02-19
 
 [extra]
 author = "Louis Dutton"
-image = "/images/posts/obsolescence.svg"
+icon = "obsolescence"
 image_alt = "Software window with update arrows and price symbol"
 
 [taxonomies]

@@ -1,0 +1,9 @@
+<!-- Universal accessibility symbol -->
+<g filter="url(#glow)" stroke="#ffffff" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round" transform="translate(392, 172)">
+  <circle cx="0" cy="0" r="70"/>
+  <circle cx="0" cy="-38" r="12"/>
+  <line x1="0" y1="-26" x2="0" y2="8"/>
+  <line x1="-30" y1="-12" x2="30" y2="-12"/>
+  <line x1="0" y1="8" x2="-20" y2="45"/>
+  <line x1="0" y1="8" x2="20" y2="45"/>
+</g>

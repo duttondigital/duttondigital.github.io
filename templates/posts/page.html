@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% import "macros/svg.html" as svg %}
 
 {% block title %}{{ page.title }} | {{ config.title }}{% endblock %}
 
@@ -148,7 +149,11 @@ article hr {
       {% if page.extra.author %}{{ page.extra.author }} · {% endif %}{{ page.date | date(format="%d %B %Y") }}{% if page.taxonomies.tags %}{% for tag in page.taxonomies.tags %}<a href="/tags/{{ tag | slugify }}/" class="tag">{{ tag }}</a>{% endfor %}{% endif %}
     </p>
   </header>
-  {% if page.extra.image %}
+  {% if page.extra.icon %}
+  <div class="hero-image" role="img" aria-label="{{ page.extra.image_alt | default(value='') }}">
+    {{ svg::hero(icon=page.extra.icon) }}
+  </div>
+  {% elif page.extra.image %}
   <div class="hero-image">
     <img src="{{ page.extra.image }}" alt="{{ page.extra.image_alt | default(value='') }}">
   </div>

@@ -4,7 +4,7 @@ date = 2026-02-21
 
 [extra]
 author = "Louis Dutton"
-image = "/images/posts/apps.svg"
+icon = "apps"
 image_alt = "Phone with app grid and arrow pointing to simpler browser window"
 
 [taxonomies]

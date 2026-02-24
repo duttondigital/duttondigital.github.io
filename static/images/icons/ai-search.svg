@@ -1,0 +1,13 @@
+<!-- Magnifying glass with AI sparkle -->
+<g filter="url(#glow)" stroke="#ffffff" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round" transform="translate(392, 162)">
+  <circle cx="0" cy="-15" r="55"/>
+  <line x1="39" y1="24" x2="70" y2="55"/>
+</g>
+
+<!-- AI sparkle inside glass -->
+<g filter="url(#glow)" stroke="#ffffff" stroke-width="2" fill="none" stroke-linecap="round" transform="translate(392, 147)">
+  <line x1="0" y1="-18" x2="0" y2="18"/>
+  <line x1="-18" y1="0" x2="18" y2="0"/>
+  <line x1="-12" y1="-12" x2="12" y2="12"/>
+  <line x1="12" y1="-12" x2="-12" y2="12"/>
+</g>

@@ -4,7 +4,7 @@ date = 2026-02-23
 
 [extra]
 author = "Louis Dutton"
-image = "/images/posts/accessibility.svg"
+icon = "accessibility"
 image_alt = "Stylised accessibility figure with radiating circles"
 
 [taxonomies]
