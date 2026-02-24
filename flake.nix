@@ -7,14 +7,14 @@
       forAllSystems = f: nixpkgs.lib.genAttrs systems (system: f nixpkgs.legacyPackages.${system});
     in {
       packages = forAllSystems (pkgs: {
-        default = pkgs.stdenv.mkDerivation {
-          pname = "duttondigital-site";
-          version = "0.1.0";
-          src = self;
+        default = pkgs.runCommand "duttondigital-site" {
           nativeBuildInputs = [ pkgs.zola ];
-          buildPhase = "zola build";
-          installPhase = "cp -r public $out";
-        };
+          src = self;
+        } ''
+          cp -r $src/* .
+          zola build
+          cp -r public $out
+        '';
       });
 
       devShells = forAllSystems (pkgs: {
