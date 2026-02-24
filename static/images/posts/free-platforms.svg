@@ -5,14 +5,7 @@
       <stop offset="100%" style="stop-color:#0d0d0d"/>
     </linearGradient>
     <filter id="glow">
-      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
-      <feMerge>
-        <feMergeNode in="coloredBlur"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
-    </filter>
-    <filter id="softGlow">
-      <feGaussianBlur stdDeviation="5" result="coloredBlur"/>
+      <feGaussianBlur stdDeviation="2.5" result="coloredBlur"/>
       <feMerge>
         <feMergeNode in="coloredBlur"/>
         <feMergeNode in="SourceGraphic"/>
@@ -22,47 +15,42 @@
 
   <rect width="400" height="400" fill="url(#bgGrad)"/>
 
-  <!-- Gift box / "free" offering -->
-  <g filter="url(#glow)" stroke="#ffffff" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
-    <!-- Box body -->
-    <rect x="120" y="180" width="160" height="120" rx="4"/>
+  <!-- Balanced scales -->
+  <g filter="url(#glow)" stroke="#ffffff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Central post -->
+    <line x1="200" y1="100" x2="200" y2="300"/>
 
-    <!-- Box lid -->
-    <rect x="110" y="155" width="180" height="30" rx="4"/>
+    <!-- Balance beam -->
+    <line x1="100" y1="160" x2="300" y2="160"/>
 
-    <!-- Ribbon vertical -->
-    <line x1="200" y1="155" x2="200" y2="300"/>
+    <!-- Fulcrum triangle -->
+    <polygon points="200,160 185,130 215,130" fill="none"/>
 
-    <!-- Ribbon horizontal -->
-    <line x1="120" y1="240" x2="280" y2="240"/>
+    <!-- Left pan (£0 / free) -->
+    <path d="M80 180 Q80 220 120 220 Q160 220 160 180" />
+    <line x1="100" y1="160" x2="80" y2="180"/>
+    <line x1="100" y1="160" x2="160" y2="180"/>
 
-    <!-- Bow -->
-    <ellipse cx="175" cy="140" rx="20" ry="15"/>
-    <ellipse cx="225" cy="140" rx="20" ry="15"/>
+    <!-- Right pan (data cost) -->
+    <path d="M240 180 Q240 220 280 220 Q320 220 320 180" />
+    <line x1="300" y1="160" x2="240" y2="180"/>
+    <line x1="300" y1="160" x2="320" y2="180"/>
   </g>
 
-  <!-- Data flowing out - representing hidden cost -->
-  <g filter="url(#softGlow)" stroke="#ffffff" stroke-width="1.5" fill="none" opacity="0.5">
-    <!-- Data streams rising from box -->
-    <path d="M160 155 Q160 100 130 70" stroke-dasharray="4 4"/>
-    <path d="M200 155 Q200 90 200 55" stroke-dasharray="4 4"/>
-    <path d="M240 155 Q240 100 270 70" stroke-dasharray="4 4"/>
-
-    <!-- Small circles representing data points -->
-    <circle cx="130" cy="65" r="6"/>
-    <circle cx="200" cy="50" r="6"/>
-    <circle cx="270" cy="65" r="6"/>
+  <!-- £0 on left side -->
+  <g filter="url(#glow)" fill="#ffffff" opacity="0.6">
+    <text x="120" y="208" font-family="system-ui, sans-serif" font-size="18" text-anchor="middle">£0</text>
   </g>
 
-  <!-- Corner accents -->
-  <g fill="#ffffff" opacity="0.25">
-    <rect x="60" y="60" width="20" height="2"/>
-    <rect x="60" y="60" width="2" height="20"/>
-    <rect x="320" y="60" width="20" height="2"/>
-    <rect x="338" y="60" width="2" height="20"/>
-    <rect x="60" y="338" width="20" height="2"/>
-    <rect x="60" y="320" width="2" height="20"/>
-    <rect x="320" y="338" width="20" height="2"/>
-    <rect x="338" y="320" width="2" height="20"/>
+  <!-- Data symbols on right side -->
+  <g stroke="#ffffff" stroke-width="1.5" fill="none" opacity="0.6">
+    <circle cx="265" cy="200" r="6"/>
+    <circle cx="280" cy="200" r="6"/>
+    <circle cx="295" cy="200" r="6"/>
+  </g>
+
+  <!-- Base -->
+  <g filter="url(#glow)" stroke="#ffffff" stroke-width="2" fill="none" stroke-linecap="round">
+    <line x1="160" y1="300" x2="240" y2="300"/>
   </g>
 </svg>
