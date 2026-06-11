@@ -97,7 +97,7 @@
 
     .logo-text {
       letter-spacing: 0;
-      font-size: 1.42rem;
+      font-size: 1.7rem;
       font-weight: 500;
       line-height: 1;
       transform: translateY(0.06em);
@@ -109,7 +109,7 @@
       display: flex;
       align-items: center;
       gap: 1.5rem;
-      flex-wrap: wrap;
+      flex-wrap: nowrap;
       justify-content: flex-end;
     }
 
@@ -450,10 +450,11 @@
       to { transform: translateX(0); }
     }
 
-    .case-study-grid {
+    .case-study-list {
       display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 1rem;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1.25rem;
+      align-items: stretch;
     }
 
     .case-study {
@@ -461,13 +462,15 @@
       border-radius: 10px;
       background: var(--panel);
       display: grid;
-      gap: 0;
+      grid-template-rows: auto 1fr;
+      gap: 1.2rem;
+      padding: 1.35rem;
       overflow: hidden;
     }
 
     .case-study-brand {
       display: grid;
-      align-content: stretch;
+      align-content: start;
     }
 
     .company-mark {
@@ -475,34 +478,23 @@
       align-items: center;
       justify-content: center;
       width: 100%;
+      min-width: 0;
       max-width: 100%;
-      height: 112px;
-      padding: 1.25rem;
-      border-bottom: 1px solid var(--tag-border);
-      background: #0d0d0d;
+      min-height: 96px;
+      padding: 0;
+      background: transparent;
       color: var(--fg);
       text-decoration: none;
-      transition: background 0.2s, border-color 0.2s;
       user-select: none;
       -webkit-user-select: none;
-    }
-
-    a.company-mark:hover {
-      background: #151515;
-      border-color: var(--tag-border);
-    }
-
-    a.company-mark:focus-visible {
-      outline: 2px solid rgba(255, 255, 255, 0.8);
-      outline-offset: -2px;
     }
 
     .company-mark img,
     .company-mark svg {
       display: block;
       width: auto;
-      max-width: min(220px, 80%);
-      max-height: 44px;
+      max-width: min(230px, 88%);
+      max-height: 58px;
       filter: brightness(0) invert(1);
       opacity: 0.92;
       user-select: none;
@@ -510,26 +502,76 @@
       -webkit-user-drag: none;
     }
 
-    .case-study > :not(.case-study-brand) {
-      padding: 1.25rem;
+    .case-study-content {
+      padding: 0;
     }
 
     .case-study h2 {
-      font-size: 1.15rem;
-      line-height: 1.35;
-      margin-bottom: 0.5rem;
+      font-size: 1.34rem;
+      line-height: 1.28;
+      margin-bottom: 1.15rem;
+      max-width: 720px;
     }
 
-    .case-study p {
+    .case-study-meta {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+      margin-bottom: 0.55rem;
+    }
+
+    .case-study-company {
+      color: var(--muted);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .case-study-link {
+      border: 1px solid var(--tag-border);
+      border-radius: 999px;
+      color: var(--fg);
+      font-size: 0.72rem;
+      font-weight: 700;
+      line-height: 1;
+      padding: 0.42rem 0.58rem;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+
+    .case-study-link:hover {
+      background: rgba(255, 255, 255, 0.04);
+    }
+
+    .case-study-points {
+      display: grid;
+      gap: 0;
+      max-width: 760px;
+    }
+
+    .case-study-point {
+      border-top: 1px solid rgba(255, 255, 255, 0.18);
+      display: grid;
+      grid-template-columns: 6rem minmax(0, 1fr);
+      gap: 1rem;
+      padding: 0.85rem 0;
+    }
+
+    .case-study-point span {
+      display: block;
+      color: var(--fg);
+      font-size: 0.75rem;
+      font-weight: 700;
+      line-height: 1.65;
+      text-transform: uppercase;
+    }
+
+    .case-study-point p {
       color: var(--muted);
       font-size: 0.88rem;
       line-height: 1.65;
-      display: -webkit-box;
-      overflow: hidden;
-      max-height: calc(0.88rem * 1.65 * 2);
-      -webkit-box-orient: vertical;
-      -webkit-line-clamp: 2;
-      line-clamp: 2;
     }
 
     .contact-card {
@@ -600,29 +642,26 @@
         grid-template-columns: 1fr;
       }
 
-      .case-study-grid { grid-template-columns: 1fr; }
-
-      .case-study {
-        grid-template-columns: 132px minmax(0, 1fr);
-        min-height: 0;
+      .case-study-list {
+        grid-template-columns: 1fr;
       }
 
-      .case-study-brand {
-        align-self: stretch;
+      .case-study {
+        padding: 1.25rem;
       }
 
       .company-mark {
-        height: 100%;
-        min-height: 132px;
-        padding: 1rem;
-        border-right: 1px solid var(--tag-border);
-        border-bottom: 0;
+        min-height: 92px;
       }
 
       .company-mark img,
       .company-mark svg {
-        max-width: min(96px, 100%);
-        max-height: 42px;
+        max-width: min(230px, 82%);
+        max-height: 54px;
+      }
+
+      .case-study h2 {
+        font-size: 1.24rem;
       }
 
     }
@@ -630,15 +669,14 @@
     @media (max-width: 600px) {
       .container { padding: 0 1.5rem; }
 
-      nav {
-        align-items: flex-start;
-        flex-direction: column;
+      .nav-links {
+        justify-content: flex-end;
+        gap: 0.75rem;
       }
 
-      .nav-links {
-        justify-content: flex-start;
-        gap: 1rem;
-      }
+      .logo { gap: 0.5rem; }
+
+      .logo-text { font-size: 1.45rem; }
 
       section { padding: 3rem 0; }
 
@@ -671,23 +709,24 @@
         padding: 0.5rem 0.62rem;
       }
 
-      .case-study {
-        grid-template-columns: 104px minmax(0, 1fr);
-      }
-
       .company-mark {
-        min-height: 116px;
-        padding: 0.75rem;
+        min-height: 86px;
       }
 
       .company-mark img,
       .company-mark svg {
-        max-width: min(78px, 100%);
-        max-height: 36px;
+        max-width: min(210px, 84%);
+        max-height: 50px;
       }
 
-      .case-study > :not(.case-study-brand) {
-        padding: 1rem;
+      .case-study h2 {
+        font-size: 1.18rem;
+      }
+
+      .case-study-point {
+        grid-template-columns: 1fr;
+        gap: 0.2rem;
+        padding: 0.9rem 0;
       }
 
       footer {
@@ -706,9 +745,6 @@
       <span class="logo-text">dutton digital</span>
     </a>
     <div class="nav-links">
-      <a href="#case-studies">Case studies</a>
-      <a href="#capabilities">Capabilities</a>
-      <a href="https://louisdutton.dev/">CV</a>
       <a href="mailto:louis@dutton.digital" class="nav-cta">Contact</a>
     </div>
   </nav>
@@ -754,64 +790,120 @@
     <div class="divider"><span>Case studies</span></div>
 
     <section id="case-studies">
-      <div class="case-study-grid">
+      <div class="case-study-list">
         <article class="case-study">
           <div class="case-study-brand">
-            <a class="company-mark givematch" href="https://www.givematch.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit GiveMatch website">
+            <div class="company-mark givematch">
               <img src="/logos/givematch.svg" alt="GiveMatch">
-            </a>
+            </div>
           </div>
-          <div>
-            <h2>Cut CI feedback to 5 minutes</h2>
-            <p>Reduced pipeline duration, introduced reproducible development environments with Nix, and reduced cycle-time by an order of magnitude.</p>
+          <div class="case-study-content">
+            <div class="case-study-meta">
+              <p class="case-study-company">GiveMatch</p>
+              <a class="case-study-link" href="https://www.givematch.com/" target="_blank" rel="noopener noreferrer">Visit site</a>
+            </div>
+            <h2>Cut CI feedback loops to around 5 minutes</h2>
+            <div class="case-study-points">
+              <div class="case-study-point">
+                <span>Problem</span>
+                <p>Developers were losing time to slow pipelines and inconsistent local environments.</p>
+              </div>
+              <div class="case-study-point">
+                <span>Solution</span>
+                <p>Reduced pipeline duration and introduced reproducible development environments with Nix.</p>
+              </div>
+              <div class="case-study-point">
+                <span>Impact</span>
+                <p>Feedback dropped to roughly 5 minutes, reducing cycle-time by an order of magnitude.</p>
+              </div>
+            </div>
           </div>
         </article>
 
         <article class="case-study">
           <div class="case-study-brand">
-            <a class="company-mark evergive" href="https://www.evergive.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit EverGive website">
+            <div class="company-mark evergive">
               <img src="https://framerusercontent.com/images/XxtJPaDyTI8mjwgdeu17qhsyg.svg?width=1026&amp;height=226" alt="EverGive">
-            </a>
+            </div>
           </div>
-          <div>
-            <h2>Reliable giving workflows</h2>
-            <p>Worked in the same charity-tech ecosystem from a product angle: donor journeys, operational reliability and maintainable delivery as the public brand evolved.</p>
+          <div class="case-study-content">
+            <div class="case-study-meta">
+              <p class="case-study-company">EverGive</p>
+              <a class="case-study-link" href="https://www.evergive.com/" target="_blank" rel="noopener noreferrer">Visit site</a>
+            </div>
+            <h2>Improved giving product workflows</h2>
+            <div class="case-study-points">
+              <div class="case-study-point">
+                <span>Problem</span>
+                <p>Charity-tech workflows needed dependable product delivery across donation journeys and operational tooling.</p>
+              </div>
+              <div class="case-study-point">
+                <span>Solution</span>
+                <p>Worked across product engineering, reliability and maintainable delivery as the public brand evolved.</p>
+              </div>
+              <div class="case-study-point">
+                <span>Impact</span>
+                <p>Supported a smoother giving experience and reduced friction around ongoing product change.</p>
+              </div>
+            </div>
           </div>
         </article>
 
         <article class="case-study">
           <div class="case-study-brand">
-            <a class="company-mark travel" href="https://www.travelchapter.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Travel Chapter website">
+            <div class="company-mark travel">
               <img src="https://cdn.prod.website-files.com/624410f4e729c6256c749f12/62442ead917d0862626bfdb3_tc_logo_reversed.svg" alt="Travel Chapter">
-            </a>
+            </div>
           </div>
-          <div>
+          <div class="case-study-content">
+            <div class="case-study-meta">
+              <p class="case-study-company">Travel Chapter</p>
+              <a class="case-study-link" href="https://www.travelchapter.com/" target="_blank" rel="noopener noreferrer">Visit site</a>
+            </div>
             <h2>Consolidated 50 whitelabel sites</h2>
-            <p>Moved 50 whitelabel websites into one deployment, built QA tooling, and introduced Storybook and accessibility standards.</p>
+            <div class="case-study-points">
+              <div class="case-study-point">
+                <span>Problem</span>
+                <p>A large whitelabel estate created duplicated delivery, QA and maintenance work.</p>
+              </div>
+              <div class="case-study-point">
+                <span>Solution</span>
+                <p>Moved 50 websites into one deployment and added QA tooling, Storybook and accessibility standards.</p>
+              </div>
+              <div class="case-study-point">
+                <span>Impact</span>
+                <p>Reduced the maintenance surface and made portfolio-wide changes safer to ship.</p>
+              </div>
+            </div>
           </div>
         </article>
 
         <article class="case-study">
           <div class="case-study-brand">
-            <a class="company-mark xgx" href="https://xgx.ai/" target="_blank" rel="noopener noreferrer" aria-label="Visit XGX.AI website">
+            <div class="company-mark xgx">
               <img src="/logos/xgx-white.svg" alt="XGX.AI">
-            </a>
+            </div>
           </div>
-          <div>
-            <h2>Improved pipeline efficiency</h2>
-            <p>Set up development environments to improve team consistency and onboarding, then aligned architecture across projects to improve pipeline efficiency.</p>
-          </div>
-        </article>
-
-        <article class="case-study">
-          <div class="case-study-brand">
-            <a class="company-mark modular" href="https://www.modularmapper.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Modular Mapper website">
-              <img src="https://www.modularmapper.com/_app/immutable/assets/mm-logo-045d7f40.svg" alt="Modular Mapper">
-            </a>
-          </div>
-          <div>
-            <h2>Migrated JavaScript to TypeScript</h2>
-            <p>Ported a codebase from JavaScript to TypeScript, created a realtime procedural mesh generation system using Rust-WASM IPC, and worked across the website.</p>
+          <div class="case-study-content">
+            <div class="case-study-meta">
+              <p class="case-study-company">XGX.AI</p>
+              <a class="case-study-link" href="https://xgx.ai/" target="_blank" rel="noopener noreferrer">Visit site</a>
+            </div>
+            <h2>Improved consistency across delivery workflows</h2>
+            <div class="case-study-points">
+              <div class="case-study-point">
+                <span>Problem</span>
+                <p>Project setup and architecture drift made onboarding and delivery harder to keep predictable.</p>
+              </div>
+              <div class="case-study-point">
+                <span>Solution</span>
+                <p>Standardised development environments and aligned architecture across related projects.</p>
+              </div>
+              <div class="case-study-point">
+                <span>Impact</span>
+                <p>Improved pipeline efficiency and reduced the hidden cost of inconsistent project setup.</p>
+              </div>
+            </div>
           </div>
         </article>
 
@@ -821,18 +913,63 @@
               <img src="/logos/iso-spaces.png" alt="ISO Spaces">
             </div>
           </div>
-          <div>
-            <h2>Migrated spatial tooling to TypeScript</h2>
-            <p>Worked on product engineering in a similar space to Modular Mapper, improving maintainability across JavaScript and TypeScript code.</p>
+          <div class="case-study-content">
+            <div class="case-study-meta">
+              <p class="case-study-company">ISO Spaces</p>
+            </div>
+            <h2>Improved spatial product maintainability</h2>
+            <div class="case-study-points">
+              <div class="case-study-point">
+                <span>Problem</span>
+                <p>Spatial product tooling needed maintainable engineering across JavaScript and TypeScript code.</p>
+              </div>
+              <div class="case-study-point">
+                <span>Solution</span>
+                <p>Worked on product engineering in a similar domain to Modular Mapper, improving the frontend codebase.</p>
+              </div>
+              <div class="case-study-point">
+                <span>Impact</span>
+                <p>Made future product changes easier to reason about in a complex visual engineering domain.</p>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="case-study">
+          <div class="case-study-brand">
+            <div class="company-mark modular">
+              <img src="https://www.modularmapper.com/_app/immutable/assets/mm-logo-045d7f40.svg" alt="Modular Mapper">
+            </div>
+          </div>
+          <div class="case-study-content">
+            <div class="case-study-meta">
+              <p class="case-study-company">Modular Mapper</p>
+              <a class="case-study-link" href="https://www.modularmapper.com/" target="_blank" rel="noopener noreferrer">Visit site</a>
+            </div>
+            <h2>Migrated JavaScript to TypeScript</h2>
+            <div class="case-study-points">
+              <div class="case-study-point">
+                <span>Problem</span>
+                <p>A complex spatial product needed stronger maintainability and performant realtime geometry.</p>
+              </div>
+              <div class="case-study-point">
+                <span>Solution</span>
+                <p>Ported JavaScript to TypeScript and built procedural mesh generation using Rust-WASM IPC.</p>
+              </div>
+              <div class="case-study-point">
+                <span>Impact</span>
+                <p>Improved long-term maintainability while keeping compute-heavy features practical in the browser.</p>
+              </div>
+            </div>
           </div>
         </article>
       </div>
     </section>
 
-    <div class="divider"><span>Capabilities</span></div>
+    <div class="divider"><span>Tech stack</span></div>
 
-    <section id="capabilities">
-      <p class="section-intro">Broad practical coverage across operating systems, languages, frameworks and delivery tools.</p>
+    <section id="tech-stack">
+      <p class="section-intro">Deep hands-on knowledge across a broad technology surface, with the cross-stack context to solve problems that do not fit neatly inside one specialism.</p>
 
       <div class="capability-cloud" aria-label="Technologies and platforms">
         <div class="capability-row">
