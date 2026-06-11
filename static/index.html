@@ -18,6 +18,7 @@
       --accent-dim: rgba(255, 255, 255, 0.06);
       --muted: #8d8d8d;
       --border: #1f1f1f;
+      --tag-border: rgba(255, 255, 255, 0.42);
       --panel: #101010;
     }
 
@@ -161,8 +162,9 @@
     .cta-secondary {
       display: inline-block;
       padding: 0.6rem 1rem;
-      border: 1px solid var(--border);
+      border: 1px solid var(--tag-border);
       color: var(--fg);
+      background: transparent;
       text-decoration: none;
       border-radius: 6px;
       font-weight: 600;
@@ -171,8 +173,8 @@
     }
 
     .cta-secondary:hover {
-      background: var(--accent-dim);
-      border-color: #383838;
+      background: rgba(255, 255, 255, 0.04);
+      border-color: var(--tag-border);
     }
 
     .hero-panel {
@@ -400,10 +402,10 @@
 
     .capability-tag {
       flex: 0 0 auto;
-      border: 1px solid rgba(255, 255, 255, 0.42);
+      border: 1px solid var(--tag-border);
       border-radius: 999px;
       color: var(--fg);
-      background: rgba(255, 255, 255, 0.045);
+      background: transparent;
       font-size: 0.88rem;
       line-height: 1;
       padding: 0.58rem 0.76rem;
@@ -427,7 +429,7 @@
     }
 
     .case-study {
-      border: 1px solid var(--border);
+      border: 1px solid var(--tag-border);
       border-radius: 10px;
       background: var(--panel);
       display: grid;
@@ -448,7 +450,7 @@
       max-width: 100%;
       height: 112px;
       padding: 1.25rem;
-      border-bottom: 1px solid var(--border);
+      border-bottom: 1px solid var(--tag-border);
       background: #0d0d0d;
       color: var(--fg);
       text-decoration: none;
@@ -459,7 +461,7 @@
 
     a.company-mark:hover {
       background: #151515;
-      border-color: rgba(255, 255, 255, 0.24);
+      border-color: var(--tag-border);
     }
 
     a.company-mark:focus-visible {
@@ -585,7 +587,7 @@
         height: 100%;
         min-height: 132px;
         padding: 1rem;
-        border-right: 1px solid var(--border);
+        border-right: 1px solid var(--tag-border);
         border-bottom: 0;
       }
 
