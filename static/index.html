@@ -492,9 +492,10 @@
     .company-mark img,
     .company-mark svg {
       display: block;
-      width: auto;
-      max-width: min(230px, 88%);
-      max-height: 58px;
+      width: min(230px, 88%);
+      height: 58px;
+      max-width: 100%;
+      object-fit: contain;
       filter: brightness(0) invert(1);
       opacity: 0.92;
       user-select: none;
@@ -656,8 +657,8 @@
 
       .company-mark img,
       .company-mark svg {
-        max-width: min(230px, 82%);
-        max-height: 54px;
+        width: min(230px, 82%);
+        height: 54px;
       }
 
       .case-study h2 {
@@ -715,8 +716,8 @@
 
       .company-mark img,
       .company-mark svg {
-        max-width: min(210px, 84%);
-        max-height: 50px;
+        width: min(210px, 84%);
+        height: 50px;
       }
 
       .case-study h2 {
