@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dutton Digital | DevOps and engineering contractor</title>
-  <meta name="description" content="Dutton Digital is the contracting practice of Louis Dutton, a senior engineer focused on DevOps, CI, development environments and software delivery.">
+  <title>Dutton Digital | Senior engineering contractor</title>
+  <meta name="description" content="Senior engineering contractor for TypeScript, React, Node.js, Python, PHP, .NET, Java, DevOps, CI/CD, Azure, AWS, Linux, Windows, macOS, Nix and product engineering.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Pathway+Extreme:wght@300;400;500&display=swap" rel="stylesheet">
@@ -64,7 +64,7 @@
 
     .logo-text {
       letter-spacing: 0;
-      font-size: 1rem;
+      font-size: 1.25rem;
       font-weight: 500;
       line-height: 1;
     }
@@ -116,6 +116,13 @@
       gap: 4rem;
       align-items: center;
       padding: 8rem 0 6rem;
+      position: relative;
+      isolation: isolate;
+    }
+
+    .hero > div {
+      position: relative;
+      z-index: 1;
     }
 
     .eyebrow {
@@ -167,45 +174,94 @@
     }
 
     .hero-panel {
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 1.5rem;
-      background: var(--panel);
-      position: relative;
-      overflow: hidden;
-      min-height: 310px;
+      position: absolute;
+      inset: 4rem 0 auto auto;
+      width: min(52vw, 460px);
+      height: 320px;
+      display: grid;
+      place-items: center;
+      pointer-events: none;
+      opacity: 0.58;
+      z-index: 0;
     }
 
     .hero-panel > * { position: relative; }
 
-    .hero-panel svg {
-      position: absolute;
-      inset: auto 0 0 auto;
-      width: 250px;
-      height: 250px;
-      opacity: 0.8;
+    .decorative-graphic {
+      width: 100%;
+      height: auto;
+      overflow: visible;
     }
 
-    .panel-title {
-      color: var(--fg);
-      font-size: 0.95rem;
-      font-weight: 700;
-      margin-bottom: 1rem;
+    .decorative-line,
+    .decorative-path {
+      fill: none;
+      stroke-linecap: round;
+      stroke-linejoin: round;
     }
 
-    .focus-list {
-      display: grid;
-      gap: 0.65rem;
-      list-style: none;
+    .decorative-line {
+      stroke: rgba(255, 255, 255, 0.07);
+      stroke-width: 1;
     }
 
-    .focus-list li {
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      padding: 0.7rem 0.85rem;
-      color: var(--muted);
-      font-size: 0.86rem;
-      background: rgba(255, 255, 255, 0.025);
+    .decorative-path {
+      stroke-width: 1.5;
+    }
+
+    .decorative-path.primary {
+      stroke: rgba(255, 255, 255, 0.7);
+    }
+
+    .decorative-path.secondary {
+      stroke: rgba(255, 255, 255, 0.22);
+    }
+
+    .decorative-sweep {
+      stroke: #fff;
+      stroke-width: 2;
+      stroke-dasharray: 36 280;
+      animation: decorativeSweep 8s linear infinite;
+    }
+
+    .decorative-node {
+      fill: var(--panel);
+      stroke: rgba(255, 255, 255, 0.28);
+      stroke-width: 1;
+    }
+
+    .decorative-node.strong {
+      fill: #fff;
+      stroke: #fff;
+    }
+
+    .decorative-pulse {
+      fill: #fff;
+      animation: decorativePulse 5.5s ease-in-out infinite;
+    }
+
+    .decorative-pulse.delay {
+      animation-delay: -2.8s;
+    }
+
+    @keyframes decorativeSweep {
+      from { stroke-dashoffset: 0; }
+      to { stroke-dashoffset: -316; }
+    }
+
+    @keyframes decorativePulse {
+      0%, 100% { opacity: 0.25; }
+      45%, 55% { opacity: 1; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .decorative-sweep,
+      .decorative-pulse,
+      .capability-track {
+        animation: none;
+      }
+
+      .decorative-pulse { opacity: 0.7; }
     }
 
     section { padding: 4rem 0; }
@@ -307,6 +363,82 @@
       width: 0.35rem;
       height: 1px;
       background: var(--fg);
+    }
+
+    .approach-points {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1rem;
+    }
+
+    .approach-point {
+      border-top: 1px solid var(--border);
+      padding-top: 1rem;
+    }
+
+    .approach-point h2 {
+      font-size: 0.95rem;
+      line-height: 1.35;
+      margin-bottom: 0.55rem;
+    }
+
+    .approach-point p {
+      color: var(--muted);
+      font-size: 0.88rem;
+      line-height: 1.65;
+    }
+
+    .capability-cloud {
+      display: grid;
+      gap: 0.75rem;
+      overflow: hidden;
+      padding: 1rem 0;
+      mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+      -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+    }
+
+    .capability-row {
+      overflow: hidden;
+    }
+
+    .capability-track {
+      display: flex;
+      gap: 0.55rem;
+      width: max-content;
+      animation: marqueeLeft 150s linear infinite;
+    }
+
+    .capability-set {
+      display: flex;
+      gap: 0.55rem;
+      padding-right: 0.55rem;
+    }
+
+    .capability-row:nth-child(even) .capability-track {
+      animation-name: marqueeRight;
+      animation-duration: 170s;
+    }
+
+    .capability-tag {
+      flex: 0 0 auto;
+      border: 1px solid rgba(255, 255, 255, 0.42);
+      border-radius: 999px;
+      color: var(--fg);
+      background: rgba(255, 255, 255, 0.045);
+      font-size: 0.88rem;
+      line-height: 1;
+      padding: 0.58rem 0.76rem;
+      white-space: nowrap;
+    }
+
+    @keyframes marqueeLeft {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+
+    @keyframes marqueeRight {
+      from { transform: translateX(-50%); }
+      to { transform: translateX(0); }
     }
 
     .case-study-grid {
@@ -452,10 +584,17 @@
       }
 
       .hero-panel {
-        min-height: 260px;
+        inset: 1.5rem -1.5rem auto auto;
+        width: min(82vw, 380px);
+        height: 274px;
+        opacity: 0.42;
       }
 
       .cards {
+        grid-template-columns: 1fr;
+      }
+
+      .approach-points {
         grid-template-columns: 1fr;
       }
 
@@ -503,7 +642,13 @@
 
       .hero { padding: 2.5rem 0 2rem; }
 
-      .hero-panel { display: none; }
+      .hero-panel {
+        display: grid;
+        inset: 0 -1.5rem auto auto;
+        width: min(96vw, 360px);
+        height: 260px;
+        opacity: 0.34;
+      }
 
       .cta,
       .cta-secondary,
@@ -514,6 +659,15 @@
       }
 
       .contact-graphic { display: none; }
+
+      .capability-cloud {
+        gap: 0.55rem;
+      }
+
+      .capability-tag {
+        font-size: 0.8rem;
+        padding: 0.5rem 0.62rem;
+      }
 
       .case-study {
         grid-template-columns: 104px minmax(0, 1fr);
@@ -549,8 +703,9 @@
       <span class="logo-text">dutton digital</span>
     </a>
     <div class="nav-links">
-      <a href="#focus">Focus</a>
       <a href="#case-studies">Case studies</a>
+      <a href="#capabilities">Capabilities</a>
+      <a href="#approach">Approach</a>
       <a href="https://louisdutton.dev/">CV</a>
       <a href="mailto:louis@dutton.digital" class="nav-cta">Contact</a>
     </div>
@@ -559,109 +714,39 @@
   <main>
     <section class="hero">
       <div>
-        <p class="eyebrow">DevOps and engineering contractor</p>
+        <p class="eyebrow">Senior engineering contractor</p>
         <h1>Analyse.<br>Optimise.<br>Deliver.</h1>
-        <p class="hero-copy">Senior DevOps and engineering support for teams that need faster CI, stable development environments and delivery workflows that keep moving.</p>
+        <p class="hero-copy">Cross-domain engineering support for teams that need someone who can move between platforms, codebases, delivery workflows and business context quickly.</p>
         <div class="hero-actions">
           <a href="mailto:louis@dutton.digital" class="cta">Discuss a role</a>
           <a href="#case-studies" class="cta-secondary">View case studies</a>
         </div>
       </div>
 
-      <aside class="hero-panel" aria-label="Contract focus areas">
-        <svg viewBox="0 0 300 300" fill="none" aria-hidden="true">
-          <defs>
-            <radialGradient id="heroGlow" cx="35%" cy="35%" r="70%">
-              <stop offset="0%" stop-color="white"/>
-              <stop offset="100%" stop-color="white" stop-opacity="0"/>
-            </radialGradient>
-            <mask id="heroFade">
-              <rect width="300" height="300" fill="url(#heroGlow)"/>
-            </mask>
-          </defs>
-          <g mask="url(#heroFade)" opacity="0.9">
-            <path d="M58 72H174" stroke="white" stroke-opacity="0.16" stroke-width="1.5"/>
-            <path d="M126 122H242" stroke="white" stroke-opacity="0.16" stroke-width="1.5"/>
-            <path d="M82 172H198" stroke="white" stroke-opacity="0.16" stroke-width="1.5"/>
-            <rect x="40" y="52" width="72" height="40" rx="8" fill="white" opacity="0.12"/>
-            <rect x="158" y="52" width="72" height="40" rx="8" fill="white" opacity="0.08"/>
-            <rect x="108" y="102" width="72" height="40" rx="8" fill="white" opacity="0.16"/>
-            <rect x="226" y="102" width="72" height="40" rx="8" fill="white" opacity="0.07"/>
-            <rect x="64" y="152" width="72" height="40" rx="8" fill="white" opacity="0.10"/>
-            <rect x="182" y="152" width="72" height="40" rx="8" fill="white" opacity="0.14"/>
-            <rect x="112" y="202" width="72" height="40" rx="8" fill="white" opacity="0.08"/>
-          </g>
+      <aside class="hero-panel" aria-hidden="true">
+        <svg class="decorative-graphic" viewBox="0 0 360 260" fill="none" aria-hidden="true">
+          <path class="decorative-line" d="M42 54H318"/>
+          <path class="decorative-line" d="M42 106H318"/>
+          <path class="decorative-line" d="M42 158H318"/>
+          <path class="decorative-line" d="M42 210H318"/>
+          <path class="decorative-line" d="M82 32V228"/>
+          <path class="decorative-line" d="M160 32V228"/>
+          <path class="decorative-line" d="M238 32V228"/>
+          <path class="decorative-path secondary" d="M82 54H160V106H238V158H318"/>
+          <path class="decorative-path secondary" d="M42 158H160V210H278"/>
+          <path class="decorative-path primary" d="M42 106H160H238H318"/>
+          <path class="decorative-path decorative-sweep" d="M42 106H160H238H318"/>
+          <circle class="decorative-node strong" cx="42" cy="106" r="5"/>
+          <circle class="decorative-node" cx="160" cy="106" r="5"/>
+          <circle class="decorative-node" cx="238" cy="106" r="5"/>
+          <circle class="decorative-node strong" cx="318" cy="106" r="5"/>
+          <rect class="decorative-node" x="74" y="46" width="16" height="16" rx="4"/>
+          <rect class="decorative-node" x="152" y="150" width="16" height="16" rx="4"/>
+          <rect class="decorative-node" x="230" y="202" width="16" height="16" rx="4"/>
+          <circle class="decorative-pulse" cx="160" cy="106" r="3"/>
+          <circle class="decorative-pulse delay" cx="238" cy="106" r="3"/>
         </svg>
-        <p class="panel-title">Contract focus</p>
-        <ul class="focus-list">
-          <li>CI/CD review, optimisation and repair</li>
-          <li>Reproducible development environments with Nix</li>
-          <li>TypeScript delivery across frontend and backend systems</li>
-          <li>Architecture normalisation across teams and projects</li>
-          <li>Accessibility and component-driven development</li>
-        </ul>
       </aside>
-    </section>
-
-    <div class="divider"><span>Focus</span></div>
-
-    <section id="focus">
-      <p class="section-intro">Useful contractor work tends to be practical: make the pipeline faster, make the local setup repeatable, clean up the shape of the system, and keep delivery moving while the permanent team stays in control.</p>
-
-      <div class="cards">
-        <article class="card">
-          <div class="card-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M4 6h6v6H4z"/>
-              <path d="M14 12h6v6h-6z"/>
-              <path d="M10 9h2a3 3 0 0 1 3 3"/>
-              <path d="M14 15h-2a3 3 0 0 1-3-3"/>
-            </svg>
-          </div>
-          <h2>DevOps and CI</h2>
-          <p>Shorten feedback loops, remove brittle checks, and make build and release workflows easier to trust.</p>
-          <ul>
-            <li>Pipeline review and optimisation</li>
-            <li>Build, test and deploy workflows</li>
-            <li>Cycle-time and release-flow improvements</li>
-          </ul>
-        </article>
-
-        <article class="card">
-          <div class="card-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12 3l8 4.5v9L12 21l-8-4.5v-9z"/>
-              <path d="M12 12l8-4.5"/>
-              <path d="M12 12v9"/>
-              <path d="M12 12L4 7.5"/>
-            </svg>
-          </div>
-          <h2>Development environments</h2>
-          <p>Make onboarding and day-to-day work consistent with reproducible local environments and clear project conventions.</p>
-          <ul>
-            <li>Nix-based project environments</li>
-            <li>Tooling consistency across teams</li>
-            <li>Documentation that reflects real workflows</li>
-          </ul>
-        </article>
-
-        <article class="card">
-          <div class="card-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M8 9l-4 3 4 3"/>
-              <path d="M16 9l4 3-4 3"/>
-              <path d="M14 4l-4 16"/>
-            </svg>
-          </div>
-          <h2>Engineering delivery</h2>
-          <p>Hands-on product engineering for teams that need a senior contributor who can understand systems quickly.</p>
-          <ul>
-            <li>TypeScript codebases and migrations</li>
-            <li>Component-driven frontend development</li>
-            <li>Accessibility standards and QA tooling</li>
-          </ul>
-        </article>
-      </div>
     </section>
 
     <div class="divider"><span>Case studies</span></div>
@@ -738,6 +823,212 @@
             <h2>Migrated spatial tooling to TypeScript</h2>
             <p>Worked on product engineering in a similar space to Modular Mapper, improving maintainability across JavaScript and TypeScript code.</p>
           </div>
+        </article>
+      </div>
+    </section>
+
+    <div class="divider"><span>Capabilities</span></div>
+
+    <section id="capabilities">
+      <p class="section-intro">Broad practical coverage across operating systems, languages, frameworks and delivery tools.</p>
+
+      <div class="capability-cloud" aria-label="Technologies and platforms">
+        <div class="capability-row">
+          <div class="capability-track">
+            <div class="capability-set">
+              <span class="capability-tag">TypeScript</span>
+              <span class="capability-tag">JavaScript</span>
+              <span class="capability-tag">React</span>
+              <span class="capability-tag">Next.js</span>
+              <span class="capability-tag">Vue</span>
+              <span class="capability-tag">Svelte</span>
+              <span class="capability-tag">Angular</span>
+              <span class="capability-tag">Node.js</span>
+              <span class="capability-tag">Express</span>
+              <span class="capability-tag">NestJS</span>
+              <span class="capability-tag">Python</span>
+              <span class="capability-tag">Django</span>
+              <span class="capability-tag">FastAPI</span>
+              <span class="capability-tag">PHP</span>
+              <span class="capability-tag">Laravel</span>
+              <span class="capability-tag">Symfony</span>
+              <span class="capability-tag">C#</span>
+              <span class="capability-tag">.NET</span>
+              <span class="capability-tag">Java</span>
+              <span class="capability-tag">Spring Boot</span>
+              <span class="capability-tag">Go</span>
+              <span class="capability-tag">Rust</span>
+              <span class="capability-tag">WebAssembly</span>
+              <span class="capability-tag">HTML</span>
+              <span class="capability-tag">CSS</span>
+              <span class="capability-tag">Sass</span>
+              <span class="capability-tag">Tailwind CSS</span>
+            </div>
+            <div class="capability-set" aria-hidden="true">
+              <span class="capability-tag">TypeScript</span>
+              <span class="capability-tag">JavaScript</span>
+              <span class="capability-tag">React</span>
+              <span class="capability-tag">Next.js</span>
+              <span class="capability-tag">Vue</span>
+              <span class="capability-tag">Svelte</span>
+              <span class="capability-tag">Angular</span>
+              <span class="capability-tag">Node.js</span>
+              <span class="capability-tag">Express</span>
+              <span class="capability-tag">NestJS</span>
+              <span class="capability-tag">Python</span>
+              <span class="capability-tag">Django</span>
+              <span class="capability-tag">FastAPI</span>
+              <span class="capability-tag">PHP</span>
+              <span class="capability-tag">Laravel</span>
+              <span class="capability-tag">Symfony</span>
+              <span class="capability-tag">C#</span>
+              <span class="capability-tag">.NET</span>
+              <span class="capability-tag">Java</span>
+              <span class="capability-tag">Spring Boot</span>
+              <span class="capability-tag">Go</span>
+              <span class="capability-tag">Rust</span>
+              <span class="capability-tag">WebAssembly</span>
+              <span class="capability-tag">HTML</span>
+              <span class="capability-tag">CSS</span>
+              <span class="capability-tag">Sass</span>
+              <span class="capability-tag">Tailwind CSS</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="capability-row">
+          <div class="capability-track">
+            <div class="capability-set">
+              <span class="capability-tag">Linux</span>
+              <span class="capability-tag">Windows</span>
+              <span class="capability-tag">macOS</span>
+              <span class="capability-tag">Microsoft 365</span>
+              <span class="capability-tag">Azure</span>
+              <span class="capability-tag">AWS</span>
+              <span class="capability-tag">Google Cloud</span>
+              <span class="capability-tag">Azure DevOps</span>
+              <span class="capability-tag">GitHub Actions</span>
+              <span class="capability-tag">GitLab CI</span>
+              <span class="capability-tag">Docker</span>
+              <span class="capability-tag">Kubernetes</span>
+              <span class="capability-tag">Helm</span>
+              <span class="capability-tag">Terraform</span>
+              <span class="capability-tag">Ansible</span>
+              <span class="capability-tag">Nix</span>
+              <span class="capability-tag">Nginx</span>
+              <span class="capability-tag">Apache</span>
+              <span class="capability-tag">IIS</span>
+              <span class="capability-tag">Cloudflare</span>
+              <span class="capability-tag">Vercel</span>
+              <span class="capability-tag">Netlify</span>
+            </div>
+            <div class="capability-set" aria-hidden="true">
+              <span class="capability-tag">Linux</span>
+              <span class="capability-tag">Windows</span>
+              <span class="capability-tag">macOS</span>
+              <span class="capability-tag">Microsoft 365</span>
+              <span class="capability-tag">Azure</span>
+              <span class="capability-tag">AWS</span>
+              <span class="capability-tag">Google Cloud</span>
+              <span class="capability-tag">Azure DevOps</span>
+              <span class="capability-tag">GitHub Actions</span>
+              <span class="capability-tag">GitLab CI</span>
+              <span class="capability-tag">Docker</span>
+              <span class="capability-tag">Kubernetes</span>
+              <span class="capability-tag">Helm</span>
+              <span class="capability-tag">Terraform</span>
+              <span class="capability-tag">Ansible</span>
+              <span class="capability-tag">Nix</span>
+              <span class="capability-tag">Nginx</span>
+              <span class="capability-tag">Apache</span>
+              <span class="capability-tag">IIS</span>
+              <span class="capability-tag">Cloudflare</span>
+              <span class="capability-tag">Vercel</span>
+              <span class="capability-tag">Netlify</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="capability-row">
+          <div class="capability-track">
+            <div class="capability-set">
+              <span class="capability-tag">Bash</span>
+              <span class="capability-tag">PowerShell</span>
+              <span class="capability-tag">Git</span>
+              <span class="capability-tag">PostgreSQL</span>
+              <span class="capability-tag">MySQL</span>
+              <span class="capability-tag">SQL Server</span>
+              <span class="capability-tag">SQLite</span>
+              <span class="capability-tag">MongoDB</span>
+              <span class="capability-tag">Redis</span>
+              <span class="capability-tag">Elasticsearch</span>
+              <span class="capability-tag">OpenSearch</span>
+              <span class="capability-tag">REST</span>
+              <span class="capability-tag">GraphQL</span>
+              <span class="capability-tag">gRPC</span>
+              <span class="capability-tag">JSON</span>
+              <span class="capability-tag">Storybook</span>
+              <span class="capability-tag">Playwright</span>
+              <span class="capability-tag">Jest</span>
+              <span class="capability-tag">Vitest</span>
+              <span class="capability-tag">Cypress</span>
+              <span class="capability-tag">Vite</span>
+              <span class="capability-tag">Webpack</span>
+              <span class="capability-tag">Rollup</span>
+              <span class="capability-tag">Next.js</span>
+              <span class="capability-tag">WCAG</span>
+            </div>
+            <div class="capability-set" aria-hidden="true">
+              <span class="capability-tag">Bash</span>
+              <span class="capability-tag">PowerShell</span>
+              <span class="capability-tag">Git</span>
+              <span class="capability-tag">PostgreSQL</span>
+              <span class="capability-tag">MySQL</span>
+              <span class="capability-tag">SQL Server</span>
+              <span class="capability-tag">SQLite</span>
+              <span class="capability-tag">MongoDB</span>
+              <span class="capability-tag">Redis</span>
+              <span class="capability-tag">Elasticsearch</span>
+              <span class="capability-tag">OpenSearch</span>
+              <span class="capability-tag">REST</span>
+              <span class="capability-tag">GraphQL</span>
+              <span class="capability-tag">gRPC</span>
+              <span class="capability-tag">JSON</span>
+              <span class="capability-tag">Storybook</span>
+              <span class="capability-tag">Playwright</span>
+              <span class="capability-tag">Jest</span>
+              <span class="capability-tag">Vitest</span>
+              <span class="capability-tag">Cypress</span>
+              <span class="capability-tag">Vite</span>
+              <span class="capability-tag">Webpack</span>
+              <span class="capability-tag">Rollup</span>
+              <span class="capability-tag">Next.js</span>
+              <span class="capability-tag">WCAG</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"><span>Approach</span></div>
+
+    <section id="approach">
+      <p class="section-intro">I work best where the shape of the problem is not fixed yet: part delivery, part architecture, part tooling, part translation between people and systems.</p>
+
+      <div class="approach-points">
+        <article class="approach-point">
+          <h2>Adapt quickly</h2>
+          <p>Drop into unfamiliar codebases, platforms and teams without needing the work to fit one narrow stack.</p>
+        </article>
+
+        <article class="approach-point">
+          <h2>Reduce drag</h2>
+          <p>Find the parts of the workflow slowing people down, then make builds, environments and delivery easier to trust.</p>
+        </article>
+
+        <article class="approach-point">
+          <h2>Leave clarity behind</h2>
+          <p>Make changes the permanent team can understand, own and keep improving after the contract ends.</p>
         </article>
       </div>
     </section>
