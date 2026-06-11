@@ -311,7 +311,7 @@
 
     .case-study-grid {
       display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
+      grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 1rem;
     }
 
@@ -351,10 +351,13 @@
     }
 
     .company-mark.givematch,
-    .company-mark.evergive,
-    .company-mark.xgx {
+    .company-mark.evergive {
       background: #fff;
       color: #09090b;
+    }
+
+    .company-mark.xgx {
+      background: #000;
     }
 
     .company-mark.travel {
@@ -363,6 +366,10 @@
 
     .company-mark.modular {
       background: #0f172a;
+    }
+
+    .company-mark.iso-spaces {
+      background: #e8e8e8;
     }
 
     .case-study > :not(.case-study-brand) {
@@ -700,7 +707,7 @@
         <article class="case-study">
           <div class="case-study-brand">
             <div class="company-mark xgx">
-              <img src="/logos/xgx.svg" alt="XGX.AI">
+              <img src="/logos/xgx-white.svg" alt="XGX.AI">
             </div>
           </div>
           <div>
@@ -718,6 +725,18 @@
           <div>
             <h2>Migrated JavaScript to TypeScript</h2>
             <p>Ported a codebase from JavaScript to TypeScript, created a realtime procedural mesh generation system using Rust-WASM IPC, and worked across the website.</p>
+          </div>
+        </article>
+
+        <article class="case-study">
+          <div class="case-study-brand">
+            <div class="company-mark iso-spaces">
+              <img src="/logos/iso-spaces.png" alt="ISO Spaces">
+            </div>
+          </div>
+          <div>
+            <h2>Migrated spatial tooling to TypeScript</h2>
+            <p>Worked on product engineering in a similar space to Modular Mapper, improving maintainability across JavaScript and TypeScript code.</p>
           </div>
         </article>
       </div>
