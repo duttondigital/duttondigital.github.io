@@ -1,6 +1,7 @@
 +++
 title = "Planned obsolescence in business software"
 date = 2026-02-19
+draft = true
 
 [extra]
 author = "Louis Dutton"

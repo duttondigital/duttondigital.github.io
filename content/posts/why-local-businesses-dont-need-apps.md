@@ -1,6 +1,7 @@
 +++
 title = "Why local businesses don't need apps"
 date = 2026-02-21
+draft = true
 
 [extra]
 author = "Louis Dutton"

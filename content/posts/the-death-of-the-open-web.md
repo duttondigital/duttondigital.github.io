@@ -1,6 +1,7 @@
 +++
 title = "The shift from open web to platforms"
 date = 2026-02-20
+draft = true
 
 [extra]
 author = "Louis Dutton"

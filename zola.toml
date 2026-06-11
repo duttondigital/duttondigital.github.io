@@ -2,8 +2,7 @@ base_url = "https://dutton.digital"
 title = "Dutton Digital"
 compile_sass = false
 build_search_index = false
-generate_feeds = true
-feed_filenames = ["rss.xml"]
+generate_feeds = false
 
 taxonomies = [
   { name = "tags" }

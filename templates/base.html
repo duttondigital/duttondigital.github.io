@@ -49,7 +49,6 @@
     .logo {
       display: flex;
       align-items: center;
-      gap: 0.6rem;
       color: #fff;
       text-decoration: none;
     }
@@ -61,14 +60,10 @@
     }
 
     .logo-text {
-      letter-spacing: 0.08em;
+      letter-spacing: 0;
       font-size: 1rem;
-      font-weight: 300;
-      font-family: 'Pathway Extreme', sans-serif;
-      text-transform: uppercase;
-      line-height: 1.1;
-      display: flex;
-      flex-direction: column;
+      font-weight: 500;
+      line-height: 1;
     }
 
     .logo-stretch {
@@ -129,26 +124,20 @@
 <div class="container">
   <nav>
     <a href="/" class="logo">
-      <div class="logo-icon">
-        <svg viewBox="-1 -1 23 23" fill="none" aria-hidden="true">
-          <path d="M 1,0 L 8,0 C 15,0 15,14 8,14 L 1,14 A 1,1 0 0,1 0,13 L 0,1 A 1,1 0 0,1 1,0 Z" stroke="white" stroke-width="1.2" fill="none"/>
-          <path d="M 7,7 L 14,7 C 21,7 21,21 14,21 L 7,21 A 1,1 0 0,1 6,20 L 6,8 A 1,1 0 0,1 7,7 Z" stroke="white" stroke-width="1.2" fill="none"/>
-        </svg>
-      </div>
-      <div class="logo-text"><span>Dutton</span><span class="logo-stretch">Digital</span></div>
+      <span class="logo-text">dutton digital</span>
     </a>
     <div class="nav-links">
       <a href="/">Home</a>
       {# <a href="/posts/">Posts</a> #}
-      <a href="mailto:contact@dutton.digital" class="nav-cta">Contact</a>
+      <a href="mailto:louis@dutton.digital" class="nav-cta">Contact</a>
     </div>
   </nav>
 
   {% block content %}{% endblock %}
 
   <footer>
-    <span>&copy; 2025 Dutton Digital</span>
-    <span>contact@dutton.digital</span>
+    <span>&copy; 2026 Dutton Digital</span>
+    <span>louis@dutton.digital</span>
   </footer>
 </div>
 

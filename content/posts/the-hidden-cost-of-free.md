@@ -1,6 +1,7 @@
 +++
 title = "The hidden cost of free platforms"
 date = 2026-02-22
+draft = true
 
 [extra]
 author = "Louis Dutton"

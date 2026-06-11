@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dutton Digital</title>
-  <meta name="description" content="Dutton Digital helps local businesses get online — websites, listings, and business info managed in one place.">
+  <title>Dutton Digital | DevOps and engineering contractor</title>
+  <meta name="description" content="Dutton Digital is the contracting practice of Louis Dutton, a senior engineer focused on DevOps, CI, development environments and software delivery.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Pathway+Extreme:wght@300;400;500&display=swap" rel="stylesheet">
@@ -16,9 +16,12 @@
       --fg: #e8e8e8;
       --accent: #fff;
       --accent-dim: rgba(255, 255, 255, 0.06);
-      --muted: #777;
-      --border: #1e1e1e;
+      --muted: #8d8d8d;
+      --border: #1f1f1f;
+      --panel: #101010;
     }
+
+    html { scroll-behavior: smooth; }
 
     body {
       font-family: system-ui, -apple-system, sans-serif;
@@ -29,9 +32,10 @@
       overflow-x: clip;
     }
 
-    /* NAV */
+    a { color: inherit; }
+
     .container {
-      max-width: 820px;
+      max-width: 960px;
       margin: 0 auto;
       padding: 0 2rem;
     }
@@ -40,15 +44,16 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      gap: 1.5rem;
       padding-top: 2rem;
     }
 
-    a.logo {
+    .logo {
       display: flex;
       align-items: center;
-      gap: 0.6rem;
       color: #fff;
       text-decoration: none;
+      flex-shrink: 0;
     }
 
     .logo-icon svg {
@@ -58,14 +63,10 @@
     }
 
     .logo-text {
-      letter-spacing: 0.08em;
+      letter-spacing: 0;
       font-size: 1rem;
-      font-weight: 300;
-      font-family: 'Pathway Extreme', sans-serif;
-      text-transform: uppercase;
-      line-height: 1.1;
-      display: flex;
-      flex-direction: column;
+      font-weight: 500;
+      line-height: 1;
     }
 
     .logo-stretch {
@@ -73,155 +74,141 @@
       letter-spacing: 0.12em;
     }
 
-    .logo-bold { font-weight: 800; }
-    .logo-thin { font-weight: 300; }
-
     .nav-links {
       display: flex;
       align-items: center;
-      gap: 0;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      justify-content: flex-end;
     }
 
     .nav-links a {
       color: var(--muted);
       text-decoration: none;
       font-size: 0.8rem;
-      margin-left: 1.5rem;
       transition: color 0.2s;
     }
 
     .nav-links a:hover { color: var(--fg); }
 
-    .nav-links .nav-cta {
+    .nav-links .nav-cta,
+    .cta {
       display: inline-block;
-      margin-left: 1.5rem;
-      padding: 0.5rem 1rem;
+      padding: 0.6rem 1rem;
       background: var(--fg);
       color: var(--bg);
       text-decoration: none;
       border-radius: 6px;
-      font-weight: 600;
-      font-size: 0.8rem;
+      font-weight: 650;
+      font-size: 0.84rem;
       transition: opacity 0.2s;
     }
 
     .nav-links .nav-cta:hover,
-    .nav-links .nav-cta:active {
+    .cta:hover {
       opacity: 0.85;
       color: var(--bg);
-      background: var(--fg);
     }
 
-    /* HERO */
     .hero {
-      padding: 10rem 0 8rem;
-      position: relative;
+      display: grid;
+      grid-template-columns: minmax(0, 1.25fr) minmax(260px, 0.75fr);
+      gap: 4rem;
+      align-items: center;
+      padding: 8rem 0 6rem;
     }
 
-    .hero h1,
-    .hero p,
-    .hero .cta {
-      position: relative;
-    }
-
-    .hero-graphic {
-      position: absolute;
-      right: 0;
-      top: 60%;
-      transform: translateY(-50%);
-      width: 380px;
-      height: 380px;
-      pointer-events: none;
-    }
-
-    .hero h1 {
-      font-size: clamp(2rem, 5vw, 2.8rem);
-      font-weight: 700;
-      letter-spacing: -0.03em;
-      line-height: 1.15;
-    }
-
-
-    .hero p {
-      margin-top: 1.25rem;
-      font-size: 1.05rem;
+    .eyebrow {
       color: var(--muted);
-      max-width: 520px;
-      line-height: 1.7;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
     }
 
-    .hero .cta {
-      display: inline-block;
-      margin-top: 2rem;
-      padding: 0.65rem 1.5rem;
-      background: var(--fg);
-      color: var(--bg);
-      text-decoration: none;
-      border-radius: 6px;
-      font-weight: 600;
-      font-size: 0.85rem;
-      transition: opacity 0.2s;
+    h1 {
+      font-size: clamp(2.1rem, 5vw, 3.6rem);
+      font-weight: 750;
+      letter-spacing: -0.03em;
+      line-height: 1.08;
     }
 
-    .hero .cta:hover { opacity: 0.85; }
+    .hero-copy {
+      margin-top: 1.25rem;
+      color: var(--muted);
+      max-width: 620px;
+      font-size: 1.05rem;
+      line-height: 1.75;
+    }
 
-    .hero .cta-secondary {
-      display: inline-block;
+    .hero-actions {
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
       margin-top: 2rem;
-      margin-left: 0.75rem;
-      padding: 0.65rem 1.5rem;
+    }
+
+    .cta-secondary {
+      display: inline-block;
+      padding: 0.6rem 1rem;
       border: 1px solid var(--border);
       color: var(--fg);
       text-decoration: none;
       border-radius: 6px;
-      font-weight: 500;
-      font-size: 0.85rem;
+      font-weight: 600;
+      font-size: 0.84rem;
       transition: background 0.2s, border-color 0.2s;
     }
 
-    .hero .cta-secondary:hover {
+    .cta-secondary:hover {
       background: var(--accent-dim);
-      border-color: #333;
+      border-color: #383838;
     }
 
-    /* CLIENTS */
-    .clients {
-      padding: 2.5rem 0;
-      text-align: center;
+    .hero-panel {
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.5rem;
+      background: var(--panel);
+      position: relative;
+      overflow: hidden;
+      min-height: 310px;
     }
 
-    .clients-label {
-      font-size: 0.65rem;
-      font-weight: 600;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
+    .hero-panel > * { position: relative; }
+
+    .hero-panel svg {
+      position: absolute;
+      inset: auto 0 0 auto;
+      width: 250px;
+      height: 250px;
+      opacity: 0.8;
+    }
+
+    .panel-title {
+      color: var(--fg);
+      font-size: 0.95rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    .focus-list {
+      display: grid;
+      gap: 0.65rem;
+      list-style: none;
+    }
+
+    .focus-list li {
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 0.7rem 0.85rem;
       color: var(--muted);
-      margin-bottom: 1.25rem;
+      font-size: 0.86rem;
+      background: rgba(255, 255, 255, 0.025);
     }
 
-    .clients-list {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 3rem;
-      flex-wrap: wrap;
-    }
-
-    .clients-list img {
-      height: 20px;
-      width: auto;
-      opacity: 0.3;
-      transition: opacity 0.2s;
-    }
-
-    .clients-list img:hover {
-      opacity: 0.5;
-    }
-
-    /* SECTIONS */
-    section {
-      padding: 4rem 0;
-    }
+    section { padding: 4rem 0; }
 
     .divider {
       display: flex;
@@ -238,572 +225,560 @@
     }
 
     .divider span {
-      font-size: 0.7rem;
-      font-weight: 600;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
       color: var(--muted);
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
       white-space: nowrap;
     }
 
-    /* PACKAGES */
-    .packages-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 1.25rem;
-      background: none;
-      border: none;
-      border-radius: 0;
-      overflow: visible;
+    .section-intro {
+      max-width: 640px;
+      color: var(--muted);
+      margin: 0 0 2rem;
+      line-height: 1.75;
     }
 
-    .package {
-      background: var(--bg);
-      padding: 2rem;
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1rem;
+    }
+
+    .card {
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      background: var(--panel);
+    }
+
+    .card {
+      padding: 1.5rem;
       display: flex;
       flex-direction: column;
+      gap: 1rem;
+    }
+
+    .card-icon {
+      width: 32px;
+      height: 32px;
+      display: grid;
+      place-items: center;
       border: 1px solid var(--border);
-      border-radius: 10px;
+      border-radius: 8px;
+      background: var(--accent-dim);
     }
 
-    .package .pkg-header {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      margin-bottom: 0.25rem;
-    }
-
-    .package .pkg-header svg {
+    .card-icon svg {
       width: 18px;
       height: 18px;
-      flex-shrink: 0;
+      stroke: var(--fg);
     }
 
-    .package h3 {
-      font-size: 0.95rem;
-      font-weight: 600;
+    .card h2 {
+      font-size: 1rem;
+      line-height: 1.35;
     }
 
-    .package .price {
-      margin-bottom: 1.25rem;
-    }
-
-    .package .price .amount {
-      font-size: 1.8rem;
-      font-weight: 700;
-      color: var(--fg);
-      letter-spacing: -0.03em;
-    }
-
-    .package .price .period {
-      font-size: 0.8rem;
+    .card p,
+    .card li {
       color: var(--muted);
-    }
-
-    .package .price .note {
-      font-size: 0.8rem;
-      color: var(--muted);
-    }
-
-    .package .desc {
-      color: var(--muted);
-      font-size: 0.85rem;
+      font-size: 0.86rem;
       line-height: 1.65;
-      margin-bottom: 1.25rem;
     }
 
-    .package ul {
+    .card ul {
       list-style: none;
-      margin-bottom: 1.5rem;
-      flex: 1;
+      display: grid;
+      gap: 0.35rem;
+      margin-top: auto;
     }
 
-    .package ul li {
-      font-size: 0.82rem;
-      color: var(--muted);
-      padding: 0.3rem 0;
-      padding-left: 1.2rem;
+    .card li {
       position: relative;
+      padding-left: 1rem;
     }
 
-    .package ul li::before {
-      content: "✓";
-      position: absolute;
-      left: 0;
-      color: var(--fg);
-      font-size: 0.75rem;
-    }
-
-    .package .pkg-cta {
-      display: block;
-      text-align: center;
-      padding: 0.6rem 1rem;
-      border: 1px solid var(--border);
-      border-radius: 6px;
-      color: var(--fg);
-      text-decoration: none;
-      font-size: 0.82rem;
-      font-weight: 500;
-      transition: background 0.2s, border-color 0.2s;
-    }
-
-    .package .pkg-cta:hover {
-      background: var(--accent-dim);
-      border-color: #333;
-    }
-
-    .package.primary {
-      border-color: #fff;
-      box-shadow: 0 0 15px rgba(255, 255, 255, 0.15), 0 0 45px rgba(255, 255, 255, 0.1), 0 0 90px rgba(255, 255, 255, 0.05);
-    }
-
-    .package.primary .pkg-cta {
-      background: var(--fg);
-      color: var(--bg);
-      border-color: var(--fg);
-    }
-
-    .package.primary .pkg-cta:hover {
-      opacity: 0.85;
-      background: var(--fg);
-    }
-
-    /* ABOUT */
-    .about-intro {
-      display: flex;
-      gap: 2.5rem;
-      align-items: flex-start;
-    }
-
-    .about-photo {
-      width: 180px;
-      height: 180px;
-      border-radius: 10px;
-      object-fit: cover;
-      flex-shrink: 0;
-      background: var(--border);
-      position: relative;
-    }
-
-    .about-photo-wrap {
-      position: relative;
-      width: 180px;
-      height: 180px;
-      flex-shrink: 0;
-    }
-
-    .about-photo-wrap::before {
+    .card li::before {
       content: "";
       position: absolute;
-      inset: 14px -14px -14px 14px;
-      border: 1px solid #fff;
-      border-radius: 10px;
-      pointer-events: none;
+      left: 0;
+      top: 0.72em;
+      width: 0.35rem;
+      height: 1px;
+      background: var(--fg);
     }
 
-    .about-text {
-      flex: 1;
-    }
-
-    .approach {
-      margin-top: 1rem;
-      font-size: 1rem;
-      color: var(--muted);
-      max-width: 560px;
-      line-height: 1.8;
-    }
-
-    .approach strong {
-      color: var(--fg);
-      font-weight: 600;
-    }
-
-    @media (max-width: 600px) {
-      .about-intro {
-        flex-direction: column;
-        gap: 1.5rem;
-      }
-      .about-photo-wrap {
-        width: calc(100% - 14px);
-        height: 200px;
-      }
-      .about-photo {
-        width: 100%;
-        height: 200px;
-      }
-    }
-
-    /* PRINCIPLES */
-    .principles {
+    .case-study-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 2.5rem;
-      margin-top: 2.5rem;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
     }
 
-    .principle {
-      border-left: 2px solid var(--border);
-      padding-left: 1.25rem;
+    .case-study {
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      background: var(--panel);
+      display: grid;
+      gap: 0;
+      overflow: hidden;
     }
 
-    .principle h3 {
-      font-size: 0.9rem;
-      font-weight: 600;
-      margin-bottom: 0.3rem;
+    .case-study-brand {
+      display: grid;
+      align-content: stretch;
     }
 
-    .principle p {
+    .company-mark {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      max-width: 100%;
+      height: 112px;
+      padding: 1.25rem;
+      border-bottom: 1px solid var(--border);
+      background: rgba(255, 255, 255, 0.04);
+      color: var(--fg);
+    }
+
+    .company-mark img,
+    .company-mark svg {
+      display: block;
+      width: auto;
+      max-width: min(220px, 80%);
+      max-height: 44px;
+    }
+
+    .company-mark.givematch,
+    .company-mark.evergive,
+    .company-mark.xgx {
+      background: #fff;
+      color: #09090b;
+    }
+
+    .company-mark.travel {
+      background: rgb(36, 112, 120);
+    }
+
+    .company-mark.modular {
+      background: #0f172a;
+    }
+
+    .case-study > :not(.case-study-brand) {
+      padding: 1.25rem;
+    }
+
+    .case-study h2 {
+      font-size: 1.15rem;
+      line-height: 1.35;
+      margin-bottom: 0.5rem;
+    }
+
+    .case-study p {
       color: var(--muted);
-      font-size: 0.85rem;
+      font-size: 0.88rem;
       line-height: 1.65;
+      display: -webkit-box;
+      overflow: hidden;
+      max-height: calc(0.88rem * 1.65 * 2);
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+      line-clamp: 2;
     }
 
-    /* CONTACT CTA */
     .contact-card {
-      background: #0e0e0e;
+      background: var(--panel);
       border: 1px solid #fff;
       border-radius: 12px;
-      box-shadow: 0 0 15px rgba(255, 255, 255, 0.15), 0 0 45px rgba(255, 255, 255, 0.1), 0 0 90px rgba(255, 255, 255, 0.05);
+      box-shadow: 0 0 16px rgba(255, 255, 255, 0.12), 0 0 52px rgba(255, 255, 255, 0.08);
       padding: 3rem;
       text-align: center;
       position: relative;
       overflow: hidden;
     }
 
-    .contact-card > * {
-      position: relative;
-    }
+    .contact-card > * { position: relative; }
 
     .contact-graphic {
       position: absolute;
       pointer-events: none;
     }
 
-    .contact-card h3 {
-      font-size: 1.4rem;
-      font-weight: 700;
+    .contact-card h2 {
+      font-size: 1.45rem;
+      line-height: 1.25;
       letter-spacing: -0.02em;
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.6rem;
     }
 
     .contact-card p {
       color: var(--muted);
-      font-size: 0.95rem;
-      margin-bottom: 1.5rem;
+      font-size: 0.96rem;
+      margin: 0 auto 1.5rem;
+      max-width: 540px;
     }
 
-    .contact-card .cta {
-      display: inline-block;
-      padding: 0.65rem 1.5rem;
-      background: var(--fg);
-      color: var(--bg);
-      text-decoration: none;
-      border-radius: 6px;
-      font-weight: 600;
-      font-size: 0.85rem;
-      transition: opacity 0.2s;
-    }
-
-    .contact-card .cta:hover { opacity: 0.85; }
-
-    /* FOOTER */
     footer {
       padding: 3rem 0;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      font-size: 0.8rem;
+      gap: 1rem;
+      border-top: 1px solid var(--border);
       color: var(--muted);
+      font-size: 0.8rem;
+    }
+
+    footer a {
+      color: var(--muted);
+      text-decoration: none;
+    }
+
+    footer a:hover { color: var(--fg); }
+
+    @media (max-width: 820px) {
+      .hero {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 5rem 0 4rem;
+      }
+
+      .hero-panel {
+        min-height: 260px;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      .case-study-grid { grid-template-columns: 1fr; }
+
+      .case-study {
+        grid-template-columns: 132px minmax(0, 1fr);
+        min-height: 0;
+      }
+
+      .case-study-brand {
+        align-self: stretch;
+      }
+
+      .company-mark {
+        height: 100%;
+        min-height: 132px;
+        padding: 1rem;
+        border-right: 1px solid var(--border);
+        border-bottom: 0;
+      }
+
+      .company-mark img,
+      .company-mark svg {
+        max-width: min(96px, 100%);
+        max-height: 42px;
+      }
+
     }
 
     @media (max-width: 600px) {
       .container { padding: 0 1.5rem; }
-      .hero { padding: 4rem 0 3rem; }
+
+      nav {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .nav-links {
+        justify-content: flex-start;
+        gap: 1rem;
+      }
+
       section { padding: 3rem 0; }
-      footer { flex-direction: column; gap: 0.5rem; text-align: center; }
-      .hero-graphic { width: 260px; height: 260px; right: -1rem; top: 65%; }
+
+      .hero { padding: 2.5rem 0 2rem; }
+
+      .hero-panel { display: none; }
+
+      .cta,
+      .cta-secondary,
+      .nav-links .nav-cta { text-align: center; }
+
+      .contact-card {
+        padding: 2rem 1.25rem;
+      }
+
+      .contact-graphic { display: none; }
+
+      .case-study {
+        grid-template-columns: 104px minmax(0, 1fr);
+      }
+
+      .company-mark {
+        min-height: 116px;
+        padding: 0.75rem;
+      }
+
+      .company-mark img,
+      .company-mark svg {
+        max-width: min(78px, 100%);
+        max-height: 36px;
+      }
+
+      .case-study > :not(.case-study-brand) {
+        padding: 1rem;
+      }
+
+      footer {
+        flex-direction: column;
+        text-align: center;
+      }
     }
   </style>
 </head>
 <body>
 
 <div class="container">
-  <nav>
-    <a href="/" class="logo">
-      <div class="logo-icon">
-        <svg viewBox="-1 -1 23 23" fill="none" aria-hidden="true">
-          <path d="M 1,0 L 8,0 C 15,0 15,14 8,14 L 1,14 A 1,1 0 0,1 0,13 L 0,1 A 1,1 0 0,1 1,0 Z" stroke="white" stroke-width="1.2" fill="none"/>
-          <path d="M 7,7 L 14,7 C 21,7 21,21 14,21 L 7,21 A 1,1 0 0,1 6,20 L 6,8 A 1,1 0 0,1 7,7 Z" stroke="white" stroke-width="1.2" fill="none"/>
-        </svg>
-      </div>
-      <div class="logo-text"><span>Dutton</span><span class="logo-stretch">Digital</span></div>
+  <nav aria-label="Main navigation">
+    <a href="/" class="logo" aria-label="Dutton Digital home">
+      <span class="logo-text">dutton digital</span>
     </a>
     <div class="nav-links">
-      <a href="/">Home</a>
-      <!-- <a href="/posts/">Posts</a> -->
-      <a href="mailto:contact@dutton.digital" class="nav-cta">Contact</a>
+      <a href="#focus">Focus</a>
+      <a href="#case-studies">Case studies</a>
+      <a href="https://louisdutton.dev/">CV</a>
+      <a href="mailto:louis@dutton.digital" class="nav-cta">Contact</a>
     </div>
   </nav>
 
-  <div class="hero">
-    <h1>Your business online<br>&mdash; without the hassle.</h1>
-    <p>Website, listings, and business info &mdash; managed in one place and always up to date.</p>
-    <a href="#contact" class="cta">Get in touch</a>
-    <a href="#packages" class="cta-secondary">Learn more</a>
-
-    <svg class="hero-graphic" viewBox="0 0 360 360" fill="none" aria-hidden="true">
-      <defs>
-        <radialGradient id="glow" cx="70%" cy="35%" r="60%">
-          <stop offset="0%" stop-color="white"/>
-          <stop offset="100%" stop-color="white" stop-opacity="0"/>
-        </radialGradient>
-        <mask id="fade">
-          <rect width="360" height="360" fill="url(#glow)"/>
-        </mask>
-      </defs>
-      <g mask="url(#fade)">
-        <!-- Row 0 -->
-        <rect x="60" y="0" width="52" height="52" rx="8" fill="white" opacity="0.06"/>
-        <rect x="120" y="0" width="52" height="52" rx="8" fill="white" opacity="0.10"/>
-        <rect x="180" y="0" width="52" height="52" rx="8" fill="white" opacity="0.06"/>
-        <!-- Row 1 -->
-        <rect x="0" y="60" width="52" height="52" rx="8" fill="white" opacity="0.05"/>
-        <rect x="60" y="60" width="52" height="52" rx="8" fill="white" opacity="0.12"/>
-        <rect x="120" y="60" width="52" height="52" rx="8" fill="white" opacity="0.08"/>
-        <rect x="180" y="60" width="52" height="52" rx="8" fill="white" opacity="0.15"/>
-        <rect x="240" y="60" width="52" height="52" rx="8" fill="white" opacity="0.07"/>
-        <!-- Row 2 -->
-        <rect x="60" y="120" width="52" height="52" rx="8" fill="white" opacity="0.07"/>
-        <rect x="120" y="120" width="52" height="52" rx="8" fill="white" opacity="0.15"/>
-        <rect x="180" y="120" width="52" height="52" rx="8" fill="white" opacity="0.12"/>
-        <rect x="240" y="120" width="52" height="52" rx="8" fill="white" opacity="0.08"/>
-        <!-- Row 3 -->
-        <rect x="120" y="180" width="52" height="52" rx="8" fill="white" opacity="0.10"/>
-        <rect x="180" y="180" width="52" height="52" rx="8" fill="white" opacity="0.15"/>
-        <rect x="240" y="180" width="52" height="52" rx="8" fill="white" opacity="0.12"/>
-        <rect x="300" y="180" width="52" height="52" rx="8" fill="white" opacity="0.06"/>
-        <!-- Row 4 -->
-        <rect x="180" y="240" width="52" height="52" rx="8" fill="white" opacity="0.08"/>
-        <rect x="240" y="240" width="52" height="52" rx="8" fill="white" opacity="0.13"/>
-        <rect x="300" y="240" width="52" height="52" rx="8" fill="white" opacity="0.07"/>
-        <!-- Row 5 -->
-        <rect x="240" y="300" width="52" height="52" rx="8" fill="white" opacity="0.06"/>
-        <rect x="300" y="300" width="52" height="52" rx="8" fill="white" opacity="0.10"/>
-        <!-- Floating detached module -->
-        <rect x="304" y="4" width="44" height="44" rx="8" stroke="white" stroke-width="1.5" fill="none" opacity="0.15"/>
-        <!-- Dashed connection -->
-        <line x1="232" y1="26" x2="304" y2="26" stroke="white" stroke-width="1" stroke-dasharray="4 3" opacity="0.10"/>
-      </g>
-    </svg>
-  </div>
-
-  <div class="divider"><span>Packages</span></div>
-
-  <section id="packages">
-    <div class="packages-grid">
-      <div class="package primary">
-        <div class="pkg-header">
-          <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M19 4H5a2 2 0 00-2 2v2a2 2 0 002 2h14a2 2 0 002-2V6a2 2 0 00-2-2z"/>
-            <path d="M3 10v8a2 2 0 002 2h14a2 2 0 002-2v-8"/>
-            <line x1="12" y1="14" x2="12" y2="14.01"/>
-          </svg>
-          <h3>Ticketed Events</h3>
+  <main>
+    <section class="hero">
+      <div>
+        <p class="eyebrow">DevOps and engineering contractor</p>
+        <h1>Analyse.<br>Optimise.<br>Deliver.</h1>
+        <p class="hero-copy">Senior DevOps and engineering support for teams that need faster CI, stable development environments and delivery workflows that keep moving.</p>
+        <div class="hero-actions">
+          <a href="mailto:louis@dutton.digital" class="cta">Discuss a role</a>
+          <a href="#case-studies" class="cta-secondary">View case studies</a>
         </div>
-        <div class="price">
-          <span class="note">Pilot programme</span>
-        </div>
-        <p class="desc">We're looking for companies that sell ticketed events to join our pilot. Get in early, lock in pilot pricing, and have a say in how it's built.</p>
-        <ul>
-          <li>Event listings &amp; scheduling</li>
-          <li>Online ticket sales &amp; payments</li>
-          <li>Your own event website</li>
-          <li>Hands-on support from our team</li>
-          <li>Pilot pricing &mdash; locked in when we launch</li>
+      </div>
+
+      <aside class="hero-panel" aria-label="Contract focus areas">
+        <svg viewBox="0 0 300 300" fill="none" aria-hidden="true">
+          <defs>
+            <radialGradient id="heroGlow" cx="35%" cy="35%" r="70%">
+              <stop offset="0%" stop-color="white"/>
+              <stop offset="100%" stop-color="white" stop-opacity="0"/>
+            </radialGradient>
+            <mask id="heroFade">
+              <rect width="300" height="300" fill="url(#heroGlow)"/>
+            </mask>
+          </defs>
+          <g mask="url(#heroFade)" opacity="0.9">
+            <path d="M58 72H174" stroke="white" stroke-opacity="0.16" stroke-width="1.5"/>
+            <path d="M126 122H242" stroke="white" stroke-opacity="0.16" stroke-width="1.5"/>
+            <path d="M82 172H198" stroke="white" stroke-opacity="0.16" stroke-width="1.5"/>
+            <rect x="40" y="52" width="72" height="40" rx="8" fill="white" opacity="0.12"/>
+            <rect x="158" y="52" width="72" height="40" rx="8" fill="white" opacity="0.08"/>
+            <rect x="108" y="102" width="72" height="40" rx="8" fill="white" opacity="0.16"/>
+            <rect x="226" y="102" width="72" height="40" rx="8" fill="white" opacity="0.07"/>
+            <rect x="64" y="152" width="72" height="40" rx="8" fill="white" opacity="0.10"/>
+            <rect x="182" y="152" width="72" height="40" rx="8" fill="white" opacity="0.14"/>
+            <rect x="112" y="202" width="72" height="40" rx="8" fill="white" opacity="0.08"/>
+          </g>
+        </svg>
+        <p class="panel-title">Contract focus</p>
+        <ul class="focus-list">
+          <li>CI/CD review, optimisation and repair</li>
+          <li>Reproducible development environments with Nix</li>
+          <li>TypeScript delivery across frontend and backend systems</li>
+          <li>Architecture normalisation across teams and projects</li>
+          <li>Accessibility and component-driven development</li>
         </ul>
-        <a href="#contact" class="pkg-cta">Join the pilot</a>
-      </div>
-      <div class="package">
-        <div class="pkg-header">
-          <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="12" r="10"/>
-            <path d="M12 6v6l4 2"/>
-          </svg>
-          <h3>More coming soon</h3>
-        </div>
-        <div class="price">
-          <span class="note">Stay tuned</span>
-        </div>
-        <p class="desc">We're building more packages for local businesses &mdash; commerce, bookings, websites &amp; beyond. Get in touch to be the first to know.</p>
-        <ul>
-          <li>Business essentials &amp; websites</li>
-          <li>Online commerce &amp; payments</li>
-          <li>Bookings, menus &amp; more</li>
-          <li>Custom modules &mdash; pick what you need</li>
-        </ul>
-        <a href="#contact" class="pkg-cta">Register interest</a>
-      </div>
-    </div>
+      </aside>
+    </section>
 
-    <!-- ORIGINAL PACKAGES — uncomment when ready to launch full offerings
-    <div class="packages-grid">
-      <div class="package">
-        <div class="pkg-header">
-          <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M3 21h18"/>
-            <path d="M5 21V7l7-4 7 4v14"/>
-            <path d="M9 21v-6h6v6"/>
-          </svg>
-          <h3>Essentials</h3>
-        </div>
-        <div class="price">
-          <span class="amount">£10</span><span class="period">/mo</span>
-        </div>
-        <p class="desc">Your business online &mdash; managed in one place, available everywhere.</p>
-        <ul>
-          <li>Business profile &amp; contact info</li>
-          <li>Opening hours &amp; location</li>
-          <li>Your own website</li>
-          <li>Works with Google, social &amp; AI</li>
-          <li>Update once, live everywhere</li>
-        </ul>
-        <a href="#contact" class="pkg-cta">Get started</a>
-      </div>
-      <div class="package">
-        <div class="pkg-header">
-          <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
-            <line x1="3" y1="6" x2="21" y2="6"/>
-            <path d="M16 10a4 4 0 01-8 0"/>
-          </svg>
-          <h3>Commerce</h3>
-        </div>
-        <div class="price">
-          <span class="amount">£50</span><span class="period">/mo</span>
-        </div>
-        <p class="desc">Everything in Essentials, plus sell your products online.</p>
-        <ul>
-          <li>Everything in Essentials</li>
-          <li>Product listings &amp; pricing</li>
-          <li>Inventory management</li>
-          <li>Online orders &amp; payments</li>
-          <li>Sell anywhere, manage in one place</li>
-        </ul>
-        <a href="#contact" class="pkg-cta">Get started</a>
-      </div>
-      <div class="package">
-        <div class="pkg-header">
-          <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M12 2l-2 7H3l5.5 4.5L6 21l6-4.5L18 21l-2.5-7.5L21 9h-7z"/>
-          </svg>
-          <h3>Custom</h3>
-        </div>
-        <div class="price">
-          <span class="note">Let's talk</span>
-        </div>
-        <p class="desc">Pick exactly the modules you need &mdash; nothing you don't.</p>
-        <ul>
-          <li>Choose exactly what you need</li>
-          <li>Bookings, menus, galleries &mdash; whatever fits</li>
-          <li>Add or remove as your business changes</li>
-          <li>No bundles, no extras, just what you use</li>
-        </ul>
-        <a href="#contact" class="pkg-cta">Get in touch</a>
-      </div>
-    </div>
-    END ORIGINAL PACKAGES -->
-  </section>
+    <div class="divider"><span>Focus</span></div>
 
-  <div class="divider"><span>About</span></div>
+    <section id="focus">
+      <p class="section-intro">Useful contractor work tends to be practical: make the pipeline faster, make the local setup repeatable, clean up the shape of the system, and keep delivery moving while the permanent team stays in control.</p>
 
-  <section id="approach">
-    <div class="about-intro">
-      <div class="about-photo-wrap">
-        <img class="about-photo" src="family.webp" alt="The Dutton family">
-      </div>
-      <div class="about-text">
-        <p class="approach" style="margin-top: 0;">
-          We're a <strong>family-run business</strong> based in Cornwall, built around one idea: getting local businesses online shouldn't be complicated or expensive.
-        </p>
-        <p class="approach" style="margin-top: 1rem;">
-          Our tools are <strong>purpose-built for local businesses</strong> &mdash; no bloated platforms, no features you'll never use. Robust, reliable, and straightforward.
-        </p>
-      </div>
-    </div>
-    <div class="principles">
-      <div class="principle">
-        <h3>Built for businesses like yours</h3>
-        <p>Everything we make is designed specifically for local businesses. Not startups, not enterprises &mdash; you.</p>
-      </div>
-      <div class="principle">
-        <h3>Real people, not a helpdesk</h3>
-        <p>Family business means you always talk to someone who knows your setup and actually cares.</p>
-      </div>
-      <div class="principle">
-        <h3>Simple by design</h3>
-        <p>Less clutter, fewer headaches, lower costs. No bloated software or confusing dashboards.</p>
-      </div>
-    </div>
-  </section>
+      <div class="cards">
+        <article class="card">
+          <div class="card-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 6h6v6H4z"/>
+              <path d="M14 12h6v6h-6z"/>
+              <path d="M10 9h2a3 3 0 0 1 3 3"/>
+              <path d="M14 15h-2a3 3 0 0 1-3-3"/>
+            </svg>
+          </div>
+          <h2>DevOps and CI</h2>
+          <p>Shorten feedback loops, remove brittle checks, and make build and release workflows easier to trust.</p>
+          <ul>
+            <li>Pipeline review and optimisation</li>
+            <li>Build, test and deploy workflows</li>
+            <li>Cycle-time and release-flow improvements</li>
+          </ul>
+        </article>
 
-  <div class="divider"><span>Contact</span></div>
+        <article class="card">
+          <div class="card-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 3l8 4.5v9L12 21l-8-4.5v-9z"/>
+              <path d="M12 12l8-4.5"/>
+              <path d="M12 12v9"/>
+              <path d="M12 12L4 7.5"/>
+            </svg>
+          </div>
+          <h2>Development environments</h2>
+          <p>Make onboarding and day-to-day work consistent with reproducible local environments and clear project conventions.</p>
+          <ul>
+            <li>Nix-based project environments</li>
+            <li>Tooling consistency across teams</li>
+            <li>Documentation that reflects real workflows</li>
+          </ul>
+        </article>
 
-  <section id="contact">
-    <div class="contact-card">
-      <svg class="contact-graphic" style="left:-40px;top:-40px;width:280px;height:280px;" viewBox="0 0 300 300" fill="none" aria-hidden="true">
-        <defs>
-          <radialGradient id="glow2" cx="80%" cy="80%" r="70%">
-            <stop offset="0%" stop-color="white"/>
-            <stop offset="100%" stop-color="white" stop-opacity="0"/>
-          </radialGradient>
-          <mask id="fade2">
-            <rect width="300" height="300" fill="url(#glow2)"/>
-          </mask>
-        </defs>
-        <g mask="url(#fade2)">
-          <rect x="60" y="60" width="44" height="44" rx="7" fill="white" opacity="0.08"/>
-          <rect x="112" y="60" width="44" height="44" rx="7" fill="white" opacity="0.18"/>
-          <rect x="60" y="112" width="44" height="44" rx="7" fill="white" opacity="0.12"/>
-          <rect x="112" y="112" width="44" height="44" rx="7" fill="white" opacity="0.25"/>
-          <rect x="164" y="112" width="44" height="44" rx="7" fill="white" opacity="0.10"/>
-          <rect x="112" y="164" width="44" height="44" rx="7" fill="white" opacity="0.08"/>
-          <rect x="164" y="164" width="44" height="44" rx="7" fill="white" opacity="0.15"/>
-          <rect x="216" y="164" width="44" height="44" rx="7" fill="white" opacity="0.06"/>
-          <rect x="164" y="216" width="44" height="44" rx="7" fill="white" opacity="0.08"/>
-        </g>
-      </svg>
-      <svg class="contact-graphic" style="right:-40px;bottom:-40px;width:280px;height:280px;" viewBox="0 0 300 300" fill="none" aria-hidden="true">
-        <defs>
-          <radialGradient id="glow3" cx="20%" cy="20%" r="70%">
-            <stop offset="0%" stop-color="white"/>
-            <stop offset="100%" stop-color="white" stop-opacity="0"/>
-          </radialGradient>
-          <mask id="fade3">
-            <rect width="300" height="300" fill="url(#glow3)"/>
-          </mask>
-        </defs>
-        <g mask="url(#fade3)">
-          <rect x="40" y="40" width="44" height="44" rx="7" fill="white" opacity="0.08"/>
-          <rect x="92" y="40" width="44" height="44" rx="7" fill="white" opacity="0.18"/>
-          <rect x="40" y="92" width="44" height="44" rx="7" fill="white" opacity="0.15"/>
-          <rect x="92" y="92" width="44" height="44" rx="7" fill="white" opacity="0.25"/>
-          <rect x="144" y="92" width="44" height="44" rx="7" fill="white" opacity="0.12"/>
-          <rect x="92" y="144" width="44" height="44" rx="7" fill="white" opacity="0.10"/>
-          <rect x="144" y="144" width="44" height="44" rx="7" fill="white" opacity="0.18"/>
-          <rect x="196" y="144" width="44" height="44" rx="7" fill="white" opacity="0.08"/>
-        </g>
-      </svg>
-      <h3>Ready to get started?</h3>
-      <p>Drop us a line and let's have a chat about what you need.</p>
-      <a href="mailto:contact@dutton.digital" class="cta">Get in touch</a>
-    </div>
-  </section>
+        <article class="card">
+          <div class="card-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M8 9l-4 3 4 3"/>
+              <path d="M16 9l4 3-4 3"/>
+              <path d="M14 4l-4 16"/>
+            </svg>
+          </div>
+          <h2>Engineering delivery</h2>
+          <p>Hands-on product engineering for teams that need a senior contributor who can understand systems quickly.</p>
+          <ul>
+            <li>TypeScript codebases and migrations</li>
+            <li>Component-driven frontend development</li>
+            <li>Accessibility standards and QA tooling</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <div class="divider"><span>Case studies</span></div>
+
+    <section id="case-studies">
+      <div class="case-study-grid">
+        <article class="case-study">
+          <div class="case-study-brand">
+            <div class="company-mark givematch">
+              <img src="/logos/givematch.svg" alt="GiveMatch">
+            </div>
+          </div>
+          <div>
+            <h2>Cut CI feedback to 5 minutes</h2>
+            <p>Reduced pipeline duration, introduced reproducible development environments with Nix, and reduced cycle-time by an order of magnitude.</p>
+          </div>
+        </article>
+
+        <article class="case-study">
+          <div class="case-study-brand">
+            <div class="company-mark evergive">
+              <img src="https://framerusercontent.com/images/XxtJPaDyTI8mjwgdeu17qhsyg.svg?width=1026&amp;height=226" alt="EverGive">
+            </div>
+          </div>
+          <div>
+            <h2>Reliable giving workflows</h2>
+            <p>Worked in the same charity-tech ecosystem from a product angle: donor journeys, operational reliability and maintainable delivery as the public brand evolved.</p>
+          </div>
+        </article>
+
+        <article class="case-study">
+          <div class="case-study-brand">
+            <div class="company-mark travel">
+              <img src="https://cdn.prod.website-files.com/624410f4e729c6256c749f12/62442ead917d0862626bfdb3_tc_logo_reversed.svg" alt="Travel Chapter">
+            </div>
+          </div>
+          <div>
+            <h2>Consolidated 50 whitelabel sites</h2>
+            <p>Moved 50 whitelabel websites into one deployment, built QA tooling, and introduced Storybook and accessibility standards.</p>
+          </div>
+        </article>
+
+        <article class="case-study">
+          <div class="case-study-brand">
+            <div class="company-mark xgx">
+              <img src="/logos/xgx.svg" alt="XGX.AI">
+            </div>
+          </div>
+          <div>
+            <h2>Improved pipeline efficiency</h2>
+            <p>Set up development environments to improve team consistency and onboarding, then aligned architecture across projects to improve pipeline efficiency.</p>
+          </div>
+        </article>
+
+        <article class="case-study">
+          <div class="case-study-brand">
+            <div class="company-mark modular">
+              <img src="https://www.modularmapper.com/_app/immutable/assets/mm-logo-045d7f40.svg" alt="Modular Mapper">
+            </div>
+          </div>
+          <div>
+            <h2>Migrated JavaScript to TypeScript</h2>
+            <p>Ported a codebase from JavaScript to TypeScript, created a realtime procedural mesh generation system using Rust-WASM IPC, and worked across the website.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <div class="divider"><span>Contact</span></div>
+
+    <section id="contact">
+      <div class="contact-card">
+        <svg class="contact-graphic" style="left:-40px;top:-40px;width:280px;height:280px;" viewBox="0 0 300 300" fill="none" aria-hidden="true">
+          <defs>
+            <radialGradient id="contactGlowA" cx="80%" cy="80%" r="70%">
+              <stop offset="0%" stop-color="white"/>
+              <stop offset="100%" stop-color="white" stop-opacity="0"/>
+            </radialGradient>
+            <mask id="contactFadeA">
+              <rect width="300" height="300" fill="url(#contactGlowA)"/>
+            </mask>
+          </defs>
+          <g mask="url(#contactFadeA)">
+            <rect x="60" y="60" width="44" height="44" rx="7" fill="white" opacity="0.08"/>
+            <rect x="112" y="60" width="44" height="44" rx="7" fill="white" opacity="0.18"/>
+            <rect x="60" y="112" width="44" height="44" rx="7" fill="white" opacity="0.12"/>
+            <rect x="112" y="112" width="44" height="44" rx="7" fill="white" opacity="0.25"/>
+            <rect x="164" y="112" width="44" height="44" rx="7" fill="white" opacity="0.10"/>
+            <rect x="112" y="164" width="44" height="44" rx="7" fill="white" opacity="0.08"/>
+            <rect x="164" y="164" width="44" height="44" rx="7" fill="white" opacity="0.15"/>
+          </g>
+        </svg>
+        <svg class="contact-graphic" style="right:-40px;bottom:-40px;width:280px;height:280px;" viewBox="0 0 300 300" fill="none" aria-hidden="true">
+          <defs>
+            <radialGradient id="contactGlowB" cx="20%" cy="20%" r="70%">
+              <stop offset="0%" stop-color="white"/>
+              <stop offset="100%" stop-color="white" stop-opacity="0"/>
+            </radialGradient>
+            <mask id="contactFadeB">
+              <rect width="300" height="300" fill="url(#contactGlowB)"/>
+            </mask>
+          </defs>
+          <g mask="url(#contactFadeB)">
+            <rect x="40" y="40" width="44" height="44" rx="7" fill="white" opacity="0.08"/>
+            <rect x="92" y="40" width="44" height="44" rx="7" fill="white" opacity="0.18"/>
+            <rect x="40" y="92" width="44" height="44" rx="7" fill="white" opacity="0.15"/>
+            <rect x="92" y="92" width="44" height="44" rx="7" fill="white" opacity="0.25"/>
+            <rect x="144" y="92" width="44" height="44" rx="7" fill="white" opacity="0.12"/>
+            <rect x="92" y="144" width="44" height="44" rx="7" fill="white" opacity="0.10"/>
+            <rect x="144" y="144" width="44" height="44" rx="7" fill="white" opacity="0.18"/>
+          </g>
+        </svg>
+        <h2>Need contractor support?</h2>
+        <p>Email with the role, dates, working pattern and the main delivery problem you want solved.</p>
+        <a href="mailto:louis@dutton.digital" class="cta">louis@dutton.digital</a>
+      </div>
+    </section>
+  </main>
 
   <footer>
     <span>&copy; 2026 Dutton Digital</span>
-    <span>contact@dutton.digital</span>
+    <span>Truro, Cornwall · <a href="mailto:louis@dutton.digital">louis@dutton.digital</a></span>
   </footer>
-  </div>
+</div>
 
 </body>
 </html>
