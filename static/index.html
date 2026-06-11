@@ -67,6 +67,8 @@
       font-size: 1.25rem;
       font-weight: 500;
       line-height: 1;
+      user-select: none;
+      -webkit-user-select: none;
     }
 
     .logo-stretch {
@@ -365,29 +367,6 @@
       background: var(--fg);
     }
 
-    .approach-points {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 1rem;
-    }
-
-    .approach-point {
-      border-top: 1px solid var(--border);
-      padding-top: 1rem;
-    }
-
-    .approach-point h2 {
-      font-size: 0.95rem;
-      line-height: 1.35;
-      margin-bottom: 0.55rem;
-    }
-
-    .approach-point p {
-      color: var(--muted);
-      font-size: 0.88rem;
-      line-height: 1.65;
-    }
-
     .capability-cloud {
       display: grid;
       gap: 0.75rem;
@@ -470,8 +449,22 @@
       height: 112px;
       padding: 1.25rem;
       border-bottom: 1px solid var(--border);
-      background: rgba(255, 255, 255, 0.04);
+      background: #0d0d0d;
       color: var(--fg);
+      text-decoration: none;
+      transition: background 0.2s, border-color 0.2s;
+      user-select: none;
+      -webkit-user-select: none;
+    }
+
+    a.company-mark:hover {
+      background: #151515;
+      border-color: rgba(255, 255, 255, 0.24);
+    }
+
+    a.company-mark:focus-visible {
+      outline: 2px solid rgba(255, 255, 255, 0.8);
+      outline-offset: -2px;
     }
 
     .company-mark img,
@@ -480,28 +473,11 @@
       width: auto;
       max-width: min(220px, 80%);
       max-height: 44px;
-    }
-
-    .company-mark.givematch,
-    .company-mark.evergive {
-      background: #fff;
-      color: #09090b;
-    }
-
-    .company-mark.xgx {
-      background: #000;
-    }
-
-    .company-mark.travel {
-      background: rgb(36, 112, 120);
-    }
-
-    .company-mark.modular {
-      background: #0f172a;
-    }
-
-    .company-mark.iso-spaces {
-      background: #e8e8e8;
+      filter: brightness(0) invert(1);
+      opacity: 0.92;
+      user-select: none;
+      -webkit-user-select: none;
+      -webkit-user-drag: none;
     }
 
     .case-study > :not(.case-study-brand) {
@@ -591,10 +567,6 @@
       }
 
       .cards {
-        grid-template-columns: 1fr;
-      }
-
-      .approach-points {
         grid-template-columns: 1fr;
       }
 
@@ -705,7 +677,6 @@
     <div class="nav-links">
       <a href="#case-studies">Case studies</a>
       <a href="#capabilities">Capabilities</a>
-      <a href="#approach">Approach</a>
       <a href="https://louisdutton.dev/">CV</a>
       <a href="mailto:louis@dutton.digital" class="nav-cta">Contact</a>
     </div>
@@ -755,9 +726,9 @@
       <div class="case-study-grid">
         <article class="case-study">
           <div class="case-study-brand">
-            <div class="company-mark givematch">
+            <a class="company-mark givematch" href="https://www.givematch.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit GiveMatch website">
               <img src="/logos/givematch.svg" alt="GiveMatch">
-            </div>
+            </a>
           </div>
           <div>
             <h2>Cut CI feedback to 5 minutes</h2>
@@ -767,9 +738,9 @@
 
         <article class="case-study">
           <div class="case-study-brand">
-            <div class="company-mark evergive">
+            <a class="company-mark evergive" href="https://www.evergive.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit EverGive website">
               <img src="https://framerusercontent.com/images/XxtJPaDyTI8mjwgdeu17qhsyg.svg?width=1026&amp;height=226" alt="EverGive">
-            </div>
+            </a>
           </div>
           <div>
             <h2>Reliable giving workflows</h2>
@@ -779,9 +750,9 @@
 
         <article class="case-study">
           <div class="case-study-brand">
-            <div class="company-mark travel">
+            <a class="company-mark travel" href="https://www.travelchapter.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Travel Chapter website">
               <img src="https://cdn.prod.website-files.com/624410f4e729c6256c749f12/62442ead917d0862626bfdb3_tc_logo_reversed.svg" alt="Travel Chapter">
-            </div>
+            </a>
           </div>
           <div>
             <h2>Consolidated 50 whitelabel sites</h2>
@@ -791,9 +762,9 @@
 
         <article class="case-study">
           <div class="case-study-brand">
-            <div class="company-mark xgx">
+            <a class="company-mark xgx" href="https://xgx.ai/" target="_blank" rel="noopener noreferrer" aria-label="Visit XGX.AI website">
               <img src="/logos/xgx-white.svg" alt="XGX.AI">
-            </div>
+            </a>
           </div>
           <div>
             <h2>Improved pipeline efficiency</h2>
@@ -803,9 +774,9 @@
 
         <article class="case-study">
           <div class="case-study-brand">
-            <div class="company-mark modular">
+            <a class="company-mark modular" href="https://www.modularmapper.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Modular Mapper website">
               <img src="https://www.modularmapper.com/_app/immutable/assets/mm-logo-045d7f40.svg" alt="Modular Mapper">
-            </div>
+            </a>
           </div>
           <div>
             <h2>Migrated JavaScript to TypeScript</h2>
@@ -1007,29 +978,6 @@
             </div>
           </div>
         </div>
-      </div>
-    </section>
-
-    <div class="divider"><span>Approach</span></div>
-
-    <section id="approach">
-      <p class="section-intro">I work best where the shape of the problem is not fixed yet: part delivery, part architecture, part tooling, part translation between people and systems.</p>
-
-      <div class="approach-points">
-        <article class="approach-point">
-          <h2>Adapt quickly</h2>
-          <p>Drop into unfamiliar codebases, platforms and teams without needing the work to fit one narrow stack.</p>
-        </article>
-
-        <article class="approach-point">
-          <h2>Reduce drag</h2>
-          <p>Find the parts of the workflow slowing people down, then make builds, environments and delivery easier to trust.</p>
-        </article>
-
-        <article class="approach-point">
-          <h2>Leave clarity behind</h2>
-          <p>Make changes the permanent team can understand, own and keep improving after the contract ends.</p>
-        </article>
       </div>
     </section>
 
