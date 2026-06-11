@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dutton Digital | Senior engineering contractor</title>
-  <meta name="description" content="Senior engineering contractor for TypeScript, React, Node.js, Python, PHP, .NET, Java, DevOps, CI/CD, Azure, AWS, Linux, Windows, macOS, Nix and product engineering.">
+  <title>Dutton Digital | Software specialist</title>
+  <meta name="description" content="Software specialist providing complete solutions for businesses across products, platforms, automation, integrations, DevOps and delivery.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Pathway+Extreme:wght@300;400;500&display=swap" rel="stylesheet">
@@ -328,6 +328,12 @@
       line-height: 1.75;
     }
 
+    #technologies .section-intro {
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+    }
+
     .cards {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -465,6 +471,7 @@
       grid-template-rows: auto 1fr;
       gap: 1.2rem;
       padding: 1.35rem;
+      position: relative;
       overflow: hidden;
     }
 
@@ -540,20 +547,30 @@
       text-transform: uppercase;
     }
 
-    .case-study-link {
-      border: 1px solid var(--tag-border);
+    .case-study-external {
+      align-items: center;
       border-radius: 999px;
       color: var(--fg);
-      font-size: 0.72rem;
-      font-weight: 700;
-      line-height: 1;
-      padding: 0.42rem 0.58rem;
+      display: inline-flex;
+      height: 2rem;
+      justify-content: center;
+      position: absolute;
+      right: 0.9rem;
       text-decoration: none;
+      top: 0.9rem;
       transition: background 0.2s;
+      width: 2rem;
+      z-index: 2;
     }
 
-    .case-study-link:hover {
+    .case-study-external:hover {
       background: rgba(255, 255, 255, 0.04);
+    }
+
+    .case-study-external svg {
+      display: block;
+      height: 1.05rem;
+      width: 1.05rem;
     }
 
     .case-study-points {
@@ -783,11 +800,11 @@
   <main>
     <section class="hero">
       <div>
-        <p class="eyebrow">Senior engineering contractor</p>
-        <h1>Analyse.<br>Optimise.<br>Deliver.</h1>
-        <p class="hero-copy">Cross-domain engineering support for teams that need someone who can move between platforms, codebases, delivery workflows and business context quickly.</p>
+        <p class="eyebrow">Software specialist</p>
+        <h1>Software,<br>sorted.</h1>
+        <p class="hero-copy">Complete software solutions, consultancy and contracting across products, platforms, automation, integrations, DevOps and delivery.</p>
         <div class="hero-actions">
-          <a href="mailto:louis@dutton.digital" class="cta">Discuss a role</a>
+          <a href="mailto:louis@dutton.digital" class="cta">Discuss work</a>
           <a href="#case-studies" class="cta-secondary">View case studies</a>
         </div>
       </div>
@@ -823,6 +840,13 @@
     <section id="case-studies">
       <div class="case-study-list">
         <article class="case-study">
+          <a class="case-study-external" href="https://www.givematch.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit GiveMatch website">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M7 17L17 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M9 7H17V15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M17 18V20H4V7H6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
           <div class="case-study-brand">
             <div class="company-mark givematch">
               <img src="/logos/givematch.svg" alt="GiveMatch">
@@ -831,7 +855,6 @@
           <div class="case-study-content">
             <div class="case-study-meta">
               <p class="case-study-company">GiveMatch</p>
-              <a class="case-study-link" href="https://www.givematch.com/" target="_blank" rel="noopener noreferrer">Visit site</a>
             </div>
             <h2>Cut CI feedback loops to around 5 minutes</h2>
             <div class="case-study-points">
@@ -852,6 +875,13 @@
         </article>
 
         <article class="case-study">
+          <a class="case-study-external" href="https://www.evergive.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit EverGive website">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M7 17L17 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M9 7H17V15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M17 18V20H4V7H6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
           <div class="case-study-brand">
             <div class="company-mark evergive">
               <img src="https://framerusercontent.com/images/XxtJPaDyTI8mjwgdeu17qhsyg.svg?width=1026&amp;height=226" alt="EverGive">
@@ -860,7 +890,6 @@
           <div class="case-study-content">
             <div class="case-study-meta">
               <p class="case-study-company">EverGive</p>
-              <a class="case-study-link" href="https://www.evergive.com/" target="_blank" rel="noopener noreferrer">Visit site</a>
             </div>
             <h2>Improved giving product workflows</h2>
             <div class="case-study-points">
@@ -870,7 +899,7 @@
               </div>
               <div class="case-study-point">
                 <span>Solution</span>
-                <p>Worked across product engineering, reliability and maintainable delivery as the public brand evolved.</p>
+                <p>Worked across product development, reliability and maintainable delivery as the public brand evolved.</p>
               </div>
               <div class="case-study-point">
                 <span>Impact</span>
@@ -881,6 +910,13 @@
         </article>
 
         <article class="case-study">
+          <a class="case-study-external" href="https://www.travelchapter.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Travel Chapter website">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M7 17L17 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M9 7H17V15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M17 18V20H4V7H6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
           <div class="case-study-brand">
             <div class="company-mark travel">
               <img src="https://cdn.prod.website-files.com/624410f4e729c6256c749f12/62442ead917d0862626bfdb3_tc_logo_reversed.svg" alt="Travel Chapter">
@@ -889,7 +925,6 @@
           <div class="case-study-content">
             <div class="case-study-meta">
               <p class="case-study-company">Travel Chapter</p>
-              <a class="case-study-link" href="https://www.travelchapter.com/" target="_blank" rel="noopener noreferrer">Visit site</a>
             </div>
             <h2>Consolidated 50 whitelabel sites</h2>
             <div class="case-study-points">
@@ -910,6 +945,13 @@
         </article>
 
         <article class="case-study">
+          <a class="case-study-external" href="https://xgx.ai/" target="_blank" rel="noopener noreferrer" aria-label="Visit XGX.AI website">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M7 17L17 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M9 7H17V15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M17 18V20H4V7H6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
           <div class="case-study-brand">
             <div class="company-mark xgx">
               <img src="/logos/xgx-white.svg" alt="XGX.AI">
@@ -918,7 +960,6 @@
           <div class="case-study-content">
             <div class="case-study-meta">
               <p class="case-study-company">XGX.AI</p>
-              <a class="case-study-link" href="https://xgx.ai/" target="_blank" rel="noopener noreferrer">Visit site</a>
             </div>
             <h2>Improved consistency across delivery workflows</h2>
             <div class="case-study-points">
@@ -952,21 +993,28 @@
             <div class="case-study-points">
               <div class="case-study-point">
                 <span>Problem</span>
-                <p>Spatial product tooling needed maintainable engineering across JavaScript and TypeScript code.</p>
+                <p>Spatial product tooling needed maintainable software across JavaScript and TypeScript code.</p>
               </div>
               <div class="case-study-point">
                 <span>Solution</span>
-                <p>Worked on product engineering in a similar domain to Modular Mapper, improving the frontend codebase.</p>
+                <p>Worked on product development in a similar domain to Modular Mapper, improving the frontend codebase.</p>
               </div>
               <div class="case-study-point">
                 <span>Impact</span>
-                <p>Made future product changes easier to reason about in a complex visual engineering domain.</p>
+                <p>Made future product changes easier to reason about in a complex visual software domain.</p>
               </div>
             </div>
           </div>
         </article>
 
         <article class="case-study">
+          <a class="case-study-external" href="https://www.modularmapper.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Modular Mapper website">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M7 17L17 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M9 7H17V15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M17 18V20H4V7H6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
           <div class="case-study-brand">
             <div class="company-mark modular">
               <img src="/logos/modular-mapper.svg" alt="Modular Mapper">
@@ -975,7 +1023,6 @@
           <div class="case-study-content">
             <div class="case-study-meta">
               <p class="case-study-company">Modular Mapper</p>
-              <a class="case-study-link" href="https://www.modularmapper.com/" target="_blank" rel="noopener noreferrer">Visit site</a>
             </div>
             <h2>Migrated JavaScript to TypeScript</h2>
             <div class="case-study-points">
@@ -997,9 +1044,9 @@
       </div>
     </section>
 
-    <div class="divider"><span>Tech stack</span></div>
+    <div class="divider"><span>Technologies</span></div>
 
-    <section id="tech-stack">
+    <section id="technologies">
       <p class="section-intro">Deep hands-on knowledge across a broad technology surface, with the cross-stack context to solve problems that do not fit neatly inside one specialism.</p>
 
       <div class="capability-cloud" aria-label="Technologies and platforms">
@@ -1224,8 +1271,8 @@
             <rect x="144" y="144" width="44" height="44" rx="7" fill="white" opacity="0.18"/>
           </g>
         </svg>
-        <h2>Need contractor support?</h2>
-        <p>Email with the role, dates, working pattern and the main delivery problem you want solved.</p>
+        <h2>Need a software solution?</h2>
+        <p>Email with the problem, business context, timeline and what needs to change.</p>
         <a href="mailto:louis@dutton.digital" class="cta">louis@dutton.digital</a>
       </div>
     </section>
